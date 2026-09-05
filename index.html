@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chicken Coop Size Calculator — Sq Ft Per Bird, Feed & Nesting Boxes (2026)</title>
+<meta name="description" content="Free chicken coop calculator: enter your bird count, get coop square footage (4 sq ft/bird) and run space (10 sq ft/bird), monthly feed cost in 50 lb bags, nesting box count, and winter heat lamp / ventilation sizing.">
+<link rel="canonical" href="https://jpanasuk-netizen.github.io/chickencoopcalc/">
+<meta name="robots" content="index,follow">
+<meta property="og:title" content="Chicken Coop Size Calculator — How Big Does My Coop Need to Be?">
+<meta property="og:description" content="Enter your bird count, get the coop and run square footage, feed cost per month, nesting boxes, and winter ventilation you actually need.">
+<meta property="og:url" content="https://jpanasuk-netizen.github.io/chickencoopcalc/">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="assets/styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "ChickenCoopCalc Chicken Coop Size Calculator",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Web",
+  "url": "https://jpanasuk-netizen.github.io/chickencoopcalc/",
+  "description": "Free chicken coop calculator: coop and run square footage from bird count (4 sq ft indoors + 10 sq ft of run per standard bird), monthly layer feed consumption and cost in 50 lb bags, nesting box count (1 per 3-4 hens), and winter heat lamp wattage plus ventilation sizing.",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How many square feet does a chicken coop need per chicken?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The widely published standard from state extension services is 4 square feet of coop space per standard-size bird and 10 square feet of outdoor run per bird. Bantams can use half that: 2 sq ft inside and 8 sq ft in the run. So 6 hens need a 24 sq ft coop (roughly 4×6 ft) with a 60 sq ft run. Cramped birds peck each other, so build above the minimum." }
+    },
+    {
+      "@type": "Question",
+      "name": "How many nesting boxes do I need for my hens?",
+      "acceptedAnswer": { "@type": "Answer", "text": "One nesting box per 3-4 hens is the standard guidance. Six hens need two boxes; twelve need three or four. Hens share and fight most in spring, so err toward one per 3. Boxes should be about 12×12×12 inches and mounted lower than the roost bars. Communal roll-out nests can serve up to 5 hens each." }
+    },
+    {
+      "@type": "Question",
+      "name": "How much feed does a chicken eat per day?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A standard laying hen eats about a quarter pound (0.25 lb) of 16% layer feed per day — roughly 7.5 lb per month, or one 50 lb bag per hen every 6-7 weeks. At $22 a bag that's about $0.10 per egg at an 80% lay rate. Bantams eat around 40% less; expect 20% more consumption in freezing weather." }
+    },
+    {
+      "@type": "Question",
+      "name": "Do chickens need a heat lamp in the winter?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Healthy, cold-hardy adult breeds do not need supplemental heat above about -20°F — damp, unventilated coops cause frostbite, not cold. Chicks are different: a brooder needs about 95°F the first week, dropping 5°F per week until feathered out around week 6, which a 250 W red bulb covers per 4×4 ft area. Heat lamps cause more coop fires than cold kills chickens, so if you heat, use a thermostat and secure the lamp with chain." }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-head">
+  <a class="brand" href="index.html">ChickenCoopCalc</a>
+  <nav aria-label="Site">
+    <a href="#calc">Calculator</a>
+    <a href="best-chicken-coops-for-6-hens.html">Best coops</a>
+    <a href="chicken-feed-cost-guide.html">Feed cost</a>
+    <a href="winter-coop-heat-lamp-guide.html">Winter heat</a>
+    <a href="https://jpanasuk-netizen.github.io/generatorsizer/" rel="noopener">GeneratorSizer ↗</a>
+    <a href="https://jpanasuk-netizen.github.io/solarsizer/" rel="noopener">SolarSizer ↗</a>
+  </nav>
+</header>
+
+<main>
+<h1>Chicken coop size calculator</h1>
+<p class="sub">Tell us your flock. Get the coop and run square footage, monthly feed cost, nesting boxes, and winter ventilation — per the published extension-service standards, rounded up.</p>
+
+<div class="tabs" role="tablist" aria-label="Calculators">
+  <button role="tab" aria-selected="true" onclick="showTab('tab-coop', this)">Coop size</button>
+  <button role="tab" aria-selected="false" onclick="showTab('tab-feed', this)">Feed cost</button>
+  <button role="tab" aria-selected="false" onclick="showTab('tab-nest', this)">Nesting boxes</button>
+  <button role="tab" aria-selected="false" onclick="showTab('tab-heat', this)">Winter heat &amp; vents</button>
+</div>
+
+<!-- ============ 1. COOP SIZE ============ -->
+<section id="tab-coop" class="panel active" role="tabpanel">
+  <p>The rule everyone argues about on r/BackYardChickens, applied for you: <strong>4 sq ft of coop + 10 sq ft of run per standard bird</strong> (2 + 8 for bantams).</p>
+  <div class="row2">
+    <div class="field">
+      <label for="ccBirds">How many birds?</label>
+      <input type="number" id="ccBirds" placeholder="e.g. 6" min="1">
+    </div>
+    <div class="field">
+      <label for="ccBreed">Bird size</label>
+      <select id="ccBreed">
+        <option value="standard">Standard (Rhode Island Red, Orpington…)</option>
+        <option value="bantam">Bantam (Serama, Cochin bantam…)</option>
+      </select>
+    </div>
+  </div>
+  <button onclick="runCoopCalc()" style="background:var(--acc);color:#fff;border:none;border-radius:8px;padding:.7rem 1.4rem;font-size:1.05rem;cursor:pointer;font-weight:600">Size my coop</button>
+  <div id="ccResult" class="ans" hidden></div>
+  <div class="affil">
+    <span class="tag">Affiliate</span>
+    <p class="small">Prefab coops matched to common flock sizes on Amazon — 4×6 walk-ins for 6-8 hens, 8×12 for 15+. <!-- AFFILIATE SLOT: Amazon Associates — prefab coops keyed to sq ft result --></p>
+  </div>
+</section>
+
+<!-- ============ 2. FEED COST ============ -->
+<section id="tab-feed" class="panel" role="tabpanel">
+  <p>A standard laying hen eats about ¼ lb of layer feed per day. Here's what your flock goes through — and what it costs per egg.</p>
+  <div class="row2">
+    <div class="field">
+      <label for="fdBirds">Number of hens</label>
+      <input type="number" id="fdBirds" placeholder="e.g. 6" min="1">
+    </div>
+    <div class="field">
+      <label for="fdWeeks">Weeks to budget for</label>
+      <input type="number" id="fdWeeks" value="12" min="1" max="52">
+    </div>
+    <div class="field">
+      <label for="fdPrice">50 lb bag price ($)</label>
+      <input type="number" id="fdPrice" value="22" min="1" step="0.5">
+    </div>
+  </div>
+  <button onclick="runFeedCalc()" style="background:var(--acc);color:#fff;border:none;border-radius:8px;padding:.7rem 1.4rem;font-size:1.05rem;cursor:pointer;font-weight:600">Calculate feed</button>
+  <div id="fdResult" class="ans" hidden></div>
+  <p class="small">Storing bulk feed? A 30-gallon metal trash can holds about 150 lb — a full pallet-order math check is in the <a href="chicken-feed-cost-guide.html">feed cost guide</a>.</p>
+  <p class="affil-note small">Layer feed, gravity feeders, and rodent-proof storage cans on Amazon: <!-- AFFILIATE SLOT: Amazon Associates — feeders, storage cans, feed --></p>
+</section>
+
+<!-- ============ 3. NESTING BOXES ============ -->
+<section id="tab-nest" class="panel" role="tabpanel">
+  <p>One box per 3-4 hens is the standard. More than that and they'll all lay in the same one anyway.</p>
+  <div class="row2">
+    <div class="field">
+      <label for="nbHens">Number of hens</label>
+      <input type="number" id="nbHens" placeholder="e.g. 6" min="1">
+    </div>
+    <div class="field">
+      <label for="nbStyle">Nest style</label>
+      <select id="nbStyle">
+        <option value="standard">Standard individual boxes</option>
+        <option value="communal">Communal roll-out nest</option>
+      </select>
+    </div>
+  </div>
+  <button onclick="runNestCalc()" style="background:var(--acc);color:#fff;border:none;border-radius:8px;padding:.7rem 1.4rem;font-size:1.05rem;cursor:pointer;font-weight:600">Count my boxes</button>
+  <div id="nbResult" class="ans" hidden></div>
+  <p class="affil-note small">Nesting box kits, roll-out nest inserts, and fake ceramic training eggs on Amazon: <!-- AFFILIATE SLOT: Amazon Associates — nesting boxes, plastic eggs --></p>
+</section>
+
+<!-- ============ 4. HEAT LAMP & VENTILATION ============ -->
+<section id="tab-heat" class="panel" role="tabpanel">
+  <p>Adults rarely need heat — damp air is the winter killer, not cold. Size your high vents and brooder bulb here.</p>
+  <div class="row2">
+    <div class="field">
+      <label for="htSqft">Coop floor area (sq ft)</label>
+      <input type="number" id="htSqft" placeholder="e.g. 24" min="4">
+    </div>
+    <div class="field">
+      <label for="htLow">Coldest winter low (°F)</label>
+      <input type="number" id="htLow" value="32" min="-40" max="60">
+    </div>
+    <div class="field">
+      <label for="htChicks">Brooding chicks this winter?</label>
+      <select id="htChicks"><option value="no">No — adults only</option><option value="yes">Yes — chicks in a brooder</option></select>
+    </div>
+  </div>
+  <button onclick="runHeatCalc()" style="background:var(--acc);color:#fff;border:none;border-radius:8px;padding:.7rem 1.4rem;font-size:1.05rem;cursor:pointer;font-weight:600">Size my winter setup</button>
+  <div id="htResult" class="ans" hidden></div>
+  <p class="affil-note small">Coop thermostats, red brooder bulbs, and vent covers on Amazon: <!-- AFFILIATE SLOT: Amazon Associates — heat lamps, thermostat controllers, vent covers --></p>
+</section>
+
+<!-- ============ CONTENT ============ -->
+<h2>How coop sizing works</h2>
+<p>Two numbers decide the build. <strong>Coop interior</strong> — 4 sq ft per standard bird if they also have a run (2 sq ft for bantams); if the coop doubles as the run, double it. <strong>Run</strong> — 10 sq ft per standard bird (8 for bantams). These come from the guidance published by state extension services and repeated in every serious backyard-flock book. The floor plans work out to a 4×6 ft coop for 6 hens, an 8×8 for 12, and roughly a 10×12 for 25+.</p>
+<p>The other constraint is roost bar length: plan 8-10 inches of roost per bird, so 12 hens need 8-10 ft of roosting bar regardless of floor math. Nesting boxes are separate — one per 3-4 hens, and hens will queue to lay in the same box no matter how many you build.</p>
+
+<h2>Quick reference by flock size</h2>
+<div class="tbl-wrap">
+<table>
+<tr><th>Flock</th><th class="num">Coop sq ft</th><th class="num">Run sq ft</th><th class="num">Nest boxes</th><th class="num">Feed / month</th></tr>
+<tr><td>3 hens</td><td class="num">12</td><td class="num">30</td><td class="num">1</td><td class="num">23 lb (~1 bag / 2 mo)</td></tr>
+<tr><td>6 hens</td><td class="num">24</td><td class="num">60</td><td class="num">2</td><td class="num">46 lb (~1 bag / mo)</td></tr>
+<tr><td>12 hens</td><td class="num">48</td><td class="num">120</td><td class="num">3–4</td><td class="num">91 lb (~2 bags)</td></tr>
+<tr><td>25 hens</td><td class="num">100</td><td class="num">250</td><td class="num">7–9</td><td class="num">190 lb (~4 bags)</td></tr>
+</table>
+</div>
+<p class="small">Standard-size birds, ¼ lb feed/day each, $22 per 50 lb bag as the default price.</p>
+
+<h2>Guides</h2>
+<div class="card"><h3><a href="best-chicken-coops-for-6-hens.html">Best chicken coops for 6 hens (2026)</a></h3><p>What a real 24+ sq ft coop costs, prefab vs DIY vs kit, and the specs that matter — roost length, vents, predator latches.</p></div>
+<div class="card"><h3><a href="chicken-feed-cost-guide.html">What does it cost to feed backyard chickens?</a></h3><p>Feed math per flock size, cost per egg, layer vs flock-raiser, and the storage setup that stops rodents eating your margin.</p></div>
+<div class="card"><h3><a href="winter-coop-heat-lamp-guide.html">Do chickens need a heat lamp in winter?</a></h3><p>Why vents beat heaters, the frostbite myth, brooder wattage by week, and how not to burn the coop down.</p></div>
+<div class="card"><h3><a href="https://jpanasuk-netizen.github.io/generatorsizer/" rel="noopener">GeneratorSizer ↗</a>
+    <a href="https://jpanasuk-netizen.github.io/solarsizer/" rel="noopener">SolarSizer ↗</a>
+    <a href="https://jpanasuk-netizen.github.io/weldingcalc/" rel="noopener">WeldingCalc ↗</a>
+    <a href="https://jpanasuk-netizen.github.io/battery-bank-sizer/" rel="noopener">Battery Bank Sizer ↗</a></h3><p>Running the coop off-grid? Size the generator, solar array, welder circuit, or battery bank with the sister tools.</p></div>
+</main>
+
+<footer>ChickenCoopCalc · free sizing tools for backyard flocks · pages may contain affiliate links · <a href="https://jpanasuk-netizen.github.io/generatorsizer/" rel="noopener">sister sites: GeneratorSizer</a> · <a href="https://jpanasuk-netizen.github.io/solarsizer/" rel="noopener">SolarSizer</a> · <a href="https://jpanasuk-netizen.github.io/weldingcalc/" rel="noopener">WeldingCalc</a> · <a href="https://jpanasuk-netizen.github.io/battery-bank-sizer/" rel="noopener">Battery Bank Sizer</a></footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>

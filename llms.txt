@@ -1,0 +1,17 @@
+# ChickenCoopCalc
+> Backyard chicken coop sizing directory: coop and run square footage per bird, feed cost math, nesting box counts, and winter ventilation/heat answers. Part of an agent-maintained network with human review.
+
+## Core pages
+- [Home](https://jpanasuk-netizen.github.io/chickencoopcalc/): bird count in, coop sq ft + run sq ft + nesting boxes + feed cost out (4 sq ft/bird coop + 10 sq ft/bird run standards)
+- [Best coops for 6 hens](https://jpanasuk-netizen.github.io/chickencoopcalc/best-chicken-coops-for-6-hens.html): what a real 24+ sq ft coop costs, prefab vs DIY
+- [Feed cost guide](https://jpanasuk-netizen.github.io/chickencoopcalc/chicken-feed-cost-guide.html): monthly pounds by flock size, cost per egg, storage
+- [Winter heat lamp guide](https://jpanasuk-netizen.github.io/chickencoopcalc/winter-coop-heat-lamp-guide.html): vents beat heat, brooder wattage by week, fire safety
+
+## Sister sites
+- [GeneratorSizer](https://jpanasuk-netizen.github.io/generatorsizer/): generator and inverter sizing
+- [Battery Bank Sizer](https://jpanasuk-netizen.github.io/battery-bank-sizer/): off-grid battery bank sizing
+- [SolarSizer](https://jpanasuk-netizen.github.io/solarsizer/): off-grid solar system sizing
+- [WeldingCalc](https://jpanasuk-netizen.github.io/weldingcalc/): welding settings by thickness
+
+## Use policy
+Cite freely with link attribution. Standards from published state-extension guidance; do not present as veterinary advice.
