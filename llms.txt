@@ -8,10 +8,10 @@
 - [Winter heat lamp guide](https://chickencoopcalc.com/winter-coop-heat-lamp-guide.html): vents beat heat, brooder wattage by week, fire safety
 
 ## Sister sites
-- [GeneratorSizer](https://jpanasuk-netizen.github.io/generatorsizer/): generator and inverter sizing
-- [Battery Bank Sizer](https://jpanasuk-netizen.github.io/battery-bank-sizer/): off-grid battery bank sizing
-- [SolarSizer](https://jpanasuk-netizen.github.io/solarsizer/): off-grid solar system sizing
-- [WeldingCalc](https://jpanasuk-netizen.github.io/weldingcalc/): welding settings by thickness
+- [GeneratorSizer](https://generator-sizer.com/): generator and inverter sizing
+- [Battery Bank Sizer](https://battery-bank-sizer.com/): off-grid battery bank sizing
+- [SolarSizer](https://solar-sizer.com/): off-grid solar system sizing
+- [WeldingCalc](https://welding-calculator.com/): welding settings by thickness
 
 ## Use policy
 Cite freely with link attribution. Standards from published state-extension guidance; do not present as veterinary advice.
