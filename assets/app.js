@@ -194,7 +194,7 @@ function runHeatCalc(){
     '<p class="note">'+(r.adultNeedsHeat
       ? 'At '+low+'°F lows, hardy breeds still manage without heat if the coop is dry and draft-free — heat lamps cause more coop fires than cold kills chickens. If you do heat, use a red 250 W bulb on a thermostat, secured with a chain, with a-rated cords.'
       : 'Cold kills chickens far less often than damp air does. Keep high vents open all winter; block only low drafts at roost level. A 250 W red heat lamp is for brooders (95°F the first week, dropping 5°F weekly to feather-out around week 6) — secure it with chain and keep flammable bedding 18+ inches away.')+'</p>'+
-    '<p class="affil-note small">Coop thermostats, red brooder bulbs, and vent covers on Amazon: <!-- AFFILIATE SLOT: Amazon Associates — heat lamps, thermostat controllers, vent covers --></p>';
+    '<p class="affil-note small">Coop thermostats, red brooder bulbs, and vent covers on Amazon: <a href="https://www.amazon.com/s?k=chicken+coop+heat+lamp+thermostat&tag=generatorsi0d-20" rel="sponsored nofollow noopener" target="_blank">heat lamps on Amazon</a> · <a href="https://www.amazon.com/s?k=red+brooder+bulb&tag=generatorsi0d-20" rel="sponsored nofollow noopener" target="_blank">red bulbs on Amazon</a> · <a href="https://www.amazon.com/s?k=chicken+coop+vent+cover&tag=generatorsi0d-20" rel="sponsored nofollow noopener" target="_blank">vent covers on Amazon</a></p>';
 }
 
 /* ---------- init ---------- */
