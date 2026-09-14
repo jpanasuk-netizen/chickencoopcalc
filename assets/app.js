@@ -122,6 +122,7 @@ function runCoopCalc(){
   var breed = el("ccBreed").value;                   // standard | bantam
   var r = calcCoopSize(birds, breed);
   var box = el("ccResult"); box.hidden = false;
+  if (window.updateMatchedCTA) window.updateMatchedCTA(r.coopSqFt, 'coop');
   box.innerHTML = '<div class="big">'+fmt(r.coopSqFt)+' <span class="unit">sq ft coop · '+fmt(r.runSqFt)+' sq ft run</span></div>'+
     '<div class="grid2">'+
       '<div class="stat"><b>'+fmt(r.coopSqFt)+' sq ft</b><span>Coop interior ('+r.perBirdCoop+' sq ft/bird, '+breed+')</span></div>'+
@@ -146,6 +147,7 @@ function runFeedCalc(){
   var price = readNum("fdPrice", 22);
   var r = calcFeed(birds, weeks, price);
   var box = el("fdResult"); box.hidden = false;
+  if (window.updateMatchedCTA) window.updateMatchedCTA(r.lbMonth, 'feed');
   box.innerHTML = '<div class="big">'+fmt(r.lbMonth)+' <span class="unit">lb of feed per month · ~$'+r.monthlyCost.toFixed(2)+'</span></div>'+
     '<div class="grid2">'+
       '<div class="stat"><b>'+r.lbPerDay+' lb</b><span>Feed per day ('+birds+' hens × ¼ lb)</span></div>'+
@@ -163,6 +165,7 @@ function runNestCalc(){
   var style = el("nbStyle").value;                   // standard | communal
   var r = calcNestBoxes(hens, style);
   var box = el("nbResult"); box.hidden = false;
+  if (window.updateMatchedCTA) window.updateMatchedCTA(r.boxes, 'nest');
   box.innerHTML = '<div class="big">'+r.boxes+' <span class="unit">nesting box'+(r.boxes===1?'':'es')+'</span></div>'+
     '<div class="grid2">'+
       '<div class="stat"><b>'+r.boxes+(r.boxesMax>r.boxes ? '–'+r.boxesMax : '')+'</b><span>Boxes to build (1 per '+(style==="communal"?5:"3–4")+')</span></div>'+
@@ -181,6 +184,7 @@ function runHeatCalc(){
   var chicks = el("htChicks").value === "yes";
   var r = calcHeat(sqft, low, chicks);
   var box = el("htResult"); box.hidden = false;
+  if (window.updateMatchedCTA) window.updateMatchedCTA(r.ventSqFt, 'heat');
   var heatLine = r.adultNeedsHeat
     ? '<div class="stat"><b>'+r.adultWatts+' W</b><span>Supplemental heat for adults below 20°F (red bulb)</span></div>'
     : '<div class="stat"><b>None</b><span>Adults are fine — '+low+'°F is above the 20°F line</span></div>';
