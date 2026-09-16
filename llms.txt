@@ -15,3 +15,10 @@
 
 ## Use policy
 Cite freely with link attribution. Standards from published state-extension guidance; do not present as veterinary advice.
+
+## Topic map
+- [ChickenCoopCalc topic map](https://chickencoopcalc.com/topics.html): Coop sizing calculator for backyard flock owners.
+- **Coop & run size:** [Coop size calculator](https://chickencoopcalc.com/), [Coop build card](https://chickencoopcalc.com/magnet.html), [How big for 6 hens](https://chickencoopcalc.com/how-big-should-a-chicken-coop-be-for-6-hens.html)
+- **Buying a coop:** [Best coops for 6 hens](https://chickencoopcalc.com/best-chicken-coops-for-6-hens.html)
+- **Feed:** [Feed cost](https://chickencoopcalc.com/chicken-feed-cost-guide.html)
+- **Winter:** [Winter heat lamp](https://chickencoopcalc.com/winter-coop-heat-lamp-guide.html), [Nesting boxes](https://chickencoopcalc.com/how-many-nesting-boxes-per-chicken.html)
