@@ -24,7 +24,7 @@
     {
       "@type": "Question",
       "name": "How much does it cost to feed 6 chickens per month?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Six standard laying hens eat about 46 lb of feed per month (6 × 0.25 lb × 30.4 days). At $22 per 50 lb bag that's roughly $20 a month — call it one bag a month with a little left over. Expect 20% more consumption in freezing weather and slightly less if they free-range in summer." }
+      "acceptedAnswer": { "@type": "Answer", "text": "At 0.25 lb per hen per day, six laying hens eat about 46 lb a month (6 × 0.25 × 30.4). Alabama Extension states that 0.25 lb figure, and Kentucky Extension states a quarter pound per hen per day. At $22 per 50 lb bag that is roughly $20 a month. Those pages do not give a percent increase for freezing weather. Minnesota Extension's separate rate is about 3 lb a week for a 6-pound hen." }
     },
     {
       "@type": "Question",
@@ -44,20 +44,45 @@
 {
   "sources": [
     {
-      "title": "UC-Davis Poultry Handbook",
-      "url": "https://ucanr.edu/sites/poultry/Poultry_Handbook/",
-      "date": "2026-09-17"
+      "title": "eXtension: Space allowances in housing for small and backyard poultry flocks",
+      "url": "https://poultry.extension.org/articles/getting-started-with-small-and-backyard-poultry/housing-for-small-and-backyard-poultry-flocks/space-allowances-in-housing-for-small-and-backyard-poultry-flocks/",
+      "date": "2026-10-02"
     },
     {
-      "title": "Backyard Chickens Stocking Forum",
-      "url": "https://www.backyardchickens.com/",
-      "date": "2026-09-17"
+      "title": "UC Master Gardeners of Monterey Bay: Backyard chickens (2017)",
+      "url": "https://ucanr.edu/sites/default/files/2017-03/257593.pdf",
+      "date": "2026-10-02"
+    },
+    {
+      "title": "Penn State Extension: Small Scale Poultry Housing",
+      "url": "https://extension.psu.edu/small-scale-poultry-housing/",
+      "date": "2026-10-02"
+    },
+    {
+      "title": "University of Maryland Extension: Housing Requirements",
+      "url": "https://www.extension.umd.edu/resource/housing-requirements",
+      "date": "2026-10-02"
+    },
+    {
+      "title": "Utah State University Extension: Housing Backyard Chickens",
+      "url": "https://extension.usu.edu/poultry/research/housing-backyard-chickens",
+      "date": "2026-10-02"
+    },
+    {
+      "title": "Alabama Cooperative Extension: Feeding the Laying Hen",
+      "url": "https://www.aces.edu/blog/topics/farming/backyard-small-poultry-flock-management-series-feeding-the-laying-hen/",
+      "date": "2026-10-02"
+    },
+    {
+      "title": "University of Kentucky Extension ASC-191: How Much Will My Chickens Eat?",
+      "url": "https://publications.mgcafe.uky.edu/files/ASC191.pdf",
+      "date": "2026-10-02"
     }
   ]
 }
 </script>
 <script>
-document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getElementById('sources-data').textContent);var s=document.createElement('div');s.className='sources-section';s.innerHTML='<h2 id="sources-heading">Sources & Standards</h2><p>All calculations verified against:</p><ul>'+d.sources.map(x=>'<li><a href="'+x.url+'" target="_blank">'+x.title+'</a></li>').join('')+'</ul><p><button id="cite-toggle">Show Copyable Citations</button></p><div id="cite-output" style="display:none"></div>';var t=document.querySelector('nav')||document.querySelector('footer')||document.body;t.parentNode.insertBefore(s,t);var o=s.querySelector('#cite-toggle'),c=s.querySelector('#cite-output');o.onclick=()=>{c.textContent=d.sources.map(x=>x.title+'. '+x.url+'. Accessed '+x.date).join('\n\n');c.style.display='block';o.style.display='none'};});
+document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getElementById('sources-data').textContent);var s=document.createElement('div');s.className='sources-section';s.innerHTML='<h2 id="sources-heading">Sources & Standards</h2><p>Published references for coop space, nests, and feed:</p><ul>'+d.sources.map(x=>'<li><a href="'+x.url+'" target="_blank">'+x.title+'</a></li>').join('')+'</ul><p><button id="cite-toggle">Show Copyable Citations</button></p><div id="cite-output" style="display:none"></div>';var t=document.querySelector('nav')||document.querySelector('footer')||document.body;t.parentNode.insertBefore(s,t);var o=s.querySelector('#cite-toggle'),c=s.querySelector('#cite-output');o.onclick=()=>{c.textContent=d.sources.map(x=>x.title+'. '+x.url+'. Accessed '+x.date).join('\n\n');c.style.display='block';o.style.display='none'};});
 </script>
 <meta name="llms.txt" content="https://chickencoopcalc.com/sources.json">
 </head>
@@ -70,7 +95,7 @@ document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getE
 <h1>What does it cost to feed backyard chickens?</h1>
 <p class="sub">The honest math: ¼ lb per hen per day is the planning number. Everything else is price-shopping and loss control.</p>
 
-<div class="answer-box"><strong>Quick answer:</strong> Six laying hens eat about 46 lb of feed per month — roughly $20 at $22 per 50 lb bag, call it one bag a month. Expect 20% more in freezing weather.</div>
+<div class="answer-box"><strong>Quick answer:</strong> At a quarter pound per hen per day, six laying hens eat about 46 lb of feed per month — roughly $20 at $22 per 50 lb bag, about one bag a month. Alabama Extension states that 0.25 lb figure, and Kentucky Extension states the same quarter-pound rule. Neither page gives a percent increase for freezing weather.</div>
 
 <h2>Monthly feed by flock size</h2>
 <div class="tbl-wrap">
@@ -84,16 +109,16 @@ document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getE
   </tbody>
 </table>
 </div>
-<p class="small">Standard-size layers, 16% layer pellets. Winter: add ~20%. Bantams: subtract ~40%. Meat birds: multiply by 2–3× depending on age.</p>
+<p class="small">Standard-size layers. Alabama Extension lists layer diets at 16% protein or more. Kentucky Extension says standard hens eat more than bantams. <a href="https://extension.umn.edu/agriculture/animals-and-livestock/poultry/raising-chickens-for-eggs">Minnesota Extension</a> gives a higher intake, about 3 lb a week for a 6-pound hen, and says consumption may rise in winter without a percent. This table uses the quarter-pound figure and does not apply a 20% or 40% adjustment.</p>
 
 <h2>Cost per egg — the real number</h2>
 <p>A hen at an 80% lay rate produces about 24 eggs a month. Six hens eating $20 of feed produce ~146 eggs: <strong>about 13–14¢ per egg in feed alone</strong>. That beats organic boutique eggs, ties store specials, and loses to the loss-leader dozen — but you're not doing this to save 40¢. Still, the number matters when someone tells you chickens are free food. They aren't. They're 13¢ eggs, minus the coop, plus the entertainment.</p>
 
 <h2>Where the money leaks</h2>
-<p><strong>Spill:</strong> trough feeders waste 10–15% to scratching. Gravity or treadle feeders pay for themselves in a season — trough length is on the <a href="how-much-feeder-space-per-chicken.html">feeder space per chicken</a> page. <strong>Rats and mice:</strong> a rat eats an ounce a night and contaminates far more; metal cans, not plastic. <strong>Wrong feed:</strong> scratch grain runs 8–9% protein — laying hens need 16%. Feeding scratch as a staple is how flocks stop laying. <strong>Free tampering:</strong> scratch grains are a treat under 10% of diet.</p>
+<p><strong>Spill:</strong> open troughs let hens scratch feed onto the floor. Trough length is on the <a href="how-much-feeder-space-per-chicken.html">feeder space per chicken</a> page. <strong>Rats and mice:</strong> they eat stored feed and contaminate more than they swallow; use metal cans, not plastic. <strong>Wrong feed:</strong> Alabama Extension lists layer diets at 16% protein or more. Scratch grain is not that diet. These pages do not publish a scratch-protein percent or a maximum treat share.</p>
 
 <h2>Cutting cost without cutting lay rate</h2>
-<p>Buy by the pallet when prices dip (feed stores run spring sales), split with a neighbor — a 50 lb bag holds 6-7 weeks for one hen but only a month for six. Fermenting feed cuts consumption 10–20% and improves yolk quality; a food-grade bucket and water is the entire equipment list. Black-soldier-fly larvae and kitchen scraps trim a little, but treat them as supplement — the 90/10 rule still applies.</p>
+<p>Buy by the pallet when prices dip, and split a bag with a neighbor. At a quarter pound a day, a 50 lb bag lasts one hen about 6–7 weeks and six hens about a month. Kitchen scraps are a supplement. These feed pages do not publish a fermenting-feed savings percent.</p>
 
 <div class="affil">
   <span class="tag">Feeders &amp; storage</span>

@@ -70,20 +70,45 @@ footer{margin-top:40px;padding-top:16px;border-top:1px solid var(--line);color:v
 {
   "sources": [
     {
-      "title": "UC-Davis Poultry Handbook",
-      "url": "https://ucanr.edu/sites/poultry/Poultry_Handbook/",
-      "date": "2026-09-17"
+      "title": "eXtension: Space allowances in housing for small and backyard poultry flocks",
+      "url": "https://poultry.extension.org/articles/getting-started-with-small-and-backyard-poultry/housing-for-small-and-backyard-poultry-flocks/space-allowances-in-housing-for-small-and-backyard-poultry-flocks/",
+      "date": "2026-10-02"
     },
     {
-      "title": "Backyard Chickens Stocking Forum",
-      "url": "https://www.backyardchickens.com/",
-      "date": "2026-09-17"
+      "title": "UC Master Gardeners of Monterey Bay: Backyard chickens (2017)",
+      "url": "https://ucanr.edu/sites/default/files/2017-03/257593.pdf",
+      "date": "2026-10-02"
+    },
+    {
+      "title": "Penn State Extension: Small Scale Poultry Housing",
+      "url": "https://extension.psu.edu/small-scale-poultry-housing/",
+      "date": "2026-10-02"
+    },
+    {
+      "title": "University of Maryland Extension: Housing Requirements",
+      "url": "https://www.extension.umd.edu/resource/housing-requirements",
+      "date": "2026-10-02"
+    },
+    {
+      "title": "Utah State University Extension: Housing Backyard Chickens",
+      "url": "https://extension.usu.edu/poultry/research/housing-backyard-chickens",
+      "date": "2026-10-02"
+    },
+    {
+      "title": "Alabama Cooperative Extension: Feeding the Laying Hen",
+      "url": "https://www.aces.edu/blog/topics/farming/backyard-small-poultry-flock-management-series-feeding-the-laying-hen/",
+      "date": "2026-10-02"
+    },
+    {
+      "title": "University of Kentucky Extension ASC-191: How Much Will My Chickens Eat?",
+      "url": "https://publications.mgcafe.uky.edu/files/ASC191.pdf",
+      "date": "2026-10-02"
     }
   ]
 }
 </script>
 <script>
-document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getElementById('sources-data').textContent);var s=document.createElement('div');s.className='sources-section';s.innerHTML='<h2 id="sources-heading">Sources & Standards</h2><p>All calculations verified against:</p><ul>'+d.sources.map(x=>'<li><a href="'+x.url+'" target="_blank">'+x.title+'</a></li>').join('')+'</ul><p><button id="cite-toggle">Show Copyable Citations</button></p><div id="cite-output" style="display:none"></div>';var t=document.querySelector('nav')||document.querySelector('footer')||document.body;t.parentNode.insertBefore(s,t);var o=s.querySelector('#cite-toggle'),c=s.querySelector('#cite-output');o.onclick=()=>{c.textContent=d.sources.map(x=>x.title+'. '+x.url+'. Accessed '+x.date).join('\n\n');c.style.display='block';o.style.display='none'};});
+document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getElementById('sources-data').textContent);var s=document.createElement('div');s.className='sources-section';s.innerHTML='<h2 id="sources-heading">Sources & Standards</h2><p>Published references for coop space, nests, and feed:</p><ul>'+d.sources.map(x=>'<li><a href="'+x.url+'" target="_blank">'+x.title+'</a></li>').join('')+'</ul><p><button id="cite-toggle">Show Copyable Citations</button></p><div id="cite-output" style="display:none"></div>';var t=document.querySelector('nav')||document.querySelector('footer')||document.body;t.parentNode.insertBefore(s,t);var o=s.querySelector('#cite-toggle'),c=s.querySelector('#cite-output');o.onclick=()=>{c.textContent=d.sources.map(x=>x.title+'. '+x.url+'. Accessed '+x.date).join('\n\n');c.style.display='block';o.style.display='none'};});
 </script>
 <meta name="llms.txt" content="https://chickencoopcalc.com/sources.json">
 </head>
@@ -97,9 +122,9 @@ document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getE
   <h1>4 sq ft inside. 10 sq ft of run. Per bird. That's the fight on every chicken forum.</h1>
   <p>Extension-service numbers, rounded up. Not the 2 sq ft prefab that looks cute on Amazon until week six.</p>
 </div>
-<p>Roost bar is the other constraint: 8–10 inches per bird. Nesting boxes: one per 3–4 hens, and they will still queue for the same box. Adults rarely need a heat lamp — damp air kills, not cold.</p>
+<p>Roost bar: Utah lists 6 to 10 inches per bird. Nesting boxes: one per 4 to 5 hens, and they will still queue for the same box. The housing pages cited here do not set an adult heat-lamp cutoff. Damp air is the winter problem they describe.</p>
 <div class="sheet">
-  <strong>Use it in 10 minutes.</strong> Count standard birds. Multiply. If the coop is the run, double the interior. Bantams: 2 + 8 instead of 4 + 10.
+  <strong>Use it in 10 minutes.</strong> Count standard birds. Multiply by 4 sq ft inside and 10 sq ft of run. Bantam minimums on the Penn State and Maryland tables are 1 sq ft inside and 4 sq ft of run. This card's calculator link uses 2 and 8, which is extra room above that minimum.
 </div>
 <h2>Quick reference by flock size (standard birds)</h2>
 <table>
@@ -109,7 +134,7 @@ document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getE
 <tr><td>12 hens</td><td class="n">48</td><td class="n">120</td><td class="n">3–4</td><td class="n">91 lb (~2 bags)</td></tr>
 <tr><td>25 hens</td><td class="n">100</td><td class="n">250</td><td class="n">7–9</td><td class="n">190 lb (~4 bags)</td></tr>
 </table>
-<p class="muted">¼ lb layer feed/day each; $22 per 50 lb bag as the default on the calculator. State extension-service space rules.</p>
+<p class="muted">¼ lb layer feed per day (Alabama and Kentucky Extension). $22 per 50 lb bag is the calculator default, not a published price. Nest counts in the table are this card's tighter one-per-3 planning count; published guidance is one per 4 to 5 hens.</p>
 <p>Worked 6-hen build: 4×6 coop, ~6×10 run, 5 ft of roost, two boxes, one 50 lb bag a month. Heat lamp is for chicks in a brooder, not a dry adult flock.</p>
 <div class="kw noprint"><strong>Comment keyword:</strong> HENS — that's the word we ask for on X/LinkedIn. We DM this page.</div>
 <p class="noprint">
@@ -117,7 +142,7 @@ document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getE
   <a class="cta ghost" href="#" onclick="window.print();return false;">Print / Save PDF</a>
 </p>
 <footer>
-ChickenCoopCalc · numbers from published manufacturer / extension / DOE figures already on the calculator · not a substitute for a licensed pro or a test bead / Manual J / door-sticker check.
+ChickenCoopCalc · coop, nest, and feed figures from the extension pages linked in Sources · not a substitute for a veterinarian or your local rules.
 </footer>
 </div>
 <a class="cta print noprint" href="#" onclick="window.print();return false;">Print</a>

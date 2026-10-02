@@ -1,12 +1,12 @@
 /* ChickenCoopCalc calculators — vanilla JS, no dependencies.
-   Standards used (published extension-service guidance, rounded conservatively):
-   - Coop space: 4 sq ft per standard bird indoors, 2 sq ft for bantams (State extension services, e.g. MSU/UC Davis)
-   - Run space: 10 sq ft per standard bird outdoors, 8 sq ft for bantams
-   - Nesting boxes: 1 box per 3–4 hens (standard flock guidance)
-   - Feed: ~1/4 lb per standard hen per day at 16% layer feed; ~20% more in freezing weather
-   - Heat lamps: red bulb, sized roughly 250 W per 4×4 ft coop area for chick brooding; adults rarely need heat
-   - Ventilation: ~1 sq ft of high vent opening per 10 sq ft of coop floor
-   All estimates rounded UP to be safe. Pure functions take a DOM-free "inputs" object so they are testable with a stub. */
+   Rates:
+   - Coop/run, standard birds: 4 sq ft indoors and 10 sq ft of run (inside eXtension and UC Master Gardener 3–4 indoor, and their 10 outdoor).
+   - Bantams: calculator uses 2 indoors and 8 of run, above the Penn State / Maryland minimum of 1 and 4.
+   - Nests: calculator uses 1 box per 3 hens, tighter than the published 1 per 4–5. Communal uses 1 per 5.
+   - Feed: 0.25 lb per standard hen per day (Alabama Extension; Kentucky ASC-191). No 20% winter factor in those pages.
+   - Brooder temps follow Maryland Extension (90–95°F, then −5°F per week). Wattage and the adult heat line are site planning, not those pages.
+   - Ventilation: site planning ratio of about 1 sq ft of high opening per 10 sq ft of floor.
+   Estimates round UP. Pure functions take a DOM-free inputs object. */
 "use strict";
 
 /* ================= pure calculation functions (DOM-free) ================= */
@@ -62,7 +62,7 @@ function calcFeed(birds, weeks, pricePer50lb) {
 
 function calcNestBoxes(hens, style) {
   hens = Math.max(0, hens || 0);
-  // 1 box per 3–4 hens → conservative: 1 per 3 (fewer disputes). Communal roll-out nests allow 1 per 5.
+  // Published rate is 1 per 4–5. This function uses 1 per 3 (tighter). Communal uses 1 per 5.
   var perBox = style === "communal" ? 5 : 3;
   var boxes = hens ? Math.ceil(hens / perBox) : 0;
   return {
@@ -78,7 +78,7 @@ function calcHeat(coopSqFt, winterLowF, hasChicks) {
   var low = parseFloat(winterLowF);
   if (isNaN(low)) low = 32;
   // Hardy adult breeds are fine below ~20°F with dry, draft-free ventilation.
-  // Brooder target: 95°F week 1, dropping 5°F/week. Rough rule: 250 W bulb per 4×4 ft (16 sq ft).
+  // Maryland brooder steps are 90–95°F, then −5°F/week. Watts below are a site ratio (250 W per 16 sq ft), not that page.
   var needAdult = low < 20;
   var adultWatts = needAdult ? ceilTo(sqft * 250 / 16, 50) : 0;
   var chickSqft = Math.min(sqft, 16);
@@ -130,13 +130,13 @@ function runCoopCalc(){
       '<div class="stat"><b>'+r.coopFootprint+'</b><span>Example coop footprint</span></div>'+
       '<div class="stat"><b>'+r.runFootprint+'</b><span>Example run footprint</span></div>'+
     '</div>'+
-    '<p class="note">Based on the widely published 4 sq ft indoors + 10 sq ft of run per standard bird (2 + 8 for bantams). Cramped birds peck each other — when in doubt, build bigger than the minimum. Free-ranging birds can use less run, but predators disagree with that plan.</p>'+
+    '<p class="note">Standard birds: 4 sq ft indoors and 10 sq ft of run, inside the published 3–4 sq ft indoor range and the 10 sq ft outdoor figure. Bantam results use 2 and 8, which is above the Penn State and Maryland minimum of 1 and 4. Build above a cramped floor.</p>'+
     nestLine(r, birds);
 }
 
 function nestLine(coop, birds){
   var nb = calcNestBoxes(birds, "standard");
-  return '<p class="note">Flock needs about <strong>'+nb.boxes+' nesting box'+(nb.boxes===1?'':'es')+'</strong> (1 per 3–4 hens) and roughly <strong>'+fmt(birds*0.25)+' lb of feed per day</strong> — check the feed tab.</p>';
+  return '<p class="note">Flock needs about <strong>'+nb.boxes+' nesting box'+(nb.boxes===1?'':'es')+'</strong> at this calculator\'s tighter rate of 1 per 3 hens (published guidance is 1 per 4–5) and roughly <strong>'+fmt(birds*0.25)+' lb of feed per day</strong> — check the feed tab.</p>';
 }
 
 /* 2. Feed calculator */
@@ -155,7 +155,7 @@ function runFeedCalc(){
       '<div class="stat"><b>~'+r.perEggCostCents+'¢</b><span>Feed cost per egg (80% lay rate)</span></div>'+
       '<div class="stat"><b>'+fmt(r.totalLb)+' lb</b><span>For '+weeks+' weeks (~$'+r.totalCost.toFixed(2)+')</span></div>'+
     '</div>'+
-    '<p class="note">Figure is 16% layer pellets for standard hens — bantams eat ~40% less, meat birds considerably more. In freezing weather hens eat ~20% more to stay warm. Scratch grains are a treat, not feed: under 10% of the diet. Free-range forage might trim 10% off in summer, near nothing in winter.</p>';
+    '<p class="note">Alabama Extension: about 0.25 lb per laying hen per day, and layer diets at 16% protein or more. Kentucky Extension states the same quarter-pound rule. Those pages say bantams eat less and that intake can rise in cold weather; they do not give a 40% or 20% adjustment. Scratch is not a complete feed.</p>';
 }
 
 /* 3. Nesting boxes */
@@ -168,12 +168,12 @@ function runNestCalc(){
   if (window.updateMatchedCTA) window.updateMatchedCTA(r.boxes, 'nest');
   box.innerHTML = '<div class="big">'+r.boxes+' <span class="unit">nesting box'+(r.boxes===1?'':'es')+'</span></div>'+
     '<div class="grid2">'+
-      '<div class="stat"><b>'+r.boxes+(r.boxesMax>r.boxes ? '–'+r.boxesMax : '')+'</b><span>Boxes to build (1 per '+(style==="communal"?5:"3–4")+')</span></div>'+
+      '<div class="stat"><b>'+r.boxes+(r.boxesMax>r.boxes ? '–'+r.boxesMax : '')+'</b><span>Boxes to build (1 per '+(style==="communal"?"5, the wide end of 4–5":"3, tighter than the published 4–5")+')</span></div>'+
       '<div class="stat"><b>12 × 12 × 12</b><span>Box size in inches (standard)</span></div>'+
       '<div class="stat"><b>'+fmt(hens)+'</b><span>Hens sharing them</span></div>'+
       '<div class="stat"><b>Below the roost</b><span>Mount boxes lower than perches — they sleep highest</span></div>'+
     '</div>'+
-    '<p class="note">One box per 3–4 hens is the standard guidance; hens fight most over boxes in spring, so the low end (1 per 3) keeps the peace. Communal roll-out nests can serve up to 5 hens each and make egg collection easier — fewer broken and egg-eaten eggs. One box per 2 hens is never wrong if you have the wall space.</p>';
+    '<p class="note">Published guidance is one nest per 4 to 5 hens. This tab counts one per 3, which is tighter than that range. The communal option uses one per 5, the wide end of the same range. Penn State says a chicken nest should be at least 12 by 12 inches, mounted below the roost.</p>';
 }
 
 /* 4. Heat lamp & winter ventilation */
@@ -186,8 +186,8 @@ function runHeatCalc(){
   var box = el("htResult"); box.hidden = false;
   if (window.updateMatchedCTA) window.updateMatchedCTA(r.ventSqFt, 'heat');
   var heatLine = r.adultNeedsHeat
-    ? '<div class="stat"><b>'+r.adultWatts+' W</b><span>Supplemental heat for adults below 20°F (red bulb)</span></div>'
-    : '<div class="stat"><b>None</b><span>Adults are fine — '+low+'°F is above the 20°F line</span></div>';
+    ? '<div class="stat"><b>'+r.adultWatts+' W</b><span>Site planning watts below 20°F — not an extension cutoff</span></div>'
+    : '<div class="stat"><b>None</b><span>No adult watts at '+low+'°F on this planner\'s 20°F line</span></div>';
   box.innerHTML = '<div class="big">'+r.ventSqFt+' <span class="unit">sq ft of high ventilation needed</span></div>'+
     '<div class="grid2">'+
       heatLine+
@@ -196,8 +196,8 @@ function runHeatCalc(){
       '<div class="stat"><b>Never close it</b><span>Moisture causes frostbite, not cold</span></div>'+
     '</div>'+
     '<p class="note">'+(r.adultNeedsHeat
-      ? 'At '+low+'°F lows, hardy breeds still manage without heat if the coop is dry and draft-free — heat lamps cause more coop fires than cold kills chickens. If you do heat, use a red 250 W bulb on a thermostat, secured with a chain, with a-rated cords.'
-      : 'Cold kills chickens far less often than damp air does. Keep high vents open all winter; block only low drafts at roost level. A 250 W red heat lamp is for brooders (95°F the first week, dropping 5°F weekly to feather-out around week 6) — secure it with chain and keep flammable bedding 18+ inches away.')+'</p>'+
+      ? 'At '+low+'°F this planner still shows adult watts. The housing pages cited here do not set that cutoff or a 250 W size. Maryland Extension does set brooder temperature: 90–95°F the first week, then 5°F less each week, with the lamp at least 18 inches above the floor.'
+      : 'Maryland Extension starts brooder chicks at 90–95°F and drops 5°F each week, with the lamp at least 18 inches above the floor. The wattage and the 1 sq ft of vent per 10 sq ft of floor are planning ratios on this site, not figures from that page. Keep the coop dry.')+'</p>'+
     '<p class="affil-note small">Coop thermostats, red brooder bulbs, and vent covers on Amazon: <a href="https://www.amazon.com/s?k=chicken+coop+heat+lamp+thermostat&tag=generatorsi0d-20" rel="sponsored nofollow noopener" target="_blank">heat lamps on Amazon</a> · <a href="https://www.amazon.com/s?k=red+brooder+bulb&tag=generatorsi0d-20" rel="sponsored nofollow noopener" target="_blank">red bulbs on Amazon</a> · <a href="https://www.amazon.com/s?k=chicken+coop+vent+cover&tag=generatorsi0d-20" rel="sponsored nofollow noopener" target="_blank">vent covers on Amazon</a></p>';
 }
 
