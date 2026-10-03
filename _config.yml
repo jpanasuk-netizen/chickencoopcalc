@@ -1,0 +1,22 @@
+# GitHub Pages runs Jekyll. This file only keeps repo-internal docs off the
+# published site. It sets no theme and no defaults, so HTML, CSS, JS, XML,
+# JSON, and txt files without front matter are copied unchanged.
+# Defaults are repeated here because a custom exclude list replaces them.
+exclude:
+  - LAUNCH_CHECKLIST.md
+  - README.md
+  - README
+  - smoke-test.js
+  - test
+  - tests
+  - Gemfile
+  - Gemfile.lock
+  - gemfiles
+  - node_modules
+  - vendor
+  - .sass-cache
+  - .jekyll-cache
+  - "*.md"
+  - "*.markdown"
+  - "*.yaml"
+  - "*.yml"
