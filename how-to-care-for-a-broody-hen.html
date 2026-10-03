@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Care for a Broody Hen</title>
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="shortcut icon" href="/assets/favicon.ico">
+<meta property="og:image" content="https://chickencoopcalc.com/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://chickencoopcalc.com/assets/og-image.png">
+<meta name="description" content="Maine, Maryland, and Georgia Extension on a hen that will not leave the nest, plus the nest count this site's calculator returns when she is occupying a box.">
+<link rel="canonical" href="https://chickencoopcalc.com/how-to-care-for-a-broody-hen.html">
+<meta name="robots" content="index,follow">
+<meta property="og:title" content="How to Care for a Broody Hen">
+<meta property="og:description" content="Move her out of the shared pen if she is hatching, or off the nest if you want eggs. The calculator does not add a broody bonus box.">
+<meta property="og:url" content="https://chickencoopcalc.com/how-to-care-for-a-broody-hen.html">
+<meta property="og:type" content="article">
+<link rel="stylesheet" href="assets/styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How to care for a broody hen",
+  "datePublished": "2026-10-03",
+  "dateModified": "2026-10-03",
+  "author": {"@type": "Organization", "name": "Chicken Coop Calc"},
+  "publisher": {"@type": "Organization", "name": "Chicken Coop Calc"},
+  "mainEntityOfPage": "https://chickencoopcalc.com/how-to-care-for-a-broody-hen.html"
+}
+</script>
+<meta name="llms.txt" content="https://chickencoopcalc.com/sources.json">
+</head>
+<body>
+<header class="site-head">
+  <a class="brand" href="index.html">ChickenCoopCalc</a>
+  <nav aria-label="Site">
+    <a href="index.html#calc">Calculator</a>
+    <a href="how-many-nesting-boxes-per-chicken.html">Nesting boxes</a>
+    <a href="chicken-coop-size-by-flock.html">Flock size</a>
+    <a href="topics.html">Topics</a>
+  </nav>
+</header>
+<main>
+<p class="small"><a href="index.html">Home</a> / <a href="topics.html">Questions</a> / How to care for a broody hen</p>
+<h1>How to care for a broody hen</h1>
+<p class="sub">A hen that stays on the nest has stopped being one of the layers who share the boxes. The nest calculator does not know that. This page runs it anyway, then applies what Maine, Maryland, and Georgia say to do with her.</p>
+<p class="small">Built by <a href="/about.html">Jeremy Panasuk</a>. Published October 3, 2026.</p>
+
+<div class="answer-box"><strong>Quick answer:</strong> If you want chicks, University of Maine Extension says to move her to a quiet nest away from the other birds, because leaving her in the pen leads to fighting and broken eggs. If you want eggs to eat, University of Georgia Extension says to take her off the nest whenever you find her there, or use a pen with pebbles instead of litter. For 8 hens, this site's calculator returns 3 boxes at its tighter 1-per-3 rate. Two broodies do not change that function. Georgia says several sitting hens may mean you need more nests for the hens that are still laying, and it does not say how many.</div>
+
+<h2>How to tell, and what she is doing</h2>
+<p>Maryland Extension's hatching fact sheet says a broody hen stays on the nest and refuses to get off, fluffs her feathers and pecks when you take the eggs, and develops a bald patch on the chest that lets body heat reach the eggs. Maine's hatching bulletin adds the evening test: if she is still on the nest at evening, that is a good sign, and broody birds give a cluck you do not hear at other times. Maine also says her estrogen drops, so laying slows or stops, and she can be out of production for a few weeks.</p>
+<p>Maryland says you can put eggs from more than one hen under the same bird. How many she can cover depends on her size. Larger hens can handle up to 20 eggs. The same page says to give her a safe place, food, water, and ventilation so predators do not take her or the eggs.</p>
+<p>Maine's place is specific: a quiet nest, safe from rodents, skunks, and the family dog. Early spring in a basement can work, and the droppings need frequent cleaning. Do not leave her in the pen with the other birds. Many keepers lift her off for a scheduled feed and water. If you let her choose, check once or twice a day that she got back on the eggs. Some hens sit so tightly they may not eat for two to three days. Some first-time hens sit on the floor in sight of the eggs and never cover them.</p>
+<p>Maine says most keepers name the Silkie and the Cochin bantam as strong setters, and that many feather-legged breeds, American breeds, and Asiatic breeds set well. It says Mediterranean breeds, Hamburgs, and Polish are poor choices, and that Rhode Island Reds and Plymouth Rocks are not the best mothers among American breeds. That is a breed note about who will sit. It is not a nest-count formula. The extra box column on the <a href="how-many-nesting-boxes-per-chicken.html">nesting-box page</a> for Silkie, Cochin, and Orpington flocks is this site's allowance. Maine does not publish it.</p>
+
+<h2>If the eggs are for the kitchen</h2>
+<p>Georgia's backyard management guide says to discourage broodiness when the eggs are going to be eaten. A broody hen stops laying, may get aggressive, and sits on a nest in a way that keeps other hens from laying there. The guide's two options are to remove her whenever you find her on the nest, or to put her where sitting is uncomfortable. Some producers use a broody pen with pebbles on the floor instead of litter.</p>
+<p>Georgia also says the natural method produces fewer chicks than an incubator, and that if several hens brood at once you may need additional nests for the hens still laying. "Additional" is the whole number they publish. This page does not turn it into "+1 box" or "+1 box per broody."</p>
+
+<h2 id="worked-example">Worked example: 8 hens, 2 of them broody</h2>
+<p>Inputs are the hen counts. Style is <code>standard</code>, which is this calculator's 1 box per 3 hens. <code>boxesMax</code> is the tighter end of the published 1-per-4 rate, <code>ceil(hens / 4)</code>. Published guidance on the nest page is 1 per 4 to 5. Penn State's count is a third method and is not what this function returns.</p>
+<div class="tbl-wrap">
+<table>
+<thead><tr><th>Call</th><th>Why</th><th class="num">Boxes at 1 per 3</th><th class="num">ceil(hens / 4)</th></tr></thead>
+<tbody>
+<tr><td><code>calcNestBoxes(8, "standard")</code></td><td>Whole flock, which is what the function knows</td><td class="num">3</td><td class="num">2</td></tr>
+<tr><td><code>calcNestBoxes(6, "standard")</code></td><td>The 6 hens still laying, if the 2 broodies have been moved to their own nests</td><td class="num">2</td><td class="num">2</td></tr>
+</tbody>
+</table>
+</div>
+<p>Eight hens at one box per 4 are 2 boxes. At one per 5 they are still 2 boxes (8 ÷ 5 rounds up to 2). The calculator's 3 is tighter than both. If the two broody hens stay in those shared boxes, Georgia's point is that the other hens can be blocked out of them. Maine's point is that those two should not be in the shared pen at all while they are setting. Their nest is then a separate setup, with food and water, and the coop boxes go back to the hens still laying. The function has no input for "boxes currently sat on." Running it on 8 and on 6 shows the before and after. It does not print Georgia's unspecified extra nests.</p>
+
+<h2>Run your own counts</h2>
+<div class="field">
+  <label for="brHens">Hens in the flock</label>
+  <input id="brHens" type="number" min="1" step="1" value="8">
+</div>
+<div class="field">
+  <label for="brBroody">How many of them are sitting and will not get off</label>
+  <input id="brBroody" type="number" min="0" step="1" value="2">
+</div>
+<p><button type="button" id="brBtn" style="background:var(--acc);color:#fff;border:none;border-radius:8px;padding:.7rem 1.4rem;font-size:1.05rem;cursor:pointer;font-weight:600">Count the boxes</button></p>
+<div id="brOut" class="answer-box" hidden></div>
+
+<h2>Common mistake</h2>
+<p>Leaving her in a community nest and still counting that box as open for the layers. Georgia says she sits there to keep the others out, and she has stopped laying. The matching housing mistake is the one Maine names directly: leaving her in the pen with the flock, which leads to fighting and broken eggs. Checking once a day is part of Maine's instruction when she controls her own feeding schedule. A hen that has not eaten in two or three days can still be inside the range Maine describes. The check is how you know she returned to the eggs, not a reason to declare her finished.</p>
+
+<h2>Limits, and when to call someone</h2>
+<p>Maine, Maryland, and Georgia describe housing, feeding, and whether to let her sit. They do not give a drug, a dose, or a treatment for an injured hen or for chicks a first-time hen attacks. Maine says some first-time mothers attack the chicks and that you should be ready to rescue them. That is the point where a veterinarian, not a nest count, is the next step. Sick-flock signs (sudden deaths, gasping, green diarrhea, a drop in eggs) belong to the <a href="how-to-introduce-new-chickens-to-your-flock.html">APHIS list on the new-bird page</a>, and the phone number there is 1-866-536-7593. Broodiness itself is not that list.</p>
+<p>After hatch, chick feed and brooder floor space are on the <a href="how-to-feed-baby-chicks.html">baby chick page</a>. A hen that is brooding them is the heat source Maine prefers to an incubator. Day-old chicks bought from a hatchery still need the brooder schedule, because they do not have her.</p>
+
+<h2>Related</h2>
+<ul>
+<li><a href="index.html#calc">Chicken coop calculator</a> — the nest tab calls the same function.</li>
+<li><a href="how-many-nesting-boxes-per-chicken.html">Nesting boxes per chicken</a> — the 1-per-4-to-5 rate and the box dimensions.</li>
+<li><a href="chicken-coop-size-by-flock.html">Coop size by flock size</a> — floor space for the hens that are not sitting in a separate nest.</li>
+</ul>
+
+<p>Compiled with AI assistance from the sources below. Spot an error? Email <a href="mailto:jpanasuk@gmail.com">jpanasuk@gmail.com</a>.</p>
+<h2>Sources</h2>
+<ul>
+<li>University of Maine Cooperative Extension, Bulletin 2072, "Hatching Your Own Chicks." <a href="https://extension.umaine.edu/publications/2072e/">https://extension.umaine.edu/publications/2072e/</a>. Accessed Oct 3, 2026.</li>
+<li>University of Maryland Extension, "Hatching Eggs at Home," FS-1114. <a href="https://www.extension.umd.edu/resource/hatching-eggs-home-fs-1114">https://www.extension.umd.edu/resource/hatching-eggs-home-fs-1114</a>. Accessed Oct 3, 2026.</li>
+<li>University of Georgia Extension, "Management Guide for the Backyard Flock," Circular 969. <a href="https://fieldreport.caes.uga.edu/publications/C969/management-guide-for-the-backyard-flock/">https://fieldreport.caes.uga.edu/publications/C969/management-guide-for-the-backyard-flock/</a>. Accessed Oct 3, 2026.</li>
+</ul>
+</main>
+<footer>Built by <a href="/about.html">Jeremy Panasuk</a> · <a href="/about.html">About &amp; how this was made</a> · <a href="/index.html#methodology-note">Methodology</a> · <a href="/privacy.html">Privacy</a> · <a href="/contact.html">Contact</a> · pages may contain affiliate links</footer>
+<script src="assets/app.js"></script>
+<script>
+function runBroodyExample() {
+  var hens = parseFloat(document.getElementById("brHens").value);
+  var broody = parseFloat(document.getElementById("brBroody").value);
+  var box = document.getElementById("brOut");
+  if (!hens || hens < 1) { box.hidden = false; box.innerHTML = "<p>Enter the number of hens.</p>"; return; }
+  if (isNaN(broody) || broody < 0) broody = 0;
+  if (broody > hens) { box.hidden = false; box.innerHTML = "<p>Broody hens cannot outnumber the flock.</p>"; return; }
+  var all = calcNestBoxes(hens, "standard");
+  var left = hens - broody;
+  var lay = calcNestBoxes(left, "standard");
+  box.hidden = false;
+  box.innerHTML =
+    '<div class="big">' + all.boxes + ' <span class="unit">boxes for the whole flock at 1 per 3</span></div>' +
+    '<div class="grid2">' +
+      '<div class="stat"><b>' + all.boxes + ' (max ' + all.boxesMax + ')</b><span>calcNestBoxes(' + hens + ', "standard"). boxesMax is ceil(hens / 4).</span></div>' +
+      '<div class="stat"><b>' + lay.boxes + ' (max ' + lay.boxesMax + ')</b><span>calcNestBoxes(' + left + ', "standard") after ' + broody + ' sitting hens are moved off the shared nests.</span></div>' +
+    '</div>' +
+    '<p class="note">Inputs: ' + hens + ' hens, ' + broody + ' of them broody. The function has no broody argument. Georgia says you may need additional nests for the hens still laying if several birds brood at once, and it does not give that extra count. Maine says the setting hen should not stay in the pen with the others.</p>';
+}
+document.getElementById("brBtn").addEventListener("click", runBroodyExample);
+</script>
+</body>
+</html>

@@ -24,7 +24,7 @@
     {
       "@type": "Question",
       "name": "How much does it cost to feed 6 chickens per month?",
-      "acceptedAnswer": { "@type": "Answer", "text": "At 0.25 lb per hen per day, six laying hens eat about 46 lb a month (6 × 0.25 × 30.4). Alabama Extension states that 0.25 lb figure, and Kentucky Extension states a quarter pound per hen per day. At $22 per 50 lb bag that is roughly $20 a month. Those pages do not give a percent increase for freezing weather. Minnesota Extension's separate rate is about 3 lb a week for a 6-pound hen." }
+      "acceptedAnswer": { "@type": "Answer", "text": "At 0.25 lb per hen per day, six laying hens eat about 46 lb a month. Alabama Extension and Kentucky Extension state that quarter-pound figure. At $22 per 50 lb bag, calcFeed returns about $20.09. Minnesota's cold-weather page says intake may rise up to 25 percent. The calculator does not apply that percent. Ohio says each laying chicken requires 2 lb of feed per week, which is a different weekly total." }
     },
     {
       "@type": "Question",
@@ -84,6 +84,18 @@
 <script>
 document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getElementById('sources-data').textContent);var s=document.createElement('div');s.className='sources-section';s.innerHTML='<h2 id="sources-heading">Sources & Standards</h2><p>Published references for coop space, nests, and feed:</p><ul>'+d.sources.map(x=>'<li><a href="'+x.url+'" target="_blank">'+x.title+'</a></li>').join('')+'</ul><p><button id="cite-toggle">Show Copyable Citations</button></p><div id="cite-output" style="display:none"></div>';var t=document.querySelector('nav')||document.querySelector('footer')||document.body;t.parentNode.insertBefore(s,t);var o=s.querySelector('#cite-toggle'),c=s.querySelector('#cite-output');o.onclick=()=>{c.textContent=d.sources.map(x=>x.title+'. '+x.url+'. Accessed '+x.date).join('\n\n');c.style.display='block';o.style.display='none'};});
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "What does it cost to feed backyard chickens?",
+  "datePublished": "2026-10-03",
+  "dateModified": "2026-10-03",
+  "author": {"@type": "Organization", "name": "Chicken Coop Calc"},
+  "publisher": {"@type": "Organization", "name": "Chicken Coop Calc"},
+  "mainEntityOfPage": "https://chickencoopcalc.com/chicken-feed-cost-guide.html"
+}
+</script>
 <meta name="llms.txt" content="https://chickencoopcalc.com/sources.json">
 </head>
 <body>
@@ -93,9 +105,10 @@ document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getE
 </header>
 <main>
 <h1>What does it cost to feed backyard chickens?</h1>
-<p class="sub">The honest math: ¼ lb per hen per day is the planning number. Everything else is price-shopping and loss control.</p>
+<p class="sub">The planning number is ¼ lb per hen per day. Other extension pages publish different weekly totals and a winter percent. The calculator applies none of those adjustments.</p>
+<p class="small">Built by <a href="/about.html">Jeremy Panasuk</a>. Updated October 3, 2026.</p>
 
-<div class="answer-box"><strong>Quick answer:</strong> At a quarter pound per hen per day, six laying hens eat about 46 lb of feed per month — roughly $20 at $22 per 50 lb bag, about one bag a month. Alabama Extension states that 0.25 lb figure, and Kentucky Extension states the same quarter-pound rule. Neither page gives a percent increase for freezing weather.</div>
+<div class="answer-box"><strong>Quick answer:</strong> At a quarter pound per hen per day, six laying hens eat 1.5 lb a day and about 46 lb a month. <code>calcFeed(6, 4, 22)</code> returns $20.09 a month at $22 per 50 lb bag, about 14¢ of feed per egg at the function's 80% lay rate. Alabama and Kentucky state the quarter-pound rule and do not give a winter percent. Minnesota's cold-weather page says intake may increase up to 25 percent. Ohio says each laying chicken requires 2 lb a week.</div>
 
 <h2>Monthly feed by flock size</h2>
 <div class="tbl-wrap">
@@ -109,23 +122,96 @@ document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getE
   </tbody>
 </table>
 </div>
-<p class="small">Standard-size layers. Alabama Extension lists layer diets at 16% protein or more. Kentucky Extension says standard hens eat more than bantams. <a href="https://extension.umn.edu/agriculture/animals-and-livestock/poultry/raising-chickens-for-eggs">Minnesota Extension</a> gives a higher intake, about 3 lb a week for a 6-pound hen, and says consumption may rise in winter without a percent. This table uses the quarter-pound figure and does not apply a 20% or 40% adjustment.</p>
+<p class="small">Standard-size layers. Alabama Extension lists layer diets at 16% protein or more. Kentucky Extension says standard hens eat more than bantams. <a href="https://extension.umn.edu/agriculture/animals-and-livestock/poultry/raising-chickens-for-eggs">Minnesota Extension</a> gives a higher intake, about 3 lb a week for a 6-pound hen. This table uses the quarter-pound figure. It does not apply a 20% or 40% adjustment, and it does not apply the 25 percent below.</p>
+
+<h2 id="worked-example">Worked example through the feed function</h2>
+<p>Inputs: 6 hens, 4 weeks, $22 per 50 lb bag. <code>calcFeed(6, 4, 22)</code> uses 0.25 lb per hen per day and a 30.44-day month.</p>
+<ul>
+<li>Per day: 6 × 0.25 = <strong>1.5 lb</strong>.</li>
+<li>Per month: 1.5 × 30.44 = 45.66, which the function rounds to <strong>46 lb</strong>. Bags: ceil(45.66 / 50) = <strong>1</strong>.</li>
+<li>Cost: (45.66 / 50) × 22 = <strong>$20.09</strong>.</li>
+<li>Per egg: the function assumes an 80% lay rate, so 6 × 0.8 × 30.44 = 146.112 eggs. $20.09 / 146.112 × 100 rounds to <strong>14¢</strong>.</li>
+<li>Over the 4 weeks you typed: 1.5 × 7 × 4 = <strong>42 lb</strong>, and (42 / 50) × 22 = <strong>$18.48</strong>.</li>
+</ul>
+<p>Three other published totals sit next to that result and are not inside the function.</p>
+<ul>
+<li>Minnesota's cold-weather page says feed intake may increase up to 25 percent. The function does not multiply by 1.25. The raising-chickens-for-eggs page still says about 3 lb a week for a 6-pound hen, which for six hens is 18 lb a week, higher than 1.5 × 7 = 10.5 lb.</li>
+<li>Ohio's winter sheet says each laying chicken requires 2 lb of feed per week, and that chickens eat less in winter than in summer. Six hens on that weekly line are 12 lb a week. That is not 10.5 lb, and it is not a 25 percent increase.</li>
+<li>Missouri says 100 lightweight mature layers eat about 25 lb of feed a day (0.25 lb each, the same quarter pound) and 100 heavy birds eat about 30 lb a day (0.30 lb each). The function has no heavy-breed switch.</li>
+</ul>
+<p>Chicks are a fourth mismatch. Twelve brown-egg chicks are 48 lb of starter through six weeks on Maryland's table, while <code>calcFeed(12, 6, 22)</code> returns 126 lb. That comparison is on the <a href="how-to-feed-baby-chicks.html">baby chick page</a>. Daily drinking water for these six hens is on the <a href="how-much-water-does-a-chicken-drink.html">water page</a>: the 1.5 lb of feed is the input Kentucky compares with water by weight.</p>
+<div class="field">
+  <label for="exBirds">Hens</label>
+  <input id="exBirds" type="number" min="1" step="1" value="6">
+</div>
+<div class="field">
+  <label for="exWeeks">Weeks</label>
+  <input id="exWeeks" type="number" min="1" step="1" value="4">
+</div>
+<div class="field">
+  <label for="exPrice">Price per 50 lb bag, dollars</label>
+  <input id="exPrice" type="number" min="0" step="0.01" value="22">
+</div>
+<p><button type="button" id="exBtn" style="background:var(--acc);color:#fff;border:none;border-radius:8px;padding:.7rem 1.4rem;font-size:1.05rem;cursor:pointer;font-weight:600">Run calcFeed</button></p>
+<div id="exOut" class="answer-box" hidden></div>
+
+<h2>Common mistake</h2>
+<p>Taking Minnesota's "up to 25 percent" or Ohio's 2 lb a week and typing a fudge factor into a spreadsheet that already uses 0.25 lb. The function's job is the quarter-pound path Alabama and Kentucky state. The other sentences stay beside it, labeled. Scratch is the other leak. Maryland's feeding guide says scratch, if you use it, should generally be about 10 percent of daily intake because it dilutes a complete diet. Minnesota's cold-weather page says no more than a handful per 10 birds. A handful is not a weight on that page, so this page does not convert it to pounds.</p>
+
+<h2>Limits, and when to call someone</h2>
+<p>Maryland says the wrong ration shows up fast in a growing bird and is often irreversible. Homemade feeds are where diagnostic labs see curly toe paralysis, nutritional coryza, and rickets. A bird that cannot stand, or a flock on a mix you built yourself, is a veterinarian or extension call. Layer feed for chicks is the specific ban on the <a href="how-to-feed-baby-chicks.html">chick page</a>: Maryland says the calcium can cause improper bone formation, kidney failure, and possibly death.</p>
 
 <h2>Cost per egg — the real number</h2>
 <p>A hen at an 80% lay rate produces about 24 eggs a month. Six hens eating $20 of feed produce ~146 eggs: <strong>about 13–14¢ per egg in feed alone</strong>. That beats organic boutique eggs, ties store specials, and loses to the loss-leader dozen — but you're not doing this to save 40¢. Still, the number matters when someone tells you chickens are free food. They aren't. They're 13¢ eggs, minus the coop, plus the entertainment.</p>
 
 <h2>Where the money leaks</h2>
-<p><strong>Spill:</strong> open troughs let hens scratch feed onto the floor. Trough length is on the <a href="how-much-feeder-space-per-chicken.html">feeder space per chicken</a> page. <strong>Rats and mice:</strong> they eat stored feed and contaminate more than they swallow; use metal cans, not plastic. <strong>Wrong feed:</strong> Alabama Extension lists layer diets at 16% protein or more. Scratch grain is not that diet. These pages do not publish a scratch-protein percent or a maximum treat share.</p>
+<p><strong>Spill:</strong> open troughs let hens scratch feed onto the floor. Trough length is on the <a href="how-much-feeder-space-per-chicken.html">feeder space per chicken</a> page. <strong>Rats and mice:</strong> they eat stored feed and contaminate more than they swallow; use metal cans, not plastic. <strong>Wrong feed:</strong> Alabama Extension lists layer diets at 16% protein or more. Scratch grain is not that diet. Maryland's feeding guide says scratch, when you use it, should generally be about 10 percent of daily intake. The worked example above is where that limit is spelled out.</p>
 
 <h2>Cutting cost without cutting lay rate</h2>
 <p>Buy by the pallet when prices dip, and split a bag with a neighbor. At a quarter pound a day, a 50 lb bag lasts one hen about 6–7 weeks and six hens about a month. Kitchen scraps are a supplement. These feed pages do not publish a fermenting-feed savings percent.</p>
 
 <div class="affil">
   <span class="tag">Feeders &amp; storage</span>
-  <p class="small">Treadle feeders, galvanized cans, and feed storage: <a href="https://www.amazon.com/s?k=chicken+treadle+feeder&tag=generatorsi0d-20" rel="sponsored nofollow noopener" target="_blank">treadle feeders on Amazon</a> · <a href="https://www.amazon.com/s?k=galvanized+trash+can+with+lid&tag=generatorsi0d-20" rel="sponsored nofollow noopener" target="_blank">storage cans on Amazon</a> · <a href="https://www.amazon.com/s?k=layer+feed+50+lb&tag=generatorsi0d-20" rel="sponsored nofollow noopener" target="_blank">layer feed on Amazon</a></p>
+  <p class="small">Affiliate disclosure: as an Amazon Associate, we earn from qualifying purchases — at no cost to you. Treadle feeders, galvanized cans, and feed storage: <a href="https://www.amazon.com/s?k=chicken+treadle+feeder&tag=generatorsi0d-20" rel="sponsored nofollow noopener" target="_blank">treadle feeders on Amazon</a> · <a href="https://www.amazon.com/s?k=galvanized+trash+can+with+lid&tag=generatorsi0d-20" rel="sponsored nofollow noopener" target="_blank">storage cans on Amazon</a> · <a href="https://www.amazon.com/s?k=layer+feed+50+lb&tag=generatorsi0d-20" rel="sponsored nofollow noopener" target="_blank">layer feed on Amazon</a></p>
 </div>
 
-<footer>Built by Jeremy Panasuk · <a href="/about.html">About &amp; how this was made</a> · <a href="/index.html#methodology-note">Methodology</a> · <a href="/privacy.html">Privacy</a> · <a href="/contact.html">Contact</a> · pages may contain affiliate links</footer>
+<p>Compiled with AI assistance from the sources below. Spot an error? Email <a href="mailto:jpanasuk@gmail.com">jpanasuk@gmail.com</a>.</p>
+<h2>Sources</h2>
+<ul>
+<li>Alabama Cooperative Extension, "Feeding the Laying Hen." <a href="https://www.aces.edu/blog/topics/farming/backyard-small-poultry-flock-management-series-feeding-the-laying-hen/">https://www.aces.edu/blog/topics/farming/backyard-small-poultry-flock-management-series-feeding-the-laying-hen/</a>. Accessed Oct 3, 2026.</li>
+<li>University of Kentucky Extension, ASC-191, "How Much Will My Chickens Eat?" <a href="https://publications.mgcafe.uky.edu/files/ASC191.pdf">https://publications.mgcafe.uky.edu/files/ASC191.pdf</a>. Accessed Oct 3, 2026.</li>
+<li>University of Minnesota Extension, "Caring for chickens in cold weather" (reviewed 2026), for the "up to 25 percent" intake sentence and the handful of scratch per 10 birds. <a href="https://extension.umn.edu/poultry/caring-chickens-cold-weather">https://extension.umn.edu/poultry/caring-chickens-cold-weather</a>. Accessed Oct 3, 2026.</li>
+<li>University of Minnesota Extension, "Raising chickens for eggs," for about 3 lb a week for a 6-pound hen. <a href="https://extension.umn.edu/agriculture/animals-and-livestock/poultry/raising-chickens-for-eggs">https://extension.umn.edu/agriculture/animals-and-livestock/poultry/raising-chickens-for-eggs</a>.</li>
+<li>Ohio State University Extension, "Winter and Your Backyard Chickens," ANR-66, for 2 lb of feed per laying chicken per week. <a href="https://ohioline.osu.edu/factsheet/anr-66">https://ohioline.osu.edu/factsheet/anr-66</a>. Accessed Oct 3, 2026.</li>
+<li>University of Missouri Extension, G8350, for 25 lb a day per 100 lightweight layers and 30 lb a day per 100 heavy birds. <a href="https://extension.missouri.edu/publications/g8350">https://extension.missouri.edu/publications/g8350</a>. Accessed Oct 3, 2026.</li>
+<li>University of Maryland Extension, "Feeding the Flock," for scratch at about 10 percent of daily intake and the warning on homemade rations. <a href="https://extension.umd.edu/resource/feeding-flock">https://extension.umd.edu/resource/feeding-flock</a>. Accessed Oct 3, 2026.</li>
+</ul>
+
+<footer>Built by <a href="/about.html">Jeremy Panasuk</a> · <a href="/about.html">About &amp; how this was made</a> · <a href="/index.html#methodology-note">Methodology</a> · <a href="/privacy.html">Privacy</a> · <a href="/contact.html">Contact</a> · pages may contain affiliate links</footer>
+<script src="assets/app.js"></script>
+<script>
+function runFeedExample() {
+  var birds = parseFloat(document.getElementById("exBirds").value);
+  var weeks = parseFloat(document.getElementById("exWeeks").value);
+  var price = parseFloat(document.getElementById("exPrice").value);
+  var box = document.getElementById("exOut");
+  if (!birds || birds < 1) { box.hidden = false; box.innerHTML = "<p>Enter at least one hen.</p>"; return; }
+  if (!weeks || weeks < 0) weeks = 0;
+  if (isNaN(price) || price < 0) price = 0;
+  var r = calcFeed(birds, weeks, price);
+  box.hidden = false;
+  box.innerHTML =
+    '<div class="big">' + r.lbMonth + ' <span class="unit">lb per month · $' + r.monthlyCost.toFixed(2) + '</span></div>' +
+    '<div class="grid2">' +
+      '<div class="stat"><b>' + r.lbPerDay + ' lb/day</b><span>calcFeed(' + birds + ', ' + weeks + ', ' + price + '). Rate is 0.25 lb per hen.</span></div>' +
+      '<div class="stat"><b>' + r.bagsMonth + ' bags</b><span>50 lb bags, rounded up from the month pounds.</span></div>' +
+      '<div class="stat"><b>' + r.perEggCostCents + '¢</b><span>Feed cost per egg at the function 80% lay rate.</span></div>' +
+      '<div class="stat"><b>' + r.totalLb + ' lb</b><span>Over ' + weeks + ' weeks, $' + r.totalCost.toFixed(2) + '.</span></div>' +
+    '</div>' +
+    '<p class="note">Minnesota cold weather: intake may rise up to 25 percent. This result does not apply that percent. Ohio lists 2 lb per hen per week. Missouri lists 0.30 lb for heavy birds. Those figures are not inside calcFeed.</p>';
+}
+document.getElementById("exBtn").addEventListener("click", runFeedExample);
+</script>
 </main>
 
 

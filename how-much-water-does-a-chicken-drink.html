@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How Much Water Does a Chicken Drink?</title>
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="shortcut icon" href="/assets/favicon.ico">
+<meta property="og:image" content="https://chickencoopcalc.com/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://chickencoopcalc.com/assets/og-image.png">
+<meta name="description" content="Daily water for a backyard flock from Utah State, Missouri, Kentucky, and Georgia Extension, plus a feed-calculator example. No single gallon figure.">
+<link rel="canonical" href="https://chickencoopcalc.com/how-much-water-does-a-chicken-drink.html">
+<meta name="robots" content="index,follow">
+<meta property="og:title" content="How Much Water Does a Chicken Drink?">
+<meta property="og:description" content="Cool-weather and hot-weather gallon ranges for laying hens, with the flock's feed pounds from this site's calculator shown beside them.">
+<meta property="og:url" content="https://chickencoopcalc.com/how-much-water-does-a-chicken-drink.html">
+<meta property="og:type" content="article">
+<link rel="stylesheet" href="assets/styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How much water does a chicken drink?",
+  "datePublished": "2026-10-03",
+  "dateModified": "2026-10-03",
+  "author": {"@type": "Organization", "name": "Chicken Coop Calc"},
+  "publisher": {"@type": "Organization", "name": "Chicken Coop Calc"},
+  "mainEntityOfPage": "https://chickencoopcalc.com/how-much-water-does-a-chicken-drink.html"
+}
+</script>
+<meta name="llms.txt" content="https://chickencoopcalc.com/sources.json">
+</head>
+<body>
+<header class="site-head">
+  <a class="brand" href="index.html">ChickenCoopCalc</a>
+  <nav aria-label="Site">
+    <a href="index.html#calc">Calculator</a>
+    <a href="chicken-coop-size-by-flock.html">Flock size</a>
+    <a href="chicken-feed-cost-guide.html">Feed cost</a>
+    <a href="how-much-feeder-space-per-chicken.html">Feeder space</a>
+    <a href="topics.html">Topics</a>
+  </nav>
+</header>
+<main>
+<p class="small"><a href="index.html">Home</a> / <a href="topics.html">Questions</a> / How much water does a chicken drink?</p>
+<h1>How much water does a chicken drink?</h1>
+<p class="sub">Gallons per hen depend on the weather table you use. This page runs the flock through the feed calculator, then applies each published water rate on its own.</p>
+<p class="small">Built by <a href="/about.html">Jeremy Panasuk</a>. Published October 3, 2026.</p>
+
+<div class="answer-box"><strong>Quick answer:</strong> Utah State Extension plans 0.05 to 0.08 gallon per adult chicken per day in cool weather and 0.08 to 0.16 gallon in hot weather. Six hens are 0.30 to 0.48 gallon a day on the cool range. The same six hens eat 1.5 lb of layer feed a day on this site's calculator (6 × 0.25). Kentucky says chickens drink about twice as much water as feed by weight under normal conditions, which is 3 lb of water for that 1.5 lb of feed, and it publishes a separate gallon table.</div>
+
+<h2>Published daily amounts</h2>
+<div class="tbl-wrap">
+<table>
+<thead><tr><th>Figure</th><th>Amount</th><th>Source</th></tr></thead>
+<tbody>
+<tr><td>Adult, cool weather</td><td class="num">0.05–0.08 gal/bird/day</td><td><a href="https://extension.usu.edu/poultry/research/basics-for-raising-backyard-chickens">Utah State Extension</a></td></tr>
+<tr><td>Adult, hot weather</td><td class="num">0.08–0.16 gal/bird/day</td><td><a href="https://extension.usu.edu/poultry/research/basics-for-raising-backyard-chickens">Utah State Extension</a></td></tr>
+<tr><td>Twenty hens, cool weather</td><td class="num">about 1 gallon/day</td><td><a href="https://extension.missouri.edu/publications/g8350">Missouri Extension</a> and <a href="https://fieldreport.caes.uga.edu/publications/C969/management-guide-for-the-backyard-flock/">Georgia Extension</a></td></tr>
+<tr><td>Layers</td><td class="num">6–8 gal per 100 birds/day</td><td><a href="https://extension.missouri.edu/publications/g8350">Missouri Extension</a></td></tr>
+<tr><td>Layers above 80°F</td><td class="num">at least 9 gal per 100 birds/day</td><td><a href="https://extension.missouri.edu/publications/g8350">Missouri Extension</a></td></tr>
+<tr><td>Layer hens at 68°F</td><td class="num">5.55 gal per 100 birds/day</td><td><a href="https://afs.mgcafe.uky.edu/poultry/chapter-12-introduction">University of Kentucky</a></td></tr>
+<tr><td>Layer hens at 89.6°F</td><td class="num">10.57 gal per 100 birds/day</td><td><a href="https://afs.mgcafe.uky.edu/poultry/chapter-12-introduction">University of Kentucky</a></td></tr>
+<tr><td>Water vs feed, by weight</td><td class="num">about twice as much water as food</td><td><a href="https://afs.mgcafe.uky.edu/poultry/chapter-12-introduction">University of Kentucky</a>, normal conditions. Extreme heat stress may quadruple the water requirement.</td></tr>
+</tbody>
+</table>
+</div>
+<p>Drinker inches and nipple counts are a different measurement. They are on the <a href="how-much-feeder-space-per-chicken.html">feeder and drinker space</a> page. A five-gallon waterer that covers up to 75 hens is a container size, not a daily intake.</p>
+
+<h2 id="worked-example">Worked example: 6 hens</h2>
+<p>Inputs to <code>calcFeed</code>: 6 birds, 4 weeks, $0 a bag. The price does not change the pounds. The function uses 0.25 lb per hen per day.</p>
+<ul>
+<li>Feed: 6 × 0.25 = <strong>1.5 lb/day</strong>. Over a 30.44-day month the function rounds that to 46 lb.</li>
+<li>Kentucky, by weight: 1.5 lb of feed × 2 = <strong>3 lb of water</strong> a day under normal conditions. That page does not convert those pounds into gallons in the same sentence.</li>
+<li>Utah, cool: 6 × 0.05 = <strong>0.30 gallon</strong> and 6 × 0.08 = <strong>0.48 gallon</strong>.</li>
+<li>Utah, hot: 6 × 0.08 = <strong>0.48 gallon</strong> and 6 × 0.16 = <strong>0.96 gallon</strong>.</li>
+<li>Missouri's twenty-hens line: 6/20 × 1 gallon = <strong>0.30 gallon</strong> in cool weather.</li>
+<li>Missouri's layer line: 6/100 × 6 = <strong>0.36 gallon</strong> and 6/100 × 8 = <strong>0.48 gallon</strong>. Above 80°F, 6/100 × 9 = <strong>0.54 gallon</strong> as the minimum on that sentence.</li>
+<li>Kentucky's table: 6/100 × 5.55 = <strong>0.333 gallon</strong> at 68°F, and 6/100 × 10.57 = <strong>0.634 gallon</strong> at 89.6°F (the exact product is 0.6342).</li>
+</ul>
+<p>A 1-gallon fountain, on the Utah page, holds a day's water for 12 to 15 adult chickens in cool weather and 6 to 12 in hot weather. Six hens sit inside the cool-weather capacity of one fountain. The same page says to provide at least two or three additional drinkers beyond the estimated consumption, so the capacity sentence and the extra-drinker sentence both stay in force.</p>
+
+<h2>Run your own count</h2>
+<div class="field">
+  <label for="waBirds">Adult chickens</label>
+  <input id="waBirds" type="number" min="1" step="1" value="6">
+</div>
+<p><button type="button" id="waBtn" style="background:var(--acc);color:#fff;border:none;border-radius:8px;padding:.7rem 1.4rem;font-size:1.05rem;cursor:pointer;font-weight:600">Calculate feed and water</button></p>
+<div id="waOut" class="answer-box" hidden></div>
+<p class="small">The feed line is <code>calcFeed</code> from this site. The gallon lines multiply the bird count by the constants in the table above. The function does not contain a water formula.</p>
+
+<h2>Chicks are a different row</h2>
+<p>Missouri's chick schedule is 3 gallons a day per 100 chicks at six weeks, 5 gallons at 10 weeks, and 6 gallons at 12 or 13 weeks. Twelve chicks at six weeks are 12/100 × 3 = 0.36 gallon. That is not the adult 0.05 to 0.08 gallon line. Starter feed for those chicks is on the <a href="how-to-feed-baby-chicks.html">baby chick feed</a> page. The laying-hen quarter-pound rate is the wrong feed input for them.</p>
+
+<h2>A broiler water-to-feed ratio stays on the broiler page</h2>
+<p>University of Georgia's drinking-water primer measured commercial broilers at 1.55 lb of water per lb of feed in cold weather, 1.65 in mild weather, and 1.75 in hot weather, and it says broilers consume about 1.6 to 2.0 times as much water as feed by weight. This page does not multiply the laying-hen feed result by 1.55, 1.65, or 1.75.</p>
+
+<h2>Common mistake</h2>
+<p>Sizing the waterer from the five-gallon "up to 75 hens" container rule and never checking the daily gallons. Six hens can share a small fountain and still drink 0.30 to 0.48 gallon on the cool-weather lines. In hot weather the Utah top end for those six hens is 0.96 gallon, and Kentucky's 89.6°F table is 0.634 gallon. A fountain that is large enough on a cool morning can be empty by afternoon. Utah also says water left sitting grows bacteria and, in winter, freezes. Frozen water is the winter failure mode on the <a href="winter-coop-heat-lamp-guide.html#winterize">winterizing section</a>.</p>
+
+<h2>Limits, and when to call someone</h2>
+<p>Kentucky says an exact water requirement cannot be stated, and that extreme heat stress may quadruple intake. If birds pant, stop eating, or the drinker is empty on a hot day, treat that as a flock emergency and call a veterinarian. Georgia's management guide says to scrub drinkers daily and gives 1–2 teaspoons of bleach per 20 gallons of drinking water to inhibit bacterial growth. That rate is for 20 gallons. This page does not rescale it to a one-gallon fountain. Georgia's primer says each farm should have its well water tested, and that a county agent can submit samples. Poor water is a lab question, not a gallon estimate.</p>
+
+<p><a class="btn-amz" href="https://www.amazon.com/s?k=1+gallon+poultry+fountain+waterer&amp;tag=generatorsi0d-20" rel="sponsored nofollow noopener" target="_blank">Search Amazon for a 1 gallon poultry fountain</a></p>
+<p class="small">Affiliate disclosure: as an Amazon Associate, we earn from qualifying purchases — at no cost to you. Utah State describes a 1-gallon fountain as a common feed-store drinker. This link is a search for that capacity. It is not a review.</p>
+
+<h2>Related</h2>
+<ul>
+<li><a href="index.html#calc">Chicken coop calculator</a> — the feed tab uses the same <code>calcFeed</code> function.</li>
+<li><a href="chicken-feed-cost-guide.html#worked-example">Feed pounds and cost</a> for the same flock.</li>
+<li><a href="how-much-feeder-space-per-chicken.html">Feeder inches, drinker inches, and nipples</a>.</li>
+<li><a href="chicken-coop-size-by-flock.html">Coop size by flock size</a>.</li>
+</ul>
+
+<p>Compiled with AI assistance from the sources below. Spot an error? Email <a href="mailto:jpanasuk@gmail.com">jpanasuk@gmail.com</a>.</p>
+<h2>Sources</h2>
+<ul>
+<li>Utah State University Extension, "Basics for Raising Backyard Chickens" (June 2010). <a href="https://extension.usu.edu/poultry/research/basics-for-raising-backyard-chickens">https://extension.usu.edu/poultry/research/basics-for-raising-backyard-chickens</a>. Accessed Oct 3, 2026.</li>
+<li>University of Missouri Extension, "Small Flock Series: Managing a Family Chicken Flock," G8350 (reviewed September 2017). <a href="https://extension.missouri.edu/publications/g8350">https://extension.missouri.edu/publications/g8350</a>. Accessed Oct 3, 2026.</li>
+<li>University of Kentucky, Animal and Food Sciences, "Chapter 12 — Introduction" (water consumption table). <a href="https://afs.mgcafe.uky.edu/poultry/chapter-12-introduction">https://afs.mgcafe.uky.edu/poultry/chapter-12-introduction</a>. Accessed Oct 3, 2026.</li>
+<li>University of Georgia Extension, "Management Guide for the Backyard Flock," Circular 969. <a href="https://fieldreport.caes.uga.edu/publications/C969/management-guide-for-the-backyard-flock/">https://fieldreport.caes.uga.edu/publications/C969/management-guide-for-the-backyard-flock/</a>. Accessed Oct 3, 2026.</li>
+<li>University of Georgia Extension, "Poultry Drinking Water Primer," Bulletin 1301 (revised April 14, 2015). <a href="https://fieldreport.caes.uga.edu/publications/B1301/poultry-drinking-water-primer/">https://fieldreport.caes.uga.edu/publications/B1301/poultry-drinking-water-primer/</a>. Accessed Oct 3, 2026.</li>
+<li>Alabama Cooperative Extension, "Feeding the Laying Hen," and University of Kentucky Extension ASC-191, for the 0.25 lb feed rate inside <code>calcFeed</code>. The water pages above are the gallon sources.</li>
+</ul>
+</main>
+<footer>Built by <a href="/about.html">Jeremy Panasuk</a> · <a href="/about.html">About &amp; how this was made</a> · <a href="/index.html#methodology-note">Methodology</a> · <a href="/privacy.html">Privacy</a> · <a href="/contact.html">Contact</a> · pages may contain affiliate links</footer>
+<script src="assets/app.js"></script>
+<script>
+function runWaterExample() {
+  var birds = parseFloat(document.getElementById("waBirds").value);
+  var box = document.getElementById("waOut");
+  if (!birds || birds < 1) { box.hidden = false; box.innerHTML = "<p>Enter at least one adult chicken.</p>"; return; }
+  var feed = calcFeed(birds, 4, 0);
+  var coolLo = birds * 0.05, coolHi = birds * 0.08, hotHi = birds * 0.16;
+  var ky68 = birds * 5.55 / 100, ky90 = birds * 10.57 / 100;
+  var mo20 = birds / 20, moLo = birds * 6 / 100, moHi = birds * 8 / 100, moHot = birds * 9 / 100;
+  box.hidden = false;
+  box.innerHTML =
+    '<div class="big">' + coolLo.toFixed(2) + '–' + coolHi.toFixed(2) + ' <span class="unit">gal/day, Utah cool range</span></div>' +
+    '<div class="grid2">' +
+      '<div class="stat"><b>' + feed.lbPerDay + ' lb</b><span>Feed per day from calcFeed (' + birds + ' × 0.25)</span></div>' +
+      '<div class="stat"><b>' + (feed.lbPerDay * 2).toFixed(2) + ' lb</b><span>Water by weight if intake is twice the feed (Kentucky, normal conditions)</span></div>' +
+      '<div class="stat"><b>' + coolHi.toFixed(2) + '–' + hotHi.toFixed(2) + ' gal</b><span>Utah hot range (' + birds + ' × 0.08 to × 0.16)</span></div>' +
+      '<div class="stat"><b>' + ky68.toFixed(3) + ' / ' + ky90.toFixed(3) + ' gal</b><span>Kentucky table at 68°F and 89.6°F</span></div>' +
+      '<div class="stat"><b>' + mo20.toFixed(2) + ' gal</b><span>Missouri and Georgia: about 1 gallon per 20 hens, scaled</span></div>' +
+      '<div class="stat"><b>' + moLo.toFixed(2) + '–' + moHi.toFixed(2) + ' gal</b><span>Missouri 6–8 gal per 100 layers. Above 80°F the floor is ' + moHot.toFixed(2) + ' gal</span></div>' +
+    '</div>' +
+    '<p class="note">Inputs: ' + birds + ' adult birds into calcFeed(birds, 4, 0). Gallon lines are the published constants times the bird count. calcFeed has no water term.</p>';
+}
+document.getElementById("waBtn").addEventListener("click", runWaterExample);
+</script>
+</body>
+</html>

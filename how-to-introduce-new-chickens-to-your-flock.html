@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Introduce New Chickens to Your Flock</title>
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="shortcut icon" href="/assets/favicon.ico">
+<meta property="og:image" content="https://chickencoopcalc.com/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://chickencoopcalc.com/assets/og-image.png">
+<meta name="description" content="USDA APHIS says quarantine new birds 30 days. This page sizes the current coop, the quarantine pen, and the combined flock with the existing coop calculator.">
+<link rel="canonical" href="https://chickencoopcalc.com/how-to-introduce-new-chickens-to-your-flock.html">
+<meta name="robots" content="index,follow">
+<meta property="og:title" content="How to Introduce New Chickens to Your Flock">
+<meta property="og:description" content="A 30-day quarantine from USDA APHIS, plus coop and run square feet before, during, and after you add birds.">
+<meta property="og:url" content="https://chickencoopcalc.com/how-to-introduce-new-chickens-to-your-flock.html">
+<meta property="og:type" content="article">
+<link rel="stylesheet" href="assets/styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How to introduce new chickens to your flock",
+  "datePublished": "2026-10-03",
+  "dateModified": "2026-10-03",
+  "author": {"@type": "Organization", "name": "Chicken Coop Calc"},
+  "publisher": {"@type": "Organization", "name": "Chicken Coop Calc"},
+  "mainEntityOfPage": "https://chickencoopcalc.com/how-to-introduce-new-chickens-to-your-flock.html"
+}
+</script>
+<meta name="llms.txt" content="https://chickencoopcalc.com/sources.json">
+</head>
+<body>
+<header class="site-head">
+  <a class="brand" href="index.html">ChickenCoopCalc</a>
+  <nav aria-label="Site">
+    <a href="index.html#calc">Calculator</a>
+    <a href="chicken-coop-size-by-flock.html">Flock size</a>
+    <a href="how-big-should-a-chicken-coop-be-for-6-hens.html">Coop for 6 hens</a>
+    <a href="topics.html">Topics</a>
+  </nav>
+</header>
+<main>
+<p class="small"><a href="index.html">Home</a> / <a href="topics.html">Questions</a> / How to introduce new chickens</p>
+<h1>How to introduce new chickens to your flock</h1>
+<p class="sub">The wait is a USDA APHIS rule. The square feet are this site's coop calculator, run three times: the flock you have, the birds you are adding, and the flock after they share a coop.</p>
+<p class="small">Built by <a href="/about.html">Jeremy Panasuk</a>. Published October 3, 2026.</p>
+
+<div class="answer-box"><strong>Quick answer:</strong> USDA APHIS says to quarantine new birds for 30 days and check them daily. Birds that were sick with respiratory signs during that quarantine do not enter the flock, even if they recover. A 6-hen coop at this calculator's 4 sq ft rate is 24 sq ft. Four more standard birds need their own 16 sq ft during those 30 days. Afterward the combined 10-bird floor is 40 sq ft, not the original 24.</div>
+
+<h2>What APHIS says to do before the birds share a coop</h2>
+<p>The Defend the Flock biosecurity workbook checklist for adding and replacing poultry says:</p>
+<ul>
+<li>Buy from National Poultry Improvement Plan (NPIP) breeders, hatcheries, and dealers. Ask the source what biosecurity they use.</li>
+<li>If you buy birds in person, check health and approximate age. Do not buy birds that look old or unhealthy.</li>
+<li>Confirm the new birds tested clean for the same diseases your current flock was tested for.</li>
+<li>Haul them in equipment and vehicles that are cleaned, disinfected, and inspected. Clean and disinfect tools and cages before they are used again.</li>
+<li>Once they are home, quarantine the new additions for 30 days. Check every day for sneezing, coughing, nasal drainage, swollen eyes, mites, lice, and other health problems.</li>
+<li>Do not let birds that were sick with respiratory signs during quarantine into the flock, even after they look recovered.</li>
+<li>After the groups are combined, check the original birds every day. The workbook says the stress of the change can bring out an illness that was already there.</li>
+<li>To prevent bullying, do not add young birds until all the birds are about the same size.</li>
+</ul>
+<p>A USDA APHIS webinar transcript (March 28, 2019) repeats the 30-day quarantine and the same-size rule. It also lists signs to report: a sudden increase in deaths; sneezing, gasping, or nasal discharge; watery green diarrhea; low energy and poor appetite; a drop in egg production or soft, thin-shelled, or misshapen eggs. If you see unexplained illness, the transcript says to quarantine the sick birds immediately and call your veterinarian, APHIS, or state officials. The APHIS number given there is <strong>1-866-536-7593</strong>.</p>
+<p>Missouri Extension treats mixing groups as a social-order problem as well as a disease problem: introducing new birds leads to a period of upheaval, and mixed ages or mixed species are not recommended. The same publication says flocks of different ages should be kept at least 40 feet apart when a farm holds more than one age. That 40 feet is Missouri's distance for separate age groups. It is not a distance printed in the APHIS checklist above.</p>
+
+<h2 id="worked-example">Worked example: 6 hens, add 4</h2>
+<p>All three calls use <code>calcCoopSize</code> with breed type <code>standard</code>. The rate inside the function is 4 sq ft of coop and 10 sq ft of run per bird, then rounded up (coop to the next 2 sq ft, run to the next 4). Six, four, and ten all land on exact multiples, so the rounding does not add feet.</p>
+<div class="tbl-wrap">
+<table>
+<thead><tr><th>Group</th><th>Inputs</th><th class="num">Coop</th><th class="num">Run</th></tr></thead>
+<tbody>
+<tr><td>Flock you already have</td><td><code>calcCoopSize(6, "standard")</code></td><td class="num">24 sq ft</td><td class="num">60 sq ft</td></tr>
+<tr><td>New birds, for the 30 days they are apart</td><td><code>calcCoopSize(4, "standard")</code></td><td class="num">16 sq ft</td><td class="num">40 sq ft</td></tr>
+<tr><td>Combined flock, after quarantine</td><td><code>calcCoopSize(10, "standard")</code></td><td class="num">40 sq ft</td><td class="num">100 sq ft</td></tr>
+</tbody>
+</table>
+</div>
+<p>APHIS does not publish those square feet. The calculator does. During the 30 days the new birds are a second housing job: 16 sq ft indoors and 40 sq ft of run on this planning rate, in addition to the 24 and 60 the original hens already occupy. Putting the four into the 24 sq ft coop on arrival both skips the quarantine and drops the combined flock to 2.4 sq ft indoors per bird (24 ÷ 10). The full table of planning floors is on <a href="chicken-coop-size-by-flock.html">chicken coop size by flock size</a>. The 6-hen build, including what a "fits 6" label often measures, is on the <a href="how-big-should-a-chicken-coop-be-for-6-hens.html">6-hen coop page</a>.</p>
+<p>The footprint helper inside the same function suggests 8 ft × 3 ft for the 24 sq ft coop, 8 ft × 2 ft for the 16 sq ft coop, and 8 ft × 5 ft for a 40 sq ft floor. The 60 sq ft run comes back as 8 ft × 8 ft, which is 64 sq ft. The 100 sq ft run comes back as 8 ft × 13 ft, which is 104 sq ft. Use the square-foot result as the planning floor. The rectangle can be larger.</p>
+
+<h2>Run your own counts</h2>
+<div class="field">
+  <label for="inHave">Birds already in the coop</label>
+  <input id="inHave" type="number" min="0" step="1" value="6">
+</div>
+<div class="field">
+  <label for="inAdd">Birds you plan to add</label>
+  <input id="inAdd" type="number" min="1" step="1" value="4">
+</div>
+<div class="field">
+  <label for="inBreed">Breed size for all three runs</label>
+  <select id="inBreed">
+    <option value="standard" selected>Standard</option>
+    <option value="bantam">Bantam</option>
+  </select>
+</div>
+<p><button type="button" id="inBtn" style="background:var(--acc);color:#fff;border:none;border-radius:8px;padding:.7rem 1.4rem;font-size:1.05rem;cursor:pointer;font-weight:600">Size all three groups</button></p>
+<div id="inOut" class="answer-box" hidden></div>
+<p class="small">Bantam mode uses 2 sq ft indoors and 8 sq ft of run, which is above the Penn State and Maryland minimum of 1 and 4. The 30 days, the daily health check, and the "do not add them if they were sick" rule do not change with the breed switch.</p>
+
+<h2>Common mistake</h2>
+<p>Parking the new birds "on the other side" of the same coop and calling it quarantine. The workbook's step is a quarantine of the new additions, with a daily check, and a ban on moving in any bird that showed respiratory signs during those 30 days. A shared wall that still lets the groups mix is not that step. The other miss is adding chicks or started birds while they are smaller than the hens. The workbook's bullying rule waits until the birds are about the same size. Missouri says the social order resets whenever groups are mixed, so the size wait and the 30-day wait are both still required when the calendar and the body size do not finish on the same day.</p>
+
+<h2>Limits, and when to call someone</h2>
+<p>These pages do not give a treatment for a coughing bird, and they do not say that day 30 is a clean bill of health. The workbook's rule is stricter than a timer: respiratory illness during the quarantine keeps that bird out even after the signs stop. If you see the signs in the webinar list, quarantine the sick birds and call a veterinarian, APHIS, or your state animal-health office. The APHIS number in the transcript is 1-866-536-7593. Missouri says a different vaccination history is a reason to get consultation before the birds ever share a pen.</p>
+
+<h2>Related</h2>
+<ul>
+<li><a href="index.html#calc">Chicken coop calculator</a> — same <code>calcCoopSize</code> function as the widget.</li>
+<li><a href="chicken-coop-size-by-flock.html">Coop and run table</a> for the combined head count.</li>
+<li><a href="how-to-feed-baby-chicks.html">Feeding baby chicks</a> if the new birds are still on starter, not layer feed.</li>
+<li><a href="how-much-water-does-a-chicken-drink.html">Daily water</a> for the larger flock once they are together. During quarantine, plan water for each group.</li>
+</ul>
+
+<p>Compiled with AI assistance from the sources below. Spot an error? Email <a href="mailto:jpanasuk@gmail.com">jpanasuk@gmail.com</a>.</p>
+<h2>Sources</h2>
+<ul>
+<li>USDA APHIS, "Defend the Flock — Biosecurity Workbook," checklist for adding and replacing poultry. <a href="https://www.aphis.usda.gov/sites/default/files/biosecurity-workbook.pdf">https://www.aphis.usda.gov/sites/default/files/biosecurity-workbook.pdf</a>. Accessed Oct 3, 2026.</li>
+<li>USDA APHIS, "Biosecurity Basics and Beyond: Tools to Defend Your Flock," webinar transcript, March 28, 2019. <a href="https://www.aphis.usda.gov/sites/default/files/webinar-april-transcript-english.pdf">https://www.aphis.usda.gov/sites/default/files/webinar-april-transcript-english.pdf</a>. Accessed Oct 3, 2026.</li>
+<li>University of Missouri Extension, "Small Flock Series: Managing a Family Chicken Flock," G8350 (reviewed September 2017). <a href="https://extension.missouri.edu/publications/g8350">https://extension.missouri.edu/publications/g8350</a>. Accessed Oct 3, 2026.</li>
+</ul>
+</main>
+<footer>Built by <a href="/about.html">Jeremy Panasuk</a> · <a href="/about.html">About &amp; how this was made</a> · <a href="/index.html#methodology-note">Methodology</a> · <a href="/privacy.html">Privacy</a> · <a href="/contact.html">Contact</a> · pages may contain affiliate links</footer>
+<script src="assets/app.js"></script>
+<script>
+function line(label, n, breed) {
+  var r = calcCoopSize(n, breed);
+  return '<div class="stat"><b>' + r.coopSqFt + ' / ' + r.runSqFt + ' sq ft</b><span>' + label + ' — calcCoopSize(' + n + ', "' + breed + '"). Footprint hint: ' + r.coopFootprint + ' coop, ' + r.runFootprint + ' run.</span></div>';
+}
+function runIntroExample() {
+  var have = parseFloat(document.getElementById("inHave").value);
+  var add = parseFloat(document.getElementById("inAdd").value);
+  var breed = document.getElementById("inBreed").value;
+  var box = document.getElementById("inOut");
+  if (!add || add < 1) { box.hidden = false; box.innerHTML = "<p>Enter how many birds you plan to add.</p>"; return; }
+  have = have > 0 ? have : 0;
+  var total = have + add;
+  box.hidden = false;
+  box.innerHTML =
+    '<div class="big">' + total + ' <span class="unit">birds after the groups combine</span></div>' +
+    '<div class="grid2">' +
+      line("Current flock", have, breed) +
+      line("Quarantine group (30 days, APHIS)", add, breed) +
+      line("Combined flock", total, breed) +
+    '</div>' +
+    '<p class="note">Inputs: ' + have + ' on hand, ' + add + ' added, breed "' + breed + '". The 30-day quarantine, the daily check, and the rule against admitting birds that showed respiratory signs are USDA APHIS workbook text. The square feet are this calculator. During the 30 days the quarantine floor is extra space, not a corner subtracted from the current coop.</p>';
+}
+document.getElementById("inBtn").addEventListener("click", runIntroExample);
+</script>
+</body>
+</html>
