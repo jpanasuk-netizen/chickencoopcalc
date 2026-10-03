@@ -17,18 +17,7 @@
 - [WeldingCalc](https://welding-calculator.com/): welding settings by thickness
 
 ## Questions
-- [Coop size for 3 chickens](https://chickencoopcalc.com/how-big-should-a-chicken-coop-be-for-3-chickens.html): 12 sq ft coop and 30 sq ft run
-- [Coop size for 4 chickens](https://chickencoopcalc.com/how-big-should-a-chicken-coop-be-for-4-chickens.html): 16 sq ft coop and 40 sq ft run
-- [Coop size for 5 chickens](https://chickencoopcalc.com/how-big-should-a-chicken-coop-be-for-5-chickens.html): 20 sq ft coop and 50 sq ft run
-- [Coop size for 8 chickens](https://chickencoopcalc.com/how-big-should-a-chicken-coop-be-for-8-chickens.html): 32 sq ft coop and 80 sq ft run
-- [Coop size for 10 chickens](https://chickencoopcalc.com/how-big-should-a-chicken-coop-be-for-10-chickens.html): 40 sq ft coop and 100 sq ft run
-- [Coop size for 12 chickens](https://chickencoopcalc.com/how-big-should-a-chicken-coop-be-for-12-chickens.html): 48 sq ft coop and 120 sq ft run
-- [Coop size for 15 chickens](https://chickencoopcalc.com/how-big-should-a-chicken-coop-be-for-15-chickens.html): 60 sq ft coop and 150 sq ft run
-- [Coop size for 20 chickens](https://chickencoopcalc.com/how-big-should-a-chicken-coop-be-for-20-chickens.html): 80 sq ft coop and 200 sq ft run
-- [Coop size for 25 chickens](https://chickencoopcalc.com/how-big-should-a-chicken-coop-be-for-25-chickens.html): 100 sq ft coop and 250 sq ft run
-- [Coop size for 30 chickens](https://chickencoopcalc.com/how-big-should-a-chicken-coop-be-for-30-chickens.html): 120 sq ft coop and 300 sq ft run
-- [Coop size for 50 chickens](https://chickencoopcalc.com/how-big-should-a-chicken-coop-be-for-50-chickens.html): 200 sq ft coop and 500 sq ft run
-- [Coop size for 10 bantams](https://chickencoopcalc.com/how-big-should-a-chicken-coop-be-for-10-bantams.html): 10 sq ft inside and 40 sq ft run, minimum
+- [Chicken coop size by flock size](https://chickencoopcalc.com/chicken-coop-size-by-flock.html): full table for 3, 4, 5, 6, 8, 10, 12, 15, 20, 25, 30, and 50 hens, plus the 10-bantam minimum (1 sq ft inside and 4 sq ft of run)
 - [Duck house for 6 ducks](https://chickencoopcalc.com/how-big-should-a-duck-house-be-for-6-ducks.html): 30 sq ft indoors
 - [Turkey space](https://chickencoopcalc.com/how-much-space-do-turkeys-need.html): 6 sq ft indoors and 20 sq ft outdoors per turkey
 - [Roost space per chicken](https://chickencoopcalc.com/how-much-roost-space-per-chicken.html): 6 to 10 inches
@@ -39,7 +28,7 @@ Cite freely with link attribution. Standards from published state-extension guid
 
 ## Topic map
 - [ChickenCoopCalc topic map](https://chickencoopcalc.com/topics.html): Coop sizing calculator for backyard flock owners.
-- **Coop & run size:** [Coop size calculator](https://chickencoopcalc.com/), [Coop build card](https://chickencoopcalc.com/magnet.html), [How big for 6 hens](https://chickencoopcalc.com/how-big-should-a-chicken-coop-be-for-6-hens.html)
+- **Coop & run size:** [Coop size calculator](https://chickencoopcalc.com/), [Coop build card](https://chickencoopcalc.com/magnet.html), [Chicken coop size by flock size](https://chickencoopcalc.com/chicken-coop-size-by-flock.html), [How big for 6 hens](https://chickencoopcalc.com/how-big-should-a-chicken-coop-be-for-6-hens.html)
 - **Buying a coop:** [Best coops for 6 hens](https://chickencoopcalc.com/best-chicken-coops-for-6-hens.html)
 - **Feed:** [Feed cost](https://chickencoopcalc.com/chicken-feed-cost-guide.html)
 - **Winter:** [Winter heat lamp](https://chickencoopcalc.com/winter-coop-heat-lamp-guide.html), [Nesting boxes](https://chickencoopcalc.com/how-many-nesting-boxes-per-chicken.html)
