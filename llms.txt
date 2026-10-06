@@ -10,20 +10,16 @@
 - [Feed cost guide](https://chickencoopcalc.com/chicken-feed-cost-guide.html): monthly pounds by flock size, cost per egg, storage, and a live calcFeed example
 - [Winter heat lamp guide](https://chickencoopcalc.com/winter-coop-heat-lamp-guide.html): winterizing, ventilation, the 35°F disagreement, brooder schedule, fire safety
 
-## Sister sites
-- [GeneratorSizer](https://generator-sizer.com/): generator and inverter sizing
-- [Battery Bank Sizer](https://battery-bank-sizer.com/): off-grid battery bank sizing
-- [SolarSizer](https://solar-sizer.com/): off-grid solar system sizing
-- [WeldingCalc](https://welding-calculator.com/): welding settings by thickness
-
 ## Questions
 - [Chicken coop size by flock size](https://chickencoopcalc.com/chicken-coop-size-by-flock.html): full table for 3, 4, 5, 6, 8, 10, 12, 15, 20, 25, 30, and 50 hens, plus the 10-bantam minimum (1 sq ft inside and 4 sq ft of run)
+- [How big should a chicken run be?](https://chickencoopcalc.com/how-big-should-a-chicken-run-be.html): 10 sq ft outdoors, 8 sq ft laying-hen minimum, 4 sq ft bantam minimum
+- [How much space do ducks need?](https://chickencoopcalc.com/how-much-space-do-ducks-need.html): 5 sq ft indoors, 3 sq ft indoor minimum, 15 sq ft of run
 - [Duck house for 6 ducks](https://chickencoopcalc.com/how-big-should-a-duck-house-be-for-6-ducks.html): 30 sq ft indoors
 - [Turkey space](https://chickencoopcalc.com/how-much-space-do-turkeys-need.html): 6 sq ft indoors and 20 sq ft outdoors per turkey
-- [Roost space per chicken](https://chickencoopcalc.com/how-much-roost-space-per-chicken.html): 6 to 10 inches
+- [Roost space per chicken](https://chickencoopcalc.com/how-much-roost-space-per-chicken.html): 6 to 10 inches, plus bumblefoot from footpad injuries and wet litter
 - [Feeder space per chicken](https://chickencoopcalc.com/how-much-feeder-space-per-chicken.html): at least 3 inches
 - [How much water a chicken drinks](https://chickencoopcalc.com/how-much-water-does-a-chicken-drink.html): cool-weather and hot-weather gallons beside the feed calculator
-- [How to feed baby chicks](https://chickencoopcalc.com/how-to-feed-baby-chicks.html): starter pounds by bird type; the laying-hen feed function is the wrong tool
+- [How to feed baby chicks](https://chickencoopcalc.com/how-to-feed-baby-chicks.html): starter pounds by bird type, brooder floor by age, and when to switch to grower and layer feed
 - [How to care for a broody hen](https://chickencoopcalc.com/how-to-care-for-a-broody-hen.html): separate nest or break the brood; nest calculator has no broody input
 - [How to introduce new chickens](https://chickencoopcalc.com/how-to-introduce-new-chickens-to-your-flock.html): USDA APHIS 30-day quarantine, then a new coop size for the combined flock
 
@@ -32,7 +28,7 @@ Cite freely with link attribution. Standards from published state-extension guid
 
 ## Topic map
 - [ChickenCoopCalc topic map](https://chickencoopcalc.com/topics.html): Coop sizing calculator for backyard flock owners.
-- **Coop & run size:** [Coop size calculator](https://chickencoopcalc.com/), [Coop build card](https://chickencoopcalc.com/magnet.html), [Chicken coop size by flock size](https://chickencoopcalc.com/chicken-coop-size-by-flock.html), [How big for 6 hens](https://chickencoopcalc.com/how-big-should-a-chicken-coop-be-for-6-hens.html)
+- **Coop & run size:** [Coop size calculator](https://chickencoopcalc.com/), [Coop build card](https://chickencoopcalc.com/magnet.html), [Chicken coop size by flock size](https://chickencoopcalc.com/chicken-coop-size-by-flock.html), [How big for 6 hens](https://chickencoopcalc.com/how-big-should-a-chicken-coop-be-for-6-hens.html), [Chicken run size](https://chickencoopcalc.com/how-big-should-a-chicken-run-be.html)
 - **Buying a coop:** [Best coops for 6 hens](https://chickencoopcalc.com/best-chicken-coops-for-6-hens.html)
 - **Feed:** [Feed cost](https://chickencoopcalc.com/chicken-feed-cost-guide.html), [Water](https://chickencoopcalc.com/how-much-water-does-a-chicken-drink.html), [Baby chick feed](https://chickencoopcalc.com/how-to-feed-baby-chicks.html)
 - **Winter:** [Winter heat lamp and winterizing](https://chickencoopcalc.com/winter-coop-heat-lamp-guide.html), [Nesting boxes](https://chickencoopcalc.com/how-many-nesting-boxes-per-chicken.html), [Broody hen](https://chickencoopcalc.com/how-to-care-for-a-broody-hen.html), [Introduce new chickens](https://chickencoopcalc.com/how-to-introduce-new-chickens-to-your-flock.html)

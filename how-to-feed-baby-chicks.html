@@ -23,13 +23,32 @@
   "@type": "Article",
   "headline": "How to feed baby chicks",
   "datePublished": "2026-10-03",
-  "dateModified": "2026-10-03",
-  "author": {"@type": "Organization", "name": "Chicken Coop Calc"},
-  "publisher": {"@type": "Organization", "name": "Chicken Coop Calc"},
+  "dateModified": "2026-10-06",
+  "author": {"@type": "Organization", "name": "Chicken Coop Calculator"},
+  "publisher": {"@type": "Organization", "name": "Chicken Coop Calculator"},
   "mainEntityOfPage": "https://chickencoopcalc.com/how-to-feed-baby-chicks.html"
 }
 </script>
-<meta name="llms.txt" content="https://chickencoopcalc.com/sources.json">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Chicken Coop Calculator",
+   "item": "https://chickencoopcalc.com/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "How to feed baby chicks",
+   "item": "https://chickencoopcalc.com/how-to-feed-baby-chicks.html"
+  }
+ ]
+}
+</script>
 </head>
 <body>
 <header class="site-head">
@@ -45,7 +64,7 @@
 <p class="small"><a href="index.html">Home</a> / <a href="topics.html">Questions</a> / How to feed baby chicks</p>
 <h1>How to feed baby chicks</h1>
 <p class="sub">The pounds of starter come from Maryland's feed table. The brooder floor comes from Maine. This site's feed and coop functions are for laying hens, and the worked example shows the number you get if you point them at chicks anyway.</p>
-<p class="small">Built by <a href="/about.html">Jeremy Panasuk</a>. Published October 3, 2026.</p>
+<p class="small">Built by <a href="/about.html">Jeremy Panasuk</a>. Updated October 6, 2026.</p>
 
 <div class="answer-box"><strong>Quick answer:</strong> Maryland Extension lists 4 lb of starter per brown-egg chick from day old to 6 weeks, and 3 lb per white-egg chick. Twelve brown-egg chicks are 48 lb of starter. The same 12 birds typed into this site's laying-hen feed function return 126 lb over 6 weeks, because that function uses 0.25 lb per bird per day. Do not feed them a layer ration. Maryland says the calcium is high enough to cause improper bone formation, kidney failure, and possibly death.</div>
 
@@ -100,6 +119,29 @@
 <li><code>calcHeat(6, 40, true)</code> is the brooder floor from Maine (6 sq ft) and a room temperature of 40°F, which is above this function's 20°F adult line, so adult watts are 0. Chick watts are the site ratio 250 W per 16 sq ft, capped at 16 sq ft and rounded up to the next 50 W: 6 × 250 / 16 = 93.75, which rounds to <strong>100 W</strong>. Vent area on the site's 1-per-10 ratio, in half-foot steps, is <strong>0.5 sq ft</strong>. Maine and Maryland do not publish that 100 W or that 0.5 sq ft.</li>
 </ul>
 
+<h2 id="brooder-size">Chicken brooder size</h2>
+<p>Maine Bulletin 2219 is the floor for a brooder, not the adult coop. Per bird: 0.5 sq ft for weeks 0–4, 1.0 sq ft for weeks 4–8, and 2.0 sq ft for weeks 8–12. The table above also lists feeder inches and waterer inches for those same bands. Twelve chicks in the first four weeks are 12 × 0.5 = 6 sq ft. <code>calcCoopSize</code> on those 12 returns 48 sq ft of coop, because that function is the laying-hen floor (4 sq ft). Do not brooder them on 48 sq ft and call it the Maine number.</p>
+<div class="field">
+  <label for="brBirds">Number of chicks</label>
+  <input id="brBirds" type="number" min="1" step="1" value="12">
+</div>
+<div class="field">
+  <label for="brAge">Maine age band</label>
+  <select id="brAge">
+    <option value="0.5" selected>0–4 weeks, 0.5 sq ft</option>
+    <option value="1">4–8 weeks, 1.0 sq ft</option>
+    <option value="2">8–12 weeks, 2.0 sq ft</option>
+  </select>
+</div>
+<p><button type="button" id="brBtn" style="background:var(--acc);color:#fff;border:none;border-radius:8px;padding:.7rem 1.4rem;font-size:1.05rem;cursor:pointer;font-weight:600">Size the brooder floor</button></p>
+<div id="brOut" class="answer-box" hidden></div>
+<p class="small">The hen line is <code>calcCoopSize</code> for a standard bird. It is the adult mismatch, not the brooder answer. Heat-lamp temperatures stay on the <a href="winter-coop-heat-lamp-guide.html">winter page</a>. This widget does not invent a wattage.</p>
+
+<h2 id="switch-feeds">When to switch from starter to grower to layer</h2>
+<p>Maryland's table, cited to Vest and Dale 2002, is a pound total by stage, not a protein percent. Brown-egg birds: starter from day old to 6 weeks (4 lb), grower from 7 to 18 weeks (46 lb), layer from 19 to 70 weeks (104 lb). White-egg birds: 3 lb of starter, 12 lb of grower, and 80 lb of layer on those same week ranges. Meat birds leave starter at 3 weeks (2 lb) and eat finisher from 4 to 7 weeks (7 lb).</p>
+<p>Maine's protein bands are a second schedule, not a conversion of those pounds. Pullets: starter at 18–20% protein for weeks 0–6, grower at 15% for weeks 6–18, and layer feed at 17% protein from 18 weeks on. Broilers and fryers: starter at 22–23% for weeks 0–6 and finisher at 18–20% for weeks 6–8. Utah State says layer-strain chicks get a 20–21% protein starter from 0 to 6 weeks, and not to feed a layer diet to chickens that are not in egg production. Do not average Maine's 18–20% with Utah's 20–21%.</p>
+<p>Maryland says do not feed layer rations to younger birds. If a young chicken is fed a layer diet, the calcium level is high enough to cause improper bone formation, kidney failure, and possibly death. The laying-hen cost tool, once they are on that layer ration, is the <a href="chicken-feed-cost-guide.html#worked-example">feed cost page</a>. <code>calcFeed</code> is that later bird. It is not the starter purchase.</p>
+
 <h2>Run your own count</h2>
 <div class="field">
   <label for="chBirds">Number of chicks</label>
@@ -142,7 +184,7 @@
 </ul>
 </main>
 <footer>Built by <a href="/about.html">Jeremy Panasuk</a> · <a href="/about.html">About &amp; how this was made</a> · <a href="/index.html#methodology-note">Methodology</a> · <a href="/privacy.html">Privacy</a> · <a href="/contact.html">Contact</a> · pages may contain affiliate links</footer>
-<script src="assets/app.js"></script>
+<script src="assets/app.js" defer></script>
 <script>
 function runChickExample() {
   var birds = parseFloat(document.getElementById("chBirds").value);
@@ -171,6 +213,23 @@ function runChickExample() {
     '<p class="note">Inputs shown above. Maryland says a layer diet can cause improper bone formation, kidney failure, and possibly death in a young chicken. Do not buy the calcFeed pounds as starter.</p>';
 }
 document.getElementById("chBtn").addEventListener("click", runChickExample);
+function runBrooder() {
+  var birds = parseFloat(document.getElementById("brBirds").value);
+  var rate = parseFloat(document.getElementById("brAge").value);
+  var box = document.getElementById("brOut");
+  if (!birds || birds < 1) { box.hidden = false; box.innerHTML = "<p>Enter at least one chick.</p>"; return; }
+  var floor = birds * rate;
+  var hens = calcCoopSize(birds, "standard");
+  var band = rate === 0.5 ? "0-4 weeks" : rate === 1 ? "4-8 weeks" : "8-12 weeks";
+  box.hidden = false;
+  box.innerHTML =
+    '<div class="big">' + floor + ' <span class="unit">sq ft of brooder floor (Maine Bulletin 2219)</span></div>' +
+    '<div class="grid2">' +
+      '<div class="stat"><b>' + birds + ' × ' + rate + '</b><span>Maine floor for ' + band + '.</span></div>' +
+      '<div class="stat"><b>' + hens.coopSqFt + ' sq ft</b><span>calcCoopSize(' + birds + ', "standard") coop field. Laying-hen function, not the brooder.</span></div>' +
+    '</div>';
+}
+document.getElementById("brBtn").addEventListener("click", runBrooder);
 </script>
 </body>
 </html>

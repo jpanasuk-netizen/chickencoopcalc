@@ -11,56 +11,17 @@
 <link rel="stylesheet" href="assets/styles.css">
 <meta name="robots" content="index,follow">
 
-<script id="sources-data" type="application/json">
-{
-  "sources": [
-    {
-      "title": "eXtension: Space allowances in housing for small and backyard poultry flocks",
-      "url": "https://poultry.extension.org/articles/getting-started-with-small-and-backyard-poultry/housing-for-small-and-backyard-poultry-flocks/space-allowances-in-housing-for-small-and-backyard-poultry-flocks/",
-      "date": "2026-10-02"
-    },
-    {
-      "title": "UC Master Gardeners of Monterey Bay: Backyard chickens (2017)",
-      "url": "https://ucanr.edu/sites/default/files/2017-03/257593.pdf",
-      "date": "2026-10-02"
-    },
-    {
-      "title": "Penn State Extension: Small Scale Poultry Housing",
-      "url": "https://extension.psu.edu/small-scale-poultry-housing/",
-      "date": "2026-10-02"
-    },
-    {
-      "title": "University of Maryland Extension: Housing Requirements",
-      "url": "https://www.extension.umd.edu/resource/housing-requirements",
-      "date": "2026-10-02"
-    },
-    {
-      "title": "Utah State University Extension: Housing Backyard Chickens",
-      "url": "https://extension.usu.edu/poultry/research/housing-backyard-chickens",
-      "date": "2026-10-02"
-    },
-    {
-      "title": "Alabama Cooperative Extension: Feeding the Laying Hen",
-      "url": "https://www.aces.edu/blog/topics/farming/backyard-small-poultry-flock-management-series-feeding-the-laying-hen/",
-      "date": "2026-10-02"
-    },
-    {
-      "title": "University of Kentucky Extension ASC-191: How Much Will My Chickens Eat?",
-      "url": "https://publications.mgcafe.uky.edu/files/ASC191.pdf",
-      "date": "2026-10-02"
-    }
-  ]
-}
-</script>
-<script>
-document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getElementById('sources-data').textContent);var s=document.createElement('div');s.className='sources-section';s.innerHTML='<h2 id="sources-heading">Sources & Standards</h2><p>Published references for coop space, nests, and feed:</p><ul>'+d.sources.map(x=>'<li><a href="'+x.url+'" target="_blank">'+x.title+'</a></li>').join('')+'</ul><p><button id="cite-toggle">Show Copyable Citations</button></p><div id="cite-output" style="display:none"></div>';var t=document.querySelector('nav')||document.querySelector('footer')||document.body;t.parentNode.insertBefore(s,t);var o=s.querySelector('#cite-toggle'),c=s.querySelector('#cite-output');o.onclick=()=>{c.textContent=d.sources.map(x=>x.title+'. '+x.url+'. Accessed '+x.date).join('\n\n');c.style.display='block';o.style.display='none'};});
-</script>
-<meta name="llms.txt" content="https://chickencoopcalc.com/sources.json">
 </head>
 <body>
 <h1>Contact Chicken Coop Calculator</h1>
 <p>Questions, corrections, or a calculator request for backyard chicken coop planning and sizing calculators: email <a href="mailto:jpanasuk@gmail.com">jpanasuk@gmail.com</a>.</p>
 <p>The calculators show the math so you can check each step.</p>
+
+<section class="sources-section" aria-labelledby="sources-heading">
+<h2 id="sources-heading">Sources & Standards</h2>
+<p>Published references for coop space, nests, and feed:</p>
+<ul><li><a href="https://poultry.extension.org/articles/getting-started-with-small-and-backyard-poultry/housing-for-small-and-backyard-poultry-flocks/space-allowances-in-housing-for-small-and-backyard-poultry-flocks/" rel="noopener" target="_blank">eXtension: Space allowances in housing for small and backyard poultry flocks</a></li><li><a href="https://ucanr.edu/sites/default/files/2017-03/257593.pdf" rel="noopener" target="_blank">UC Master Gardeners of Monterey Bay: Backyard chickens (2017)</a></li><li><a href="https://extension.psu.edu/small-scale-poultry-housing/" rel="noopener" target="_blank">Penn State Extension: Small Scale Poultry Housing</a></li><li><a href="https://www.extension.umd.edu/resource/housing-requirements" rel="noopener" target="_blank">University of Maryland Extension: Housing Requirements</a></li><li><a href="https://extension.usu.edu/poultry/research/housing-backyard-chickens" rel="noopener" target="_blank">Utah State University Extension: Housing Backyard Chickens</a></li><li><a href="https://www.aces.edu/blog/topics/farming/backyard-small-poultry-flock-management-series-feeding-the-laying-hen/" rel="noopener" target="_blank">Alabama Cooperative Extension: Feeding the Laying Hen</a></li><li><a href="https://publications.mgcafe.uky.edu/files/ASC191.pdf" rel="noopener" target="_blank">University of Kentucky Extension ASC-191: How Much Will My Chickens Eat?</a></li></ul>
+</section>
 <footer>Built by Jeremy Panasuk · <a href="/about.html">About &amp; how this was made</a> · <a href="/index.html#methodology-note">Methodology</a> · <a href="/privacy.html">Privacy</a> · <a href="/contact.html">Contact</a> · pages may contain affiliate links</footer>
 </body>
 </html>
