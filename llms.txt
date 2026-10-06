@@ -6,7 +6,7 @@
 - [About](https://chickencoopcalc.com/about.html): who built the site, how the pages are drafted, and why it exists
 - [Privacy](https://chickencoopcalc.com/privacy.html): what the site loads and what it does not collect
 - [Contact](https://chickencoopcalc.com/contact.html): jpanasuk@gmail.com
-- [Best coops for 6 hens](https://chickencoopcalc.com/best-chicken-coops-for-6-hens.html): what a real 24+ sq ft coop costs, prefab vs DIY
+- [Best coops for 6 hens](https://chickencoopcalc.com/best-chicken-coops-for-6-hens.html): interior square feet for a 6-hen coop, prefab vs DIY, no prices
 - [Feed cost guide](https://chickencoopcalc.com/chicken-feed-cost-guide.html): monthly pounds by flock size, cost per egg, storage, and a live calcFeed example
 - [Winter heat lamp guide](https://chickencoopcalc.com/winter-coop-heat-lamp-guide.html): winterizing, ventilation, the 35°F disagreement, brooder schedule, fire safety
 
