@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Embed the Chicken Coop Calculator</title>
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="shortcut icon" href="/assets/favicon.ico">
+<meta property="og:image" content="https://chickencoopcalc.com/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://chickencoopcalc.com/assets/og-image.png">
+<meta name="description" content="Copy an iframe to put the chicken coop size calculator on your site. Free, with a credit link, and the same math as the homepage.">
+<link rel="canonical" href="https://chickencoopcalc.com/embed-calculator.html">
+<meta name="robots" content="index,follow">
+<meta property="og:title" content="Embed the Chicken Coop Calculator">
+<meta property="og:description" content="Copy an iframe to put the chicken coop size calculator on your site. Free, with a credit link, and the same math as the homepage.">
+<meta property="og:url" content="https://chickencoopcalc.com/embed-calculator.html">
+<meta property="og:type" content="article">
+<link rel="stylesheet" href="assets/styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://chickencoopcalc.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Questions", "item": "https://chickencoopcalc.com/topics.html"},
+    {"@type": "ListItem", "position": 3, "name": "Embed the Chicken Coop Calculator", "item": "https://chickencoopcalc.com/embed-calculator.html"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can I embed this calculator for free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The embed is free. Keep the credit link under the iframe."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the embed include ads or affiliate links?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The embed page has the calculator and a credit link to Chicken Coop Calculator. It does not include ads or affiliate links."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header class="site-head">
+  <a class="brand" href="index.html">ChickenCoopCalc</a>
+  <nav aria-label="Site">
+    <a href="index.html">Home</a>
+    <a href="topics.html">Topics</a>
+    <a href="index.html#calc">Calculator</a>
+  </nav>
+</header>
+<main>
+<h1>Embed the Chicken Coop Size Calculator on Your Site</h1>
+<p class="sub">The iframe uses the same <code>calcCoopSize</code>, <code>calcFeed</code>, <code>calcNestBoxes</code>, and <code>calcHeat</code> functions as the homepage.</p>
+<p>The embed is free. Keep the credit link. Do not hide it, restyle it so it cannot be seen, or drop the paragraph under the iframe. The embed page itself is not a place for ads or affiliate links.</p>
+
+<h2>Preview</h2>
+<iframe src="/embed.html" title="Chicken Coop Size Calculator" width="100%" height="520" style="border:1px solid var(--bd);border-radius:10px;max-width:100%;background:var(--card)"></iframe>
+
+<h2>Copy the snippet</h2>
+<p>Paste this where you want the calculator. The iframe is about 520 pixels tall and should be 100% of the column width.</p>
+<textarea id="embed-snippet" readonly rows="8" style="width:100%;max-width:100%;font-family:ui-monospace,monospace;font-size:.85rem;padding:.7rem;border:1px solid var(--bd);border-radius:8px;background:var(--card);color:var(--fg)">&lt;iframe src="https://chickencoopcalc.com/embed.html" title="Chicken Coop Size Calculator" width="100%" height="520" style="border:0;max-width:100%"&gt;&lt;/iframe&gt;
+&lt;p&gt;Calculator by &lt;a href="https://chickencoopcalc.com/"&gt;Chicken Coop Calculator&lt;/a&gt;&lt;/p&gt;</textarea>
+<p style="min-height:1.6em"><button type="button" id="copy-embed" style="background:var(--acc);color:#fff;border:none;border-radius:8px;padding:.55rem 1rem;font:inherit;font-weight:700;cursor:pointer">Copy snippet</button> <span id="copy-status" aria-live="polite"></span></p>
+
+<h2>FAQ</h2>
+<h3>Can I embed this calculator for free?</h3>
+<p>Yes. The embed is free. Keep the credit link under the iframe.</p>
+<h3>Does the embed include ads or affiliate links?</h3>
+<p>No. The embed page has the calculator and a credit link to Chicken Coop Calculator. It does not include ads or affiliate links.</p>
+<p>Compiled with AI assistance from the sources below. Spot an error? Email <a href="mailto:jpanasuk@gmail.com">jpanasuk@gmail.com</a>.</p>
+<h2>Sources</h2>
+<p>The embed does not add a new rate. Space, feed, nests, and the winter planner are the functions already documented on the <a href="index.html">homepage</a> and the <a href="topics.html">topic map</a>.</p>
+</main>
+<footer>Built by <a href="/about.html">Jeremy Panasuk</a> · <a href="/about.html">About &amp; how this was made</a> · <a href="/index.html#methodology-note">Methodology</a> · <a href="/privacy.html">Privacy</a> · <a href="/contact.html">Contact</a> · pages may contain affiliate links</footer>
+<script>
+document.getElementById("copy-embed").addEventListener("click", function () {
+  var text = document.getElementById("embed-snippet").value;
+  var status = document.getElementById("copy-status");
+  function done() { status.textContent = "Copied."; }
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(done, function () { status.textContent = "Select the box and copy it."; });
+  } else {
+    status.textContent = "Select the box and copy it.";
+  }
+});
+</script>
+</body>
+</html>

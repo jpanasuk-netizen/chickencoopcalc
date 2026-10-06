@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chicken Breed Size &amp; Space Chart</title>
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="shortcut icon" href="/assets/favicon.ico">
+<meta property="og:image" content="https://chickencoopcalc.com/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://chickencoopcalc.com/assets/og-image.png">
+<meta name="description" content="Adult weights, egg color, hardiness, and laying notes for 33 chicken breeds, copied from Wisconsin Extension and The Livestock Conservancy.">
+<link rel="canonical" href="https://chickencoopcalc.com/chicken-breed-size-chart.html">
+<meta name="robots" content="index,follow">
+<meta property="og:title" content="Chicken Breed Size &amp; Space Chart">
+<meta property="og:description" content="Adult weights, egg color, hardiness, and laying notes for 33 chicken breeds, copied from Wisconsin Extension and The Livestock Conservancy.">
+<meta property="og:url" content="https://chickencoopcalc.com/chicken-breed-size-chart.html">
+<meta property="og:type" content="article">
+<link rel="stylesheet" href="assets/styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "Chicken Breed Size & Space Chart",
+  "description": "Adult weights, egg color, cold or heat notes, and laying notes for 33 chicken breeds, copied from University of Wisconsin-Madison Extension A2880 and The Livestock Conservancy breed pages. Cells say not listed when the source does not state the item.",
+  "url": "https://chickencoopcalc.com/chicken-breed-size-chart.html",
+  "creator": {
+    "@type": "Organization",
+    "name": "Chicken Coop Calculator",
+    "url": "https://chickencoopcalc.com/"
+  },
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "distribution": {
+    "@type": "DataDownload",
+    "encodingFormat": "text/csv",
+    "contentUrl": "https://chickencoopcalc.com/assets/data/chicken-breed-size-chart.csv"
+  },
+  "dateModified": "2026-10-06"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://chickencoopcalc.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Questions", "item": "https://chickencoopcalc.com/topics.html"},
+    {"@type": "ListItem", "position": 3, "name": "Chicken Breed Size & Space Chart", "item": "https://chickencoopcalc.com/chicken-breed-size-chart.html"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does a heavier breed need more coop space in this calculator?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. calcCoopSize uses 4 sq ft of coop and 10 sq ft of run for every standard bird, and 2 and 8 for every bantam. A Jersey Giant and a Leghorn are both standard. The weights in the table do not change those rates."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where do the breed weights come from?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Large-fowl rows are the standard cock and hen weights on the University of Wisconsin-Madison Extension page Chicken Breeds & Varieties (A2880), accessed October 6, 2026. Bantam rows are the mature weights on the linked Livestock Conservancy breed pages, accessed the same day. A cell says not listed when that page does not state it."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header class="site-head">
+  <a class="brand" href="index.html">ChickenCoopCalc</a>
+  <nav aria-label="Site">
+    <a href="index.html">Home</a>
+    <a href="topics.html">Topics</a>
+    <a href="chicken-coop-size-by-flock.html">Flock size</a>
+    <a href="index.html#calc">Calculator</a>
+  </nav>
+</header>
+<main>
+<h1>Chicken Breed Size &amp; Space Chart</h1>
+<p class="sub">Published adult weights, egg color, cold or heat notes, and laying notes. Thirty-three breeds. Nothing in a cell is estimated.</p>
+<p>Large-fowl weights are the cock and hen figures on <a href="https://livestock.extension.wisc.edu/articles/chicken-breeds-varieties-a2880/">University of Wisconsin–Madison Extension, Chicken Breeds &amp; Varieties (A2880)</a>. That page says the American Poultry Association describes size in the American Standard of Perfection. These rows use the weights printed on the Wisconsin page. They do not add figures from the book. Bantam rows use the mature weights on the linked <a href="https://livestockconservancy.org/">Livestock Conservancy</a> breed pages. Every figure was copied on October 6, 2026. If that page does not state a fact, the cell says <strong>not listed</strong>.</p>
+<p>The calculator does not read this table. <code>calcCoopSize</code> uses 4 sq ft of coop and 10 sq ft of run for a standard bird, and 2 sq ft of coop and 8 sq ft of run for a bantam. Pick standard or bantam. A heavier standard breed does not get a larger rate.</p>
+
+<h2>Worked example</h2>
+<p>Six standard birds: 6 × 4 = 24 sq ft of coop and 6 × 10 = 60 sq ft of run. <code>calcCoopSize(6, "standard")</code> rounds the coop up to the next 2 sq ft and the run up to the next 4 sq ft. Both products are already on those steps, so the result is 24 and 60. Six bantams: 6 × 2 = 12 sq ft of coop and 6 × 8 = 48 sq ft of run, and the same rounding leaves 12 and 48. Penn State and Maryland list a bantam minimum of 1 sq ft inside and 4 sq ft of run, which is 6 sq ft and 24 sq ft for those six bantams. The calculator's 12 and 48 is extra room above that minimum. Run it on the <a href="index.html#calc">coop calculator</a> or the <a href="chicken-coop-size-by-flock.html">flock-size page</a>.</p>
+<figure class="diagram">
+  <img src="/assets/img/standard-bantam-space.svg" width="720" height="320" alt="Bar chart of this calculator's standard rates, 4 square feet of coop and 10 of run, and bantam rates, 2 and 8, with the Penn State and Maryland bantam minimum of 1 and 4 marked separately." loading="lazy">
+  <figcaption>Dark bars are this site's calculator rates: 4 and 10 sq ft for a standard bird, 2 and 8 for a bantam. Open bars are the Penn State and Maryland bantam minimum of 1 sq ft inside and 4 sq ft of run. Breed weights are not on this drawing.</figcaption>
+</figure>
+
+<h2>The table</h2>
+<p><a href="/assets/data/chicken-breed-size-chart.csv">Download CSV</a> of the same rows. Click a column heading to sort. Sorting does not change the copied text.</p>
+<div class="tbl-wrap">
+<table id="breed-table">
+<thead>
+<tr>
+  <th><button type="button" class="sort-btn" data-col="0" data-type="text">Breed</button></th>
+  <th><button type="button" class="sort-btn" data-col="1" data-type="text">Size class</button></th>
+  <th><button type="button" class="sort-btn" data-col="2" data-type="num">Adult weight</button></th>
+  <th><button type="button" class="sort-btn" data-col="3" data-type="text">Egg color</button></th>
+  <th><button type="button" class="sort-btn" data-col="4" data-type="text">Cold or heat</button></th>
+  <th><button type="button" class="sort-btn" data-col="5" data-type="text">Laying as published</button></th>
+  <th><button type="button" class="sort-btn" data-col="6" data-type="text">Source</button></th>
+</tr>
+</thead>
+<tbody>
+<tr><td>Ameraucana</td><td>Standard (large fowl)</td><td data-sort-value="6.5">Cock 6½ lb; hen 5½ lb</td><td>Blue/pastel</td><td>not listed</td><td>General-purpose fowl for the production of colored eggs of good quality.</td><td><a href="https://livestock.extension.wisc.edu/articles/chicken-breeds-varieties-a2880/">Wisconsin Extension A2880</a></td></tr>
+<tr><td>Andalusian</td><td>Standard (large fowl)</td><td data-sort-value="7">Cock 7 lb; hen 5½ lb</td><td>White</td><td>not listed</td><td>Fairly good egg-production potential.</td><td><a href="https://livestock.extension.wisc.edu/articles/chicken-breeds-varieties-a2880/">Wisconsin Extension A2880</a></td></tr>
+<tr><td>Australorp</td><td>Standard (large fowl)</td><td data-sort-value="8.5">Cock 8½ lb; hen 6½ lb</td><td>Brown</td><td>not listed</td><td>Generally a very good egg producer. The page says one hen laid 364 eggs in 365 days under official Australian trapnest testing.</td><td><a href="https://livestock.extension.wisc.edu/articles/chicken-breeds-varieties-a2880/">Wisconsin Extension A2880</a></td></tr>
+<tr><td>Belgian Bearded d&#x27;Uccle</td><td>Bantam</td><td data-sort-value="1.625">Male 26 oz (737 grams); female 22 oz (624 grams)</td><td>Cream</td><td>not listed</td><td>100-200 eggs per year, depending on whether the hen becomes broody.</td><td><a href="https://livestockconservancy.org/belgian-bearded-duccle-bantam/">Livestock Conservancy</a></td></tr>
+<tr><td>Booted Bantam</td><td>Bantam</td><td data-sort-value="1.625">Male 26 oz (738 grams); female 22 oz (624 grams)</td><td>White, cream, or tinted</td><td>Characteristics: not cold tolerant. Body text: very hardy and easy to raise, but will need protection from the cold.</td><td>not listed</td><td><a href="https://livestockconservancy.org/booted-bantam-chicken/">Livestock Conservancy</a></td></tr>
+<tr><td>Brahma</td><td>Standard (large fowl)</td><td data-sort-value="12">Cock 12 lb; hen 9½ lb</td><td>Brown</td><td>Stand cold temperatures very well.</td><td>Fair egg layers.</td><td><a href="https://livestock.extension.wisc.edu/articles/chicken-breeds-varieties-a2880/">Wisconsin Extension A2880</a></td></tr>
+<tr><td>Cochin</td><td>Standard (large fowl)</td><td data-sort-value="11">Cock 11 lb; hen 8½ lb</td><td>Brown</td><td>not listed</td><td>Intense layers for short periods of time.</td><td><a href="https://livestock.extension.wisc.edu/articles/chicken-breeds-varieties-a2880/">Wisconsin Extension A2880</a></td></tr>
+<tr><td>Cornish</td><td>Standard (large fowl)</td><td data-sort-value="10.5">Cock 10½ lb; hen 8 lb</td><td>Light brown</td><td>Need adequate protection during cold weather, because their feathers offer less insulation than most other chickens.</td><td>not listed</td><td><a href="https://livestock.extension.wisc.edu/articles/chicken-breeds-varieties-a2880/">Wisconsin Extension A2880</a></td></tr>
+<tr><td>Faverolle</td><td>Standard (large fowl)</td><td data-sort-value="8">Cock 8 lb; hen 6½ lb</td><td>Light brown</td><td>not listed</td><td>Winter laying was one of the original purposes of the breed.</td><td><a href="https://livestock.extension.wisc.edu/articles/chicken-breeds-varieties-a2880/">Wisconsin Extension A2880</a></td></tr>
+<tr><td>Hamburg</td><td>Standard (large fowl)</td><td data-sort-value="5">Cock 5 lb; hen 4 lb</td><td>White</td><td>not listed</td><td>Capable of laying fair numbers of relatively small eggs. Eggs are often very small.</td><td><a href="https://livestock.extension.wisc.edu/articles/chicken-breeds-varieties-a2880/">Wisconsin Extension A2880</a></td></tr>
+<tr><td>Houdan</td><td>Standard (large fowl)</td><td data-sort-value="8">Cock 8 lb; hen 5½ lb</td><td>White</td><td>Feed and water containers should prevent the crest from getting wet and dirty, especially in cold weather.</td><td>A good egg producer.</td><td><a href="https://livestock.extension.wisc.edu/articles/chicken-breeds-varieties-a2880/">Wisconsin Extension A2880</a></td></tr>
+<tr><td>Japanese Bantam</td><td>Bantam</td><td data-sort-value="1.625">Male 26 oz (737 grams); female 22 oz (624 grams)</td><td>Cream</td><td>Not cold tolerant. In northern climates they will need supplemental heat to avoid frostbite on combs and wattles.</td><td>Lays small cream-colored eggs. Annual rate not listed.</td><td><a href="https://livestockconservancy.org/japanese-bantam-chicken/">Livestock Conservancy</a></td></tr>
+<tr><td>Jersey Giant</td><td>Standard (large fowl)</td><td data-sort-value="13">Cock 13 lb; hen 10 lb</td><td>Brown</td><td>not listed</td><td>Fairly good layers.</td><td><a href="https://livestock.extension.wisc.edu/articles/chicken-breeds-varieties-a2880/">Wisconsin Extension A2880</a></td></tr>
+<tr><td>Langshan</td><td>Standard (large fowl)</td><td data-sort-value="9.5">Cock 9½ lb; hen 7½ lb</td><td>Brown</td><td>not listed</td><td>A general-purpose fowl for the production of meat and eggs.</td><td><a href="https://livestock.extension.wisc.edu/articles/chicken-breeds-varieties-a2880/">Wisconsin Extension A2880</a></td></tr>
+<tr><td>Leghorn</td><td>Standard (large fowl)</td><td data-sort-value="6">Cock 6 lb; hen 4½ lb</td><td>White</td><td>not listed</td><td>Noted for egg production.</td><td><a href="https://livestock.extension.wisc.edu/articles/chicken-breeds-varieties-a2880/">Wisconsin Extension A2880</a></td></tr>
+<tr><td>Malay</td><td>Standard (large fowl)</td><td data-sort-value="9">Cock 9 lb; hen 7 lb</td><td>Brown</td><td>not listed</td><td>not listed</td><td><a href="https://livestock.extension.wisc.edu/articles/chicken-breeds-varieties-a2880/">Wisconsin Extension A2880</a></td></tr>
+<tr><td>Maran</td><td>Standard (large fowl)</td><td data-sort-value="8">Cock 8 lb; hen 6½ lb</td><td>Very dark reddish brown</td><td>not listed</td><td>Mainly prized for extremely dark-colored eggshells. Annual rate not listed.</td><td><a href="https://livestock.extension.wisc.edu/articles/chicken-breeds-varieties-a2880/">Wisconsin Extension A2880</a></td></tr>
+<tr><td>Minorca (Single Comb Black)</td><td>Standard (large fowl)</td><td data-sort-value="9">Cock 9 lb; hen 7½ lb</td><td>Chalky white</td><td>not listed</td><td>Can give a fair return in eggs.</td><td><a href="https://livestock.extension.wisc.edu/articles/chicken-breeds-varieties-a2880/">Wisconsin Extension A2880</a></td></tr>
+<tr><td>Minorca (all other varieties)</td><td>Standard (large fowl)</td><td data-sort-value="8">Cock 8 lb; hen 6½ lb</td><td>Chalky white</td><td>not listed</td><td>Can give a fair return in eggs.</td><td><a href="https://livestock.extension.wisc.edu/articles/chicken-breeds-varieties-a2880/">Wisconsin Extension A2880</a></td></tr>
+<tr><td>Modern Game</td><td>Standard (large fowl)</td><td data-sort-value="6">Cock 6 lb; hen 4½ lb</td><td>White or light tint</td><td>Do not stand cold weather well.</td><td>not listed</td><td><a href="https://livestock.extension.wisc.edu/articles/chicken-breeds-varieties-a2880/">Wisconsin Extension A2880</a></td></tr>
+<tr><td>Nankin</td><td>Bantam</td><td data-sort-value="1.5">Male 24 oz; female 22 oz</td><td>Creamy white</td><td>The single comb variety is prone to frostbite. Not the best choice for northern climates.</td><td>About 80-100 small white eggs a year.</td><td><a href="https://livestockconservancy.org/nankin-chicken/">Livestock Conservancy</a></td></tr>
+<tr><td>New Hampshire</td><td>Standard (large fowl)</td><td data-sort-value="8.5">Cock 8½ lb; hen 6½ lb</td><td>Brown</td><td>not listed</td><td>Fair egg-laying ability.</td><td><a href="https://livestock.extension.wisc.edu/articles/chicken-breeds-varieties-a2880/">Wisconsin Extension A2880</a></td></tr>
+<tr><td>Old English Game</td><td>Standard (large fowl)</td><td data-sort-value="5">Cock 5 lb; hen 4 lb</td><td>White or light tint</td><td>not listed</td><td>not listed</td><td><a href="https://livestock.extension.wisc.edu/articles/chicken-breeds-varieties-a2880/">Wisconsin Extension A2880</a></td></tr>
+<tr><td>Orpington</td><td>Standard (large fowl)</td><td data-sort-value="10">Cock 10 lb; hen 8 lb</td><td>Brown to dark brown</td><td>Feathering allows them to endure cold temperatures better than some other breeds.</td><td>A heavy dual-purpose fowl for the production of both meat and eggs.</td><td><a href="https://livestock.extension.wisc.edu/articles/chicken-breeds-varieties-a2880/">Wisconsin Extension A2880</a></td></tr>
+<tr><td>Plymouth Rock</td><td>Standard (large fowl)</td><td data-sort-value="9.5">Cock 9½ lb; hen 7½ lb</td><td>Brown</td><td>not listed</td><td>Some strains are good layers while others are bred principally for meat.</td><td><a href="https://livestock.extension.wisc.edu/articles/chicken-breeds-varieties-a2880/">Wisconsin Extension A2880</a></td></tr>
+<tr><td>Polish</td><td>Standard (large fowl)</td><td data-sort-value="6">Cock 6 lb; hen 4½ lb</td><td>White</td><td>Ice forming in their crests from drinking water can be a problem in cold weather.</td><td>not listed</td><td><a href="https://livestock.extension.wisc.edu/articles/chicken-breeds-varieties-a2880/">Wisconsin Extension A2880</a></td></tr>
+<tr><td>Rhode Island Red</td><td>Standard (large fowl)</td><td data-sort-value="8.5">Cock 8½ lb; hen 6½ lb</td><td>Brown</td><td>not listed</td><td>Good rate of lay. Probably the best egg layers of the dual-purpose breeds.</td><td><a href="https://livestock.extension.wisc.edu/articles/chicken-breeds-varieties-a2880/">Wisconsin Extension A2880</a></td></tr>
+<tr><td>Sebright</td><td>Bantam</td><td data-sort-value="1.375">Male 22 oz; female 20 oz</td><td>Creamy white</td><td>Do not handle cold and damp well, and do better overall in warm climates.</td><td>About 60-80 small eggs per year.</td><td><a href="https://livestockconservancy.org/sebright-chicken/">Livestock Conservancy</a></td></tr>
+<tr><td>Sumatra</td><td>Standard (large fowl)</td><td data-sort-value="5">Cock 5 lb; hen 4 lb</td><td>White or light tint</td><td>not listed</td><td>not listed</td><td><a href="https://livestock.extension.wisc.edu/articles/chicken-breeds-varieties-a2880/">Wisconsin Extension A2880</a></td></tr>
+<tr><td>Sussex</td><td>Standard (large fowl)</td><td data-sort-value="9">Cock 9 lb; hen 7 lb</td><td>Brown</td><td>not listed</td><td>A general-purpose breed for producing meat and/or eggs.</td><td><a href="https://livestock.extension.wisc.edu/articles/chicken-breeds-varieties-a2880/">Wisconsin Extension A2880</a></td></tr>
+<tr><td>Welsummer</td><td>Standard (large fowl)</td><td data-sort-value="7">Cock 7 lb; hen 6 lb</td><td>Dark brown</td><td>not listed</td><td>Will lay a good number of dark-brown eggs.</td><td><a href="https://livestock.extension.wisc.edu/articles/chicken-breeds-varieties-a2880/">Wisconsin Extension A2880</a></td></tr>
+<tr><td>White Faced Black Spanish</td><td>Standard (large fowl)</td><td data-sort-value="8">Cock 8 lb; hen 6½ lb</td><td>Chalky white</td><td>not listed</td><td>An egg-production bird that has had very little selection for that purpose in recent years.</td><td><a href="https://livestock.extension.wisc.edu/articles/chicken-breeds-varieties-a2880/">Wisconsin Extension A2880</a></td></tr>
+<tr><td>Wyandotte</td><td>Standard (large fowl)</td><td data-sort-value="8.5">Cock 8½ lb; hen 6½ lb</td><td>Brown</td><td>Rose combs do not freeze as easily as single combs.</td><td>Use on the page: meat or eggs. Annual rate not listed.</td><td><a href="https://livestock.extension.wisc.edu/articles/chicken-breeds-varieties-a2880/">Wisconsin Extension A2880</a></td></tr>
+</tbody>
+</table>
+</div>
+<p class="small">Adult weight for large fowl is the published cock and hen pair. Cockerel and pullet weights are younger birds and are not in this column. Bantam weight is the published male and female pair. The number used for sorting is the cock or male weight in pounds (ounces divided by 16). Accessed October 6, 2026.</p>
+
+<h2>How to use a row</h2>
+<ol>
+  <li>Read the size class. Standard large fowl uses the calculator's standard setting. Bantam uses the bantam setting.</li>
+  <li>Do not convert the weight into square feet. The Wisconsin page and the Livestock Conservancy pages cited here do not publish coop square feet.</li>
+  <li>Read hardiness before you plan winter heat. The cold or heat column says not listed when the page does not state cold or heat. A general word such as hardy, with no cold or heat sentence, stays not listed. The winter page keeps Minnesota's 35°F line, Maryland's note on dry adults, and this site's separate 20°F planner.</li>
+  <li>Read laying as a phrase from that page. A record for one Australorp hen is not a flock average.</li>
+</ol>
+
+<h2>FAQ</h2>
+<h3>Does a heavier breed need more coop space in this calculator?</h3>
+<p>No. calcCoopSize uses 4 sq ft of coop and 10 sq ft of run for every standard bird, and 2 and 8 for every bantam. A Jersey Giant and a Leghorn are both standard. The weights in the table do not change those rates.</p>
+<h3>Where do the breed weights come from?</h3>
+<p>Large-fowl rows are the standard cock and hen weights on the University of Wisconsin-Madison Extension page Chicken Breeds &amp; Varieties (A2880), accessed October 6, 2026. Bantam rows are the mature weights on the linked Livestock Conservancy breed pages, accessed the same day. A cell says not listed when that page does not state it.</p>
+<p>Compiled with AI assistance from the sources below. Spot an error? Email <a href="mailto:jpanasuk@gmail.com">jpanasuk@gmail.com</a>.</p>
+<h2>Sources</h2>
+<ul>
+  <li>University of Wisconsin–Madison Extension, "Chicken Breeds &amp; Varieties (A2880)," John L. Skinner and Adam Hady. Originally published June 2018. <a href="https://livestock.extension.wisc.edu/articles/chicken-breeds-varieties-a2880/">https://livestock.extension.wisc.edu/articles/chicken-breeds-varieties-a2880/</a>. Accessed October 6, 2026.</li>
+  <li>The Livestock Conservancy, "Belgian Bearded d'Uccle Bantam." <a href="https://livestockconservancy.org/belgian-bearded-duccle-bantam/">https://livestockconservancy.org/belgian-bearded-duccle-bantam/</a>. Accessed October 6, 2026.</li>
+  <li>The Livestock Conservancy, "Booted Bantam Chicken." <a href="https://livestockconservancy.org/booted-bantam-chicken/">https://livestockconservancy.org/booted-bantam-chicken/</a>. Accessed October 6, 2026.</li>
+  <li>The Livestock Conservancy, "Japanese Bantam Chicken." <a href="https://livestockconservancy.org/japanese-bantam-chicken/">https://livestockconservancy.org/japanese-bantam-chicken/</a>. Accessed October 6, 2026.</li>
+  <li>The Livestock Conservancy, "Nankin Chicken." <a href="https://livestockconservancy.org/nankin-chicken/">https://livestockconservancy.org/nankin-chicken/</a>. Accessed October 6, 2026.</li>
+  <li>The Livestock Conservancy, "Sebright Chicken." <a href="https://livestockconservancy.org/sebright-chicken/">https://livestockconservancy.org/sebright-chicken/</a>. Accessed October 6, 2026.</li>
+  <li>Penn State Extension, "Small Scale Poultry Housing." Bantam minimum of 1 sq ft inside and 4 sq ft of run, used only in the worked example. <a href="https://extension.psu.edu/small-scale-poultry-housing/">https://extension.psu.edu/small-scale-poultry-housing/</a>. Accessed October 6, 2026.</li>
+  <li>University of Maryland Extension, "Housing Requirements." Same bantam minimum, used only in the worked example. <a href="https://www.extension.umd.edu/resource/housing-requirements">https://www.extension.umd.edu/resource/housing-requirements</a>. Accessed October 6, 2026.</li>
+</ul>
+</main>
+<footer>Built by <a href="/about.html">Jeremy Panasuk</a> · <a href="/about.html">About &amp; how this was made</a> · <a href="/index.html#methodology-note">Methodology</a> · <a href="/privacy.html">Privacy</a> · <a href="/contact.html">Contact</a> · pages may contain affiliate links</footer>
+<script src="assets/breed-sort.js" defer></script>
+</body>
+</html>

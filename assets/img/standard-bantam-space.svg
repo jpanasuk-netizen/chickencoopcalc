@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="320" viewBox="0 0 720 320" role="img" aria-labelledby="t d">
+  <title id="t">Standard and bantam space rates</title>
+  <desc id="d">Calculator rates are 4 and 10 square feet for a standard bird and 2 and 8 for a bantam. Penn State and Maryland list a bantam minimum of 1 and 4.</desc>
+  <rect width="720" height="320" fill="#f6f8fa"/>
+  <g font-family="system-ui,Segoe UI,sans-serif" fill="#1f2328">
+    <text x="200" y="36" font-size="14">0</text>
+    <text x="560" y="36" font-size="14">10 sq ft</text>
+    <text x="24" y="78" font-size="14">Standard coop</text>
+    <rect x="200" y="60" width="144" height="28" fill="#1f2328"/>
+    <text x="352" y="80" font-size="14">4</text>
+    <text x="24" y="122" font-size="14">Standard run</text>
+    <rect x="200" y="104" width="360" height="28" fill="#1f2328"/>
+    <text x="568" y="124" font-size="14">10</text>
+    <text x="24" y="178" font-size="14">Bantam coop</text>
+    <rect x="200" y="160" width="72" height="28" fill="#57606a"/>
+    <text x="280" y="180" font-size="14">2</text>
+    <text x="24" y="222" font-size="14">Bantam run</text>
+    <rect x="200" y="204" width="288" height="28" fill="#57606a"/>
+    <text x="496" y="224" font-size="14">8</text>
+    <text x="24" y="268" font-size="14">Bantam minimum</text>
+    <rect x="200" y="250" width="36" height="22" fill="#ffffff" stroke="#1f2328"/>
+    <text x="244" y="266" font-size="14">1 coop</text>
+    <rect x="330" y="250" width="144" height="22" fill="#ffffff" stroke="#1f2328"/>
+    <text x="482" y="266" font-size="14">4 run</text>
+    <text x="24" y="304" font-size="13">Dark bars: this calculator. Open bars: Penn State and Maryland minimum.</text>
+  </g>
+</svg>

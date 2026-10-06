@@ -72,6 +72,10 @@ th,td{text-align:left;padding:.5rem .6rem;border-bottom:1px solid var(--bd)}
 th{color:var(--mut);font-weight:600;font-size:.8rem;text-transform:uppercase;letter-spacing:.05em}
 .num{font-variant-numeric:tabular-nums;text-align:right}
 .tbl-wrap{overflow-x:auto}
+th button.sort-btn{background:none;border:0;color:inherit;font:inherit;letter-spacing:inherit;text-transform:inherit;cursor:pointer;padding:0;text-align:left}
+figure.diagram{margin:1.2rem 0}
+figure.diagram img{max-width:100%;height:auto;display:block}
+figure.diagram figcaption{font-size:.85rem;color:var(--mut);margin-top:.4rem}
 
 /* cards / footer */
 .card{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:1rem 1.1rem;margin:.7rem 0}

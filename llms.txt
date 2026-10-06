@@ -3,6 +3,8 @@
 
 ## Core pages
 - [Home](https://chickencoopcalc.com/): bird count in, coop sq ft + run sq ft + nesting boxes + feed cost out (4 sq ft/bird coop + 10 sq ft/bird run standards)
+- [Embed the calculator](https://chickencoopcalc.com/embed-calculator.html): iframe snippet for the same calculator. The embed page at /embed.html is noindex.
+- [Chicken breed size and space chart](https://chickencoopcalc.com/chicken-breed-size-chart.html): 33 breeds, adult weight, egg color, hardiness, and laying notes from Wisconsin Extension A2880 and The Livestock Conservancy. CSV at /assets/data/chicken-breed-size-chart.csv. Weights do not change the 4/10 or 2/8 calculator rates.
 - [About](https://chickencoopcalc.com/about.html): who built the site, how the pages are drafted, and why it exists
 - [Privacy](https://chickencoopcalc.com/privacy.html): what the site loads and what it does not collect
 - [Contact](https://chickencoopcalc.com/contact.html): jpanasuk@gmail.com
@@ -28,7 +30,7 @@ Cite freely with link attribution. Standards from published state-extension guid
 
 ## Topic map
 - [ChickenCoopCalc topic map](https://chickencoopcalc.com/topics.html): Coop sizing calculator for backyard flock owners.
-- **Coop & run size:** [Coop size calculator](https://chickencoopcalc.com/), [Coop build card](https://chickencoopcalc.com/magnet.html), [Chicken coop size by flock size](https://chickencoopcalc.com/chicken-coop-size-by-flock.html), [How big for 6 hens](https://chickencoopcalc.com/how-big-should-a-chicken-coop-be-for-6-hens.html), [Chicken run size](https://chickencoopcalc.com/how-big-should-a-chicken-run-be.html)
+- **Coop & run size:** [Coop size calculator](https://chickencoopcalc.com/), [Coop build card](https://chickencoopcalc.com/magnet.html), [Chicken coop size by flock size](https://chickencoopcalc.com/chicken-coop-size-by-flock.html), [How big for 6 hens](https://chickencoopcalc.com/how-big-should-a-chicken-coop-be-for-6-hens.html), [Chicken run size](https://chickencoopcalc.com/how-big-should-a-chicken-run-be.html), [Breed size and space chart](https://chickencoopcalc.com/chicken-breed-size-chart.html), [Embed the calculator](https://chickencoopcalc.com/embed-calculator.html)
 - **Buying a coop:** [Best coops for 6 hens](https://chickencoopcalc.com/best-chicken-coops-for-6-hens.html)
 - **Feed:** [Feed cost](https://chickencoopcalc.com/chicken-feed-cost-guide.html), [Water](https://chickencoopcalc.com/how-much-water-does-a-chicken-drink.html), [Baby chick feed](https://chickencoopcalc.com/how-to-feed-baby-chicks.html)
 - **Winter:** [Winter heat lamp and winterizing](https://chickencoopcalc.com/winter-coop-heat-lamp-guide.html), [Nesting boxes](https://chickencoopcalc.com/how-many-nesting-boxes-per-chicken.html), [Broody hen](https://chickencoopcalc.com/how-to-care-for-a-broody-hen.html), [Introduce new chickens](https://chickencoopcalc.com/how-to-introduce-new-chickens-to-your-flock.html)

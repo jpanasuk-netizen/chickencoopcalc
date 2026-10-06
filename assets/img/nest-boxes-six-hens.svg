@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="260" viewBox="0 0 720 260" role="img" aria-labelledby="t d">
+  <title id="t">Nest boxes for six hens</title>
+  <desc id="d">Six hens at one box per four hens need two boxes. Penn State says a nest at least 12 by 12 inches.</desc>
+  <rect width="720" height="260" fill="#f6f8fa"/>
+  <g font-family="system-ui,Segoe UI,sans-serif" fill="#1f2328">
+    <rect x="28" y="78" width="160" height="80" rx="8" fill="#ffffff" stroke="#1f2328" stroke-width="2"/>
+    <text x="108" y="114" text-anchor="middle" font-size="16" font-weight="700">6 hens</text>
+    <text x="108" y="138" text-anchor="middle" font-size="14">1 box per 4</text>
+    <path d="M188 118 H230" stroke="#1f2328" stroke-width="2"/>
+    <path d="M222 110 L234 118 L222 126" fill="#1f2328"/>
+    <rect x="246" y="48" width="120" height="90" fill="#ffffff" stroke="#1f2328" stroke-width="2"/>
+    <text x="306" y="88" text-anchor="middle" font-size="16" font-weight="700">Box 1</text>
+    <text x="306" y="112" text-anchor="middle" font-size="14">12 × 12 in</text>
+    <rect x="386" y="48" width="120" height="90" fill="#ffffff" stroke="#1f2328" stroke-width="2"/>
+    <text x="446" y="88" text-anchor="middle" font-size="16" font-weight="700">Box 2</text>
+    <text x="446" y="112" text-anchor="middle" font-size="14">12 × 12 in</text>
+    <text x="366" y="180" text-anchor="middle" font-size="15">2 boxes for 6 hens</text>
+    <text x="366" y="206" text-anchor="middle" font-size="14">Penn State minimum: at least 12 × 12 inches</text>
+  </g>
+</svg>

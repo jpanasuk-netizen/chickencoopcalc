@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chicken coop calculator embed</title>
+<link rel="canonical" href="https://chickencoopcalc.com/">
+<meta name="robots" content="noindex, follow">
+<meta name="description" content="Embeddable chicken coop size calculator. Same math as the Chicken Coop Calculator homepage.">
+<style>
+  :root { color-scheme: light dark; --bg:#f4f5f7; --fg:#1c1f24; --mut:#5c6570; --bd:#c5ccd6; --card:#fff; --acc:#3d4a5c; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#14171c; --fg:#e7ebf0; --mut:#a3acb8; --bd:#3a4250; --card:#1c2129; --acc:#d5dbe3; }
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--bg); color: var(--fg); }
+  body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-size: 16px; line-height: 1.4; padding: 12px 14px 10px;
+  }
+  h1 { font-size: 1.05rem; margin: 0 0 8px; font-weight: 700; }
+  .tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 8px; }
+  .tabs button {
+    background: var(--card); color: var(--fg); border: 1px solid var(--bd);
+    border-radius: 8px; padding: 6px 10px; font: inherit; cursor: pointer;
+  }
+  .tabs button[aria-selected="true"] { border-color: var(--acc); font-weight: 700; }
+  .panel { display: none; }
+  .panel.active { display: block; }
+  label { display: block; font-weight: 600; font-size: .9rem; margin: 6px 0 2px; }
+  input, select {
+    width: 100%; max-width: 280px; font: inherit; padding: 6px 8px;
+    border: 1px solid var(--bd); border-radius: 8px; background: var(--card); color: var(--fg);
+  }
+  .go {
+    margin-top: 8px; background: var(--acc); color: var(--bg); border: 0; border-radius: 8px;
+    padding: 8px 14px; font: inherit; font-weight: 700; cursor: pointer;
+  }
+  .out { margin-top: 8px; min-height: 4.6rem; }
+  .out strong { font-size: 1.25rem; }
+  .err { color: #9a3412; margin: 6px 0 0; min-height: 1.2em; }
+  @media (prefers-color-scheme: dark) { .err { color: #fdba74; } }
+  .credit { margin: 10px 0 0; font-size: .85rem; color: var(--mut); }
+  .credit a { color: var(--fg); }
+  .note { color: var(--mut); font-size: .8rem; margin: 4px 0 0; }
+</style>
+</head>
+<body>
+<h1>Chicken coop size</h1>
+<div class="tabs" role="tablist" aria-label="Calculators">
+  <button type="button" role="tab" id="tab-coop" aria-selected="true" aria-controls="panel-coop">Coop</button>
+  <button type="button" role="tab" id="tab-feed" aria-selected="false" aria-controls="panel-feed">Feed</button>
+  <button type="button" role="tab" id="tab-nest" aria-selected="false" aria-controls="panel-nest">Nests</button>
+  <button type="button" role="tab" id="tab-heat" aria-selected="false" aria-controls="panel-heat">Heat</button>
+</div>
+
+<section id="panel-coop" class="panel active" role="tabpanel" aria-labelledby="tab-coop">
+  <label for="birds">Birds</label>
+  <input id="birds" type="number" min="1" inputmode="numeric" value="6">
+  <label for="breed">Bird type</label>
+  <select id="breed">
+    <option value="standard">Standard (4 sq ft coop, 10 sq ft run)</option>
+    <option value="bantam">Bantam (2 sq ft coop, 8 sq ft run)</option>
+  </select>
+  <p><button type="button" class="go" id="go-coop">Calculate</button></p>
+  <p class="err" id="err-coop" role="status"></p>
+  <div class="out" id="out-coop"></div>
+</section>
+
+<section id="panel-feed" class="panel" role="tabpanel" aria-labelledby="tab-feed">
+  <label for="fd-birds">Hens</label>
+  <input id="fd-birds" type="number" min="1" inputmode="numeric" value="6">
+  <label for="fd-weeks">Weeks</label>
+  <input id="fd-weeks" type="number" min="1" inputmode="numeric" value="12">
+  <label for="fd-price">Price per 50 lb bag (USD)</label>
+  <input id="fd-price" type="number" min="0" step="0.01" inputmode="decimal" value="22">
+  <p><button type="button" class="go" id="go-feed">Calculate</button></p>
+  <p class="err" id="err-feed" role="status"></p>
+  <div class="out" id="out-feed"></div>
+</section>
+
+<section id="panel-nest" class="panel" role="tabpanel" aria-labelledby="tab-nest">
+  <label for="nb-hens">Hens</label>
+  <input id="nb-hens" type="number" min="1" inputmode="numeric" value="6">
+  <label for="nb-style">Box rate</label>
+  <select id="nb-style">
+    <option value="standard">1 per 3 (tighter than the published 1 per 4–5)</option>
+    <option value="communal">1 per 5 (wide end of 1 per 4–5)</option>
+  </select>
+  <p><button type="button" class="go" id="go-nest">Calculate</button></p>
+  <p class="err" id="err-nest" role="status"></p>
+  <div class="out" id="out-nest"></div>
+</section>
+
+<section id="panel-heat" class="panel" role="tabpanel" aria-labelledby="tab-heat">
+  <label for="ht-sqft">Coop floor (sq ft)</label>
+  <input id="ht-sqft" type="number" min="1" inputmode="numeric" value="24">
+  <label for="ht-low">Winter low (°F)</label>
+  <input id="ht-low" type="number" step="1" inputmode="decimal" value="10">
+  <label for="ht-chicks">Chicks in the brooder?</label>
+  <select id="ht-chicks">
+    <option value="no">No</option>
+    <option value="yes">Yes</option>
+  </select>
+  <p><button type="button" class="go" id="go-heat">Calculate</button></p>
+  <p class="err" id="err-heat" role="status"></p>
+  <div class="out" id="out-heat"></div>
+</section>
+
+<p class="credit">Calculator by <a href="https://chickencoopcalc.com/" target="_blank" rel="noopener">Chicken Coop Calculator</a></p>
+<script src="/assets/app.js"></script>
+<script>
+(function () {
+  var tabs = document.querySelectorAll(".tabs button");
+  tabs.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      tabs.forEach(function (b) {
+        var on = b === btn;
+        b.setAttribute("aria-selected", on ? "true" : "false");
+        document.getElementById(b.getAttribute("aria-controls")).classList.toggle("active", on);
+      });
+    });
+  });
+  function num(id) {
+    var v = parseFloat(document.getElementById(id).value);
+    return isNaN(v) ? NaN : v;
+  }
+  function showErr(id, msg) { document.getElementById(id).textContent = msg || ""; }
+  document.getElementById("go-coop").addEventListener("click", function () {
+    var birds = num("birds");
+    if (!birds || birds < 1) { showErr("err-coop", "Enter at least 1 bird."); return; }
+    showErr("err-coop", "");
+    var breed = document.getElementById("breed").value;
+    var r = calcCoopSize(birds, breed);
+    document.getElementById("out-coop").innerHTML =
+      "<strong>" + r.coopSqFt + " sq ft coop · " + r.runSqFt + " sq ft run</strong>" +
+      "<p class=\"note\">" + r.perBirdCoop + " sq ft indoors and " + r.perBirdRun + " sq ft of run per " + breed + " bird. Coop rounds up to the next 2 sq ft. Run rounds up to the next 4 sq ft.</p>";
+  });
+  document.getElementById("go-feed").addEventListener("click", function () {
+    var birds = num("fd-birds");
+    if (!birds || birds < 1) { showErr("err-feed", "Enter at least 1 hen."); return; }
+    showErr("err-feed", "");
+    var r = calcFeed(birds, num("fd-weeks") || 0, num("fd-price") || 0);
+    document.getElementById("out-feed").innerHTML =
+      "<strong>" + r.lbPerDay + " lb/day · " + r.lbMonth + " lb/month</strong>" +
+      "<p class=\"note\">" + r.bagsMonth + (r.bagsMonth === 1 ? " bag" : " bags") + " of 50 lb per month. About $" + r.monthlyCost.toFixed(2) + " at the price you entered. Rate is 0.25 lb per hen per day.</p>";
+  });
+  document.getElementById("go-nest").addEventListener("click", function () {
+    var hens = num("nb-hens");
+    if (!hens || hens < 1) { showErr("err-nest", "Enter at least 1 hen."); return; }
+    showErr("err-nest", "");
+    var style = document.getElementById("nb-style").value;
+    var r = calcNestBoxes(hens, style);
+    document.getElementById("out-nest").innerHTML =
+      "<strong>" + r.boxes + " nesting box" + (r.boxes === 1 ? "" : "es") + "</strong>" +
+      "<p class=\"note\">This count is 1 box per " + r.perBox + " hens.</p>";
+  });
+  document.getElementById("go-heat").addEventListener("click", function () {
+    var sqft = num("ht-sqft");
+    if (!sqft || sqft < 1) { showErr("err-heat", "Enter the coop floor in square feet."); return; }
+    showErr("err-heat", "");
+    var chicks = document.getElementById("ht-chicks").value === "yes";
+    var r = calcHeat(sqft, num("ht-low"), chicks);
+    var adult = r.adultNeedsHeat ? (r.adultWatts + " W adult planning watts") : "No adult watts on the 20°F line";
+    document.getElementById("out-heat").innerHTML =
+      "<strong>" + r.ventSqFt + " sq ft high ventilation</strong>" +
+      "<p class=\"note\">" + adult + (chicks ? ". Brooder planning watts: " + r.chickWatts + " W." : ".") + " The 20°F line and the watts are site planning.</p>";
+  });
+})();
+</script>
+</body>
+</html>
