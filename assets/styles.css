@@ -76,6 +76,10 @@ th button.sort-btn{background:none;border:0;color:inherit;font:inherit;letter-sp
 figure.diagram{margin:1.2rem 0}
 figure.diagram img{max-width:100%;height:auto;display:block}
 figure.diagram figcaption{font-size:.85rem;color:var(--mut);margin-top:.4rem}
+.share-row{margin:.7rem 0 0;display:flex;flex-wrap:wrap;gap:.4rem;align-items:center}
+.share-row button{background:var(--card);color:var(--fg);border:1px solid var(--bd);border-radius:8px;padding:.45rem .7rem;font:inherit;cursor:pointer}
+.share-status{min-width:4.5rem;font-size:.85rem;color:var(--mut)}
+.affil-disclosure{margin:.6rem 0}
 
 /* cards / footer */
 .card{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:1rem 1.1rem;margin:.7rem 0}

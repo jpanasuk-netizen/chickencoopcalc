@@ -25,6 +25,7 @@
   "applicationCategory": "UtilitiesApplication",
   "operatingSystem": "Any",
   "url": "https://chickencoopcalc.com/",
+  "dateModified": "2026-10-06",
   "description": "Coop sizing calculator for backyard flock owners. Tell us your flock. Get the coop and run square footage, monthly feed cost, nesting boxes, and winter ventilation — per the published extension-service standards, rounded up.",
   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
 }
@@ -99,17 +100,20 @@
 
 <main>
 <h1>Chicken Coop Size Calculator</h1>
+<p class="small">Last updated: October 6, 2026</p>
+<p><strong>Quick answer.</strong> This calculator turns a bird count into coop square feet, run square feet, nesting boxes, and feed. Standard birds use 4 sq ft of coop and 10 sq ft of run. Bantams use 2 and 8, which is above the Penn State and Maryland minimum of 1 and 4.</p>
 <p data-magnet-cta="1" style="margin:.6rem 0 1.1rem;padding:.7rem .9rem;border-left:4px solid #f59e0b;background:rgba(245,158,11,.08);font-size:1.02rem"><a href="magnet.html" style="font-weight:700">Free coop build card — print it, 10 minutes.</a></p>
 <p class="sub">Coop sizing calculator for backyard flock owners.</p>
 <p class="sub">Tell us your flock. Get the coop and run square footage, monthly feed cost, nesting boxes, and winter ventilation — per the published extension-service standards, rounded up.</p>
 
 <div class="tabs" id="calc" role="tablist" aria-label="Calculators">
-  <button role="tab" aria-selected="true" onclick="showTab('tab-coop', this)">Coop size</button>
-  <button role="tab" aria-selected="false" onclick="showTab('tab-feed', this)">Feed cost</button>
-  <button role="tab" aria-selected="false" onclick="showTab('tab-nest', this)">Nesting boxes</button>
-  <button role="tab" aria-selected="false" onclick="showTab('tab-heat', this)">Winter heat &amp; vents</button>
+  <button role="tab" aria-selected="true" data-panel="tab-coop" onclick="showTab('tab-coop', this)">Coop size</button>
+  <button role="tab" aria-selected="false" data-panel="tab-feed" onclick="showTab('tab-feed', this)">Feed cost</button>
+  <button role="tab" aria-selected="false" data-panel="tab-nest" onclick="showTab('tab-nest', this)">Nesting boxes</button>
+  <button role="tab" aria-selected="false" data-panel="tab-heat" onclick="showTab('tab-heat', this)">Winter heat &amp; vents</button>
 </div>
 
+<p class="small affil-disclosure">As an Amazon Associate I earn from qualifying purchases. The Amazon links below are affiliate links; they don't change the math.</p>
 <!-- ============ 1. COOP SIZE ============ -->
 <section id="tab-coop" class="panel active" role="tabpanel">
   <p>The planning rate on this calculator: <strong>4 sq ft of coop + 10 sq ft of run per standard bird</strong>. That 4 sits in the eXtension and UC Master Gardener range of about 3–4 sq ft indoors, and 10 sq ft outdoors is the figure both of those pages publish. Bantam rows on the Penn State and Maryland tables are 1 sq ft inside and 4 sq ft of run; this calculator uses 2 and 8, which is extra room above that minimum.</p>
@@ -127,7 +131,7 @@
       </select>
     </div>
   </div>
-  <button onclick="runCoopCalc()" style="background:var(--acc);color:#fff;border:none;border-radius:8px;padding:.7rem 1.4rem;font-size:1.05rem;cursor:pointer;font-weight:600">Size my coop</button>
+  <button id="ccBtn" onclick="runCoopCalc()" style="background:var(--acc);color:#fff;border:none;border-radius:8px;padding:.7rem 1.4rem;font-size:1.05rem;cursor:pointer;font-weight:600">Size my coop</button>
   <div id="ccResult" class="ans" hidden></div>
   <div id="matchedCta" hidden></div>
   <div class="affil">
@@ -153,7 +157,7 @@
       <input type="number" id="fdPrice" value="22" min="1" step="0.5">
     </div>
   </div>
-  <button onclick="runFeedCalc()" style="background:var(--acc);color:#fff;border:none;border-radius:8px;padding:.7rem 1.4rem;font-size:1.05rem;cursor:pointer;font-weight:600">Calculate feed</button>
+  <button id="fdBtn" onclick="runFeedCalc()" style="background:var(--acc);color:#fff;border:none;border-radius:8px;padding:.7rem 1.4rem;font-size:1.05rem;cursor:pointer;font-weight:600">Calculate feed</button>
   <div id="fdResult" class="ans" hidden></div>
   <p class="small">Storing bulk feed? A 30-gallon metal trash can holds about 150 lb — a full pallet-order math check is in the <a href="chicken-feed-cost-guide.html">feed cost guide</a>.</p>
   <p class="affil-note small">Layer feed, gravity feeders, and rodent-proof storage cans on Amazon: <a href="https://www.amazon.com/s?k=chicken+treadle+feeder&tag=generatorsi0d-20" rel="sponsored nofollow noopener" target="_blank">treadle feeders on Amazon</a> · <a href="https://www.amazon.com/s?k=galvanized+metal+trash+can+32+gallon&tag=generatorsi0d-20" rel="sponsored nofollow noopener" target="_blank">rodent-proof cans on Amazon</a> · <a href="https://www.amazon.com/s?k=layer+chicken+feed+50+lb&tag=generatorsi0d-20" rel="sponsored nofollow noopener" target="_blank">layer feed on Amazon</a></p>
@@ -175,7 +179,7 @@
       </select>
     </div>
   </div>
-  <button onclick="runNestCalc()" style="background:var(--acc);color:#fff;border:none;border-radius:8px;padding:.7rem 1.4rem;font-size:1.05rem;cursor:pointer;font-weight:600">Count my boxes</button>
+  <button id="nbBtn" onclick="runNestCalc()" style="background:var(--acc);color:#fff;border:none;border-radius:8px;padding:.7rem 1.4rem;font-size:1.05rem;cursor:pointer;font-weight:600">Count my boxes</button>
   <div id="nbResult" class="ans" hidden></div>
   <p class="affil-note small">Nesting box kits, roll-out nest inserts, and fake ceramic training eggs on Amazon: <a href="https://www.amazon.com/s?k=chicken+nesting+box&tag=generatorsi0d-20" rel="sponsored nofollow noopener" target="_blank">nesting boxes on Amazon</a> · <a href="https://www.amazon.com/s?k=ceramic+eggs+chicken+nesting&tag=generatorsi0d-20" rel="sponsored nofollow noopener" target="_blank">ceramic eggs on Amazon</a></p>
 </section>
@@ -197,7 +201,7 @@
       <select id="htChicks"><option value="no">No — adults only</option><option value="yes">Yes — chicks in a brooder</option></select>
     </div>
   </div>
-  <button onclick="runHeatCalc()" style="background:var(--acc);color:#fff;border:none;border-radius:8px;padding:.7rem 1.4rem;font-size:1.05rem;cursor:pointer;font-weight:600">Size my winter setup</button>
+  <button id="htBtn" onclick="runHeatCalc()" style="background:var(--acc);color:#fff;border:none;border-radius:8px;padding:.7rem 1.4rem;font-size:1.05rem;cursor:pointer;font-weight:600">Size my winter setup</button>
   <div id="htResult" class="ans" hidden></div>
   <p class="affil-note small">Coop thermostats, red brooder bulbs, and vent covers on Amazon: <a href="https://www.amazon.com/s?k=chicken+coop+heat+lamp+with+thermostat&tag=generatorsi0d-20" rel="sponsored nofollow noopener" target="_blank">thermostat heat lamps on Amazon</a> · <a href="https://www.amazon.com/s?k=red+brooder+heat+bulb&tag=generatorsi0d-20" rel="sponsored nofollow noopener" target="_blank">red brooder bulbs on Amazon</a> · <a href="https://www.amazon.com/s?k=chicken+coop+vent+cover&tag=generatorsi0d-20" rel="sponsored nofollow noopener" target="_blank">vent covers on Amazon</a></p>
 </section>
@@ -321,9 +325,12 @@
 </section>
 
 
-<footer>Built by <a href="/about.html">Jeremy Panasuk</a> · <a href="/about.html">About &amp; how this was made</a> · <a href="/index.html#methodology-note">Methodology</a> · <a href="/embed-calculator.html">Embed this calculator</a> · <a href="/privacy.html">Privacy</a> · <a href="/contact.html">Contact</a> · pages may contain affiliate links</footer>
+<footer>Built by <a href="/about.html">Jeremy Panasuk</a> · <a href="/about.html">About &amp; how this was made</a> · <a href="/methodology.html">Methodology</a> · <a href="/embed-calculator.html">Embed this calculator</a> · <a href="/privacy.html">Privacy</a> · <a href="/contact.html">Contact</a> · pages may contain affiliate links</footer>
 
 <script src="assets/app.js" defer></script>
+<script type="application/json" id="share-spec">{"tab":true,"calcs":[{"tab":"coop","panel":"tab-coop","name":"Chicken coop size estimate","box":"ccResult","click":"ccBtn","fields":[["birds","ccBirds","n",1],["breed","ccBreed","s",0]]},{"tab":"feed","panel":"tab-feed","name":"Chicken feed estimate","box":"fdResult","click":"fdBtn","fields":[["hens","fdBirds","n",1],["weeks","fdWeeks","n",0],["price","fdPrice","n",0]]},{"tab":"nest","panel":"tab-nest","name":"Nesting box estimate","box":"nbResult","click":"nbBtn","fields":[["hens","nbHens","n",1],["style","nbStyle","s",0]]},{"tab":"heat","panel":"tab-heat","name":"Winter heat and vent estimate","box":"htResult","click":"htBtn","fields":[["sqft","htSqft","n",1],["low","htLow","n",0],["chicks","htChicks","s",0]]}]}</script>
+<script src="assets/share.js" defer></script>
+
 <script src="assets/monetization.js" defer></script>
 <script src="assets/magnet-cta.js" defer></script>
 
