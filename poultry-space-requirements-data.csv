@@ -1,0 +1,43 @@
+bird,metric,value,unit,source_name,source_url,accessed
+Bantam chickens,Minimum floor space inside,1,sq ft per bird,"Penn State Extension, Small-Scale Poultry Housing (Table 1)",https://extension.psu.edu/small-scale-poultry-housing/,2026-10-10
+Bantam chickens,Minimum outside run,4,sq ft per bird,"Penn State Extension, Small-Scale Poultry Housing (Table 1)",https://extension.psu.edu/small-scale-poultry-housing/,2026-10-10
+Bantam chickens,Minimum floor space inside,1,sq ft per bird,"University of Maryland Extension, Housing Requirements (Clauer, 2009)",https://www.extension.umd.edu/resource/housing-requirements,2026-10-10
+Bantam chickens,Minimum outside run,4,sq ft per bird,"University of Maryland Extension, Housing Requirements (Clauer, 2009)",https://www.extension.umd.edu/resource/housing-requirements,2026-10-10
+Laying hens,Minimum floor space inside,1.5,sq ft per bird,"Penn State Extension, Small-Scale Poultry Housing (Table 1)",https://extension.psu.edu/small-scale-poultry-housing/,2026-10-10
+Laying hens,Minimum outside run,8,sq ft per bird,"Penn State Extension, Small-Scale Poultry Housing (Table 1)",https://extension.psu.edu/small-scale-poultry-housing/,2026-10-10
+Laying hens,Minimum floor space inside,1.5,sq ft per bird,"University of Maryland Extension, Housing Requirements (Clauer, 2009)",https://www.extension.umd.edu/resource/housing-requirements,2026-10-10
+Laying hens,Minimum outside run,8,sq ft per bird,"University of Maryland Extension, Housing Requirements (Clauer, 2009)",https://www.extension.umd.edu/resource/housing-requirements,2026-10-10
+Large chickens,Minimum floor space inside,2,sq ft per bird,"Penn State Extension, Small-Scale Poultry Housing (Table 1)",https://extension.psu.edu/small-scale-poultry-housing/,2026-10-10
+Large chickens,Minimum outside run,10,sq ft per bird,"Penn State Extension, Small-Scale Poultry Housing (Table 1)",https://extension.psu.edu/small-scale-poultry-housing/,2026-10-10
+Large chickens,Minimum floor space inside,2,sq ft per bird,"University of Maryland Extension, Housing Requirements (Clauer, 2009)",https://www.extension.umd.edu/resource/housing-requirements,2026-10-10
+Large chickens,Minimum outside run,10,sq ft per bird,"University of Maryland Extension, Housing Requirements (Clauer, 2009)",https://www.extension.umd.edu/resource/housing-requirements,2026-10-10
+Quail,Minimum floor space inside,1,sq ft per bird,"Penn State Extension, Small-Scale Poultry Housing (Table 1)",https://extension.psu.edu/small-scale-poultry-housing/,2026-10-10
+Quail,Minimum outside run,4,sq ft per bird,"Penn State Extension, Small-Scale Poultry Housing (Table 1)",https://extension.psu.edu/small-scale-poultry-housing/,2026-10-10
+Quail,Minimum floor space inside,1,sq ft per bird,"University of Maryland Extension, Housing Requirements (Clauer, 2009)",https://www.extension.umd.edu/resource/housing-requirements,2026-10-10
+Quail,Minimum outside run,4,sq ft per bird,"University of Maryland Extension, Housing Requirements (Clauer, 2009)",https://www.extension.umd.edu/resource/housing-requirements,2026-10-10
+Pheasant,Minimum floor space inside,5,sq ft per bird,"Penn State Extension, Small-Scale Poultry Housing (Table 1)",https://extension.psu.edu/small-scale-poultry-housing/,2026-10-10
+Pheasant,Minimum outside run,25,sq ft per bird,"Penn State Extension, Small-Scale Poultry Housing (Table 1)",https://extension.psu.edu/small-scale-poultry-housing/,2026-10-10
+Pheasant,Minimum floor space inside,5,sq ft per bird,"University of Maryland Extension, Housing Requirements (Clauer, 2009)",https://www.extension.umd.edu/resource/housing-requirements,2026-10-10
+Pheasant,Minimum outside run,25,sq ft per bird,"University of Maryland Extension, Housing Requirements (Clauer, 2009)",https://www.extension.umd.edu/resource/housing-requirements,2026-10-10
+Ducks,Minimum floor space inside,3,sq ft per bird,"Penn State Extension, Small-Scale Poultry Housing (Table 1)",https://extension.psu.edu/small-scale-poultry-housing/,2026-10-10
+Ducks,Minimum outside run,15,sq ft per bird,"Penn State Extension, Small-Scale Poultry Housing (Table 1)",https://extension.psu.edu/small-scale-poultry-housing/,2026-10-10
+Ducks,Minimum floor space inside,3,sq ft per bird,"University of Maryland Extension, Housing Requirements (Clauer, 2009)",https://www.extension.umd.edu/resource/housing-requirements,2026-10-10
+Ducks,Minimum outside run,15,sq ft per bird,"University of Maryland Extension, Housing Requirements (Clauer, 2009)",https://www.extension.umd.edu/resource/housing-requirements,2026-10-10
+Geese,Minimum floor space inside,6,sq ft per bird,"Penn State Extension, Small-Scale Poultry Housing (Table 1)",https://extension.psu.edu/small-scale-poultry-housing/,2026-10-10
+Geese,Minimum outside run,18,sq ft per bird,"Penn State Extension, Small-Scale Poultry Housing (Table 1)",https://extension.psu.edu/small-scale-poultry-housing/,2026-10-10
+Geese,Minimum floor space inside,6,sq ft per bird,"University of Maryland Extension, Housing Requirements (Clauer, 2009)",https://www.extension.umd.edu/resource/housing-requirements,2026-10-10
+Geese,Minimum outside run,18,sq ft per bird,"University of Maryland Extension, Housing Requirements (Clauer, 2009)",https://www.extension.umd.edu/resource/housing-requirements,2026-10-10
+Laying hens,Minimum indoor space,3-4,sq ft per bird,"Poultry Extension (extension.org), Space allowances for small and backyard flocks",https://poultry.extension.org/articles/getting-started-with-small-and-backyard-poultry/housing-for-small-and-backyard-poultry-flocks/space-allowances-in-housing-for-small-and-backyard-poultry-flocks/,2026-10-10
+Laying hens,Outdoor space,10,sq ft per bird,"Poultry Extension (extension.org), Space allowances for small and backyard flocks",https://poultry.extension.org/articles/getting-started-with-small-and-backyard-poultry/housing-for-small-and-backyard-poultry-flocks/space-allowances-in-housing-for-small-and-backyard-poultry-flocks/,2026-10-10
+Meat chickens,Minimum indoor space,3-4,sq ft per bird,"Poultry Extension (extension.org), Space allowances for small and backyard flocks",https://poultry.extension.org/articles/getting-started-with-small-and-backyard-poultry/housing-for-small-and-backyard-poultry-flocks/space-allowances-in-housing-for-small-and-backyard-poultry-flocks/,2026-10-10
+Turkeys,Minimum indoor space,6,sq ft per bird,"Poultry Extension (extension.org), Space allowances for small and backyard flocks",https://poultry.extension.org/articles/getting-started-with-small-and-backyard-poultry/housing-for-small-and-backyard-poultry-flocks/space-allowances-in-housing-for-small-and-backyard-poultry-flocks/,2026-10-10
+Turkeys,Outdoor space,20,sq ft per bird,"Poultry Extension (extension.org), Space allowances for small and backyard flocks",https://poultry.extension.org/articles/getting-started-with-small-and-backyard-poultry/housing-for-small-and-backyard-poultry-flocks/space-allowances-in-housing-for-small-and-backyard-poultry-flocks/,2026-10-10
+Adult ducks,Indoor space,5,sq ft per bird,"Poultry Extension (extension.org), Space allowances for small and backyard flocks",https://poultry.extension.org/articles/getting-started-with-small-and-backyard-poultry/housing-for-small-and-backyard-poultry-flocks/space-allowances-in-housing-for-small-and-backyard-poultry-flocks/,2026-10-10
+Standard chickens,Roost space,6,inches per bird,"Penn State Extension, Small-Scale Poultry Housing",https://extension.psu.edu/small-scale-poultry-housing/,2026-10-10
+Bantams,Roost space,4,inches per bird,"Penn State Extension, Small-Scale Poultry Housing",https://extension.psu.edu/small-scale-poultry-housing/,2026-10-10
+Chickens,Feeder space (minimum),3,inches per bird,"Penn State Extension, Small-Scale Poultry Housing",https://extension.psu.edu/small-scale-poultry-housing/,2026-10-10
+Chickens,Nest box size (minimum),12 x 12,inches,"Penn State Extension, Small-Scale Poultry Housing",https://extension.psu.edu/small-scale-poultry-housing/,2026-10-10
+Chickens,Water nipples,1 per 6-8,birds,"Penn State Extension, Small-Scale Poultry Housing",https://extension.psu.edu/small-scale-poultry-housing/,2026-10-10
+Laying hens / meat birds,Feeder space,2-3,inches per bird,"University of Maryland Extension, Housing Requirements",https://www.extension.umd.edu/resource/housing-requirements,2026-10-10
+Chickens,Roost space,6-7,inches per bird,"University of Maryland Extension, Housing Requirements",https://www.extension.umd.edu/resource/housing-requirements,2026-10-10
+Chickens,Nest boxes,1 (10 x 10 in) per 4-5,hens,"University of Maryland Extension, Housing Requirements",https://www.extension.umd.edu/resource/housing-requirements,2026-10-10
