@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chicken Brooder Size Calculator (Penn State and UMaine Tables)</title>
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="shortcut icon" href="/assets/favicon.ico">
+<meta property="og:image" content="https://chickencoopcalc.com/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://chickencoopcalc.com/assets/og-image.png">
+<meta name="description" content="Penn State: 1/4 sq ft per chick the first week, rising to 1 sq ft at 5 to 8 weeks. UMaine: 0.5 sq ft through 4 weeks. Enter chick count and age.">
+<link rel="canonical" href="https://chickencoopcalc.com/chicken-brooder-size-calculator.html">
+<meta name="robots" content="index,follow">
+<meta property="og:title" content="Chicken Brooder Size Calculator (Penn State and UMaine Tables)">
+<meta property="og:description" content="Penn State: 1/4 sq ft per chick the first week, rising to 1 sq ft at 5 to 8 weeks. UMaine: 0.5 sq ft through 4 weeks. Enter chick count and age.">
+<meta property="og:url" content="https://chickencoopcalc.com/chicken-brooder-size-calculator.html">
+<meta property="og:type" content="article">
+<link rel="stylesheet" href="assets/styles.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Chicken brooder size calculator",
+  "description": "Penn State: 1/4 sq ft per chick the first week, rising to 1 sq ft at 5 to 8 weeks. UMaine: 0.5 sq ft through 4 weeks. Enter chick count and age.",
+  "url": "https://chickencoopcalc.com/chicken-brooder-size-calculator.html",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://chickencoopcalc.com/chicken-brooder-size-calculator.html"
+  },
+  "datePublished": "2026-10-13",
+  "dateModified": "2026-10-13",
+  "author": {
+    "@type": "Organization",
+    "name": "Chicken Coop Calculator"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Chicken Coop Calculator"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://chickencoopcalc.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Chicken brooder size calculator",
+      "item": "https://chickencoopcalc.com/chicken-brooder-size-calculator.html"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@type": "Dataset",
+  "name": "Chick brooder floor space by age",
+  "description": "Minimum brooder floor space per chick by age from Penn State Extension and University of Maine Cooperative Extension.",
+  "url": "https://chickencoopcalc.com/chicken-brooder-size-calculator.html",
+  "creator": {
+    "@type": "Organization",
+    "name": "Chicken Coop Calculator"
+  },
+  "isBasedOn": [
+    "https://extension.psu.edu/space-should-increase-as-birds-grow",
+    "https://extension.umaine.edu/publications/2219e/"
+  ],
+  "license": {
+    "@type": "CreativeWork",
+    "name": "All rights reserved; citation and non-commercial reuse with link back OK",
+    "url": "https://chickencoopcalc.com/chicken-brooder-size-calculator.html#cite"
+  },
+  "variableMeasured": [
+    "floor space (sq ft per bird)",
+    "brooder temperature (°F)"
+  ],
+  "@context": "https://schema.org"
+}
+</script>
+</head>
+<body>
+<header class="site-head">
+  <a class="brand" href="index.html">ChickenCoopCalc</a>
+  <nav aria-label="Site">
+    <a href="index.html#calc">Calculator</a>
+    <a href="chicken-feed-cost-guide.html">Feed cost</a>
+    <a href="winter-coop-heat-lamp-guide.html">Winter heat</a>
+    <a href="topics.html">Topics</a>
+  </nav>
+</header>
+<main>
+<h1>Chicken brooder size calculator</h1>
+<div class="answer-box"><strong>Quick answer:</strong> <a href="https://extension.psu.edu/space-should-increase-as-birds-grow">Penn State Extension</a> sets brooder minimums at 1/4 sq ft per chick the first week, 1/2 sq ft at 2 to 3 weeks, 3/4 sq ft at 3 to 5 weeks and 1 sq ft at 5 to 8 weeks. <a href="https://extension.umaine.edu/publications/2219e/">University of Maine Extension</a> uses 0.5 sq ft per chick through 4 weeks, then 1 sq ft to 8 weeks.</div>
+<h2>Brooder size calculator</h2>
+<div class="card">
+<label for="cn">Number of chicks</label> <input id="cn" type="number" value="10" min="1" step="1">
+<label for="cw">Age (weeks, 0 = first week)</label> <input id="cw" type="number" value="0" min="0" max="11" step="1">
+<div id="co" aria-live="polite"></div>
+<p class="small">The square-box dimension is simple geometry (square root of the floor area), shown so you can picture it. Any shape with the same floor area works.</p>
+</div>
+<h2>Penn State Extension brooder table</h2>
+<div class="tbl-wrap"><table><tr><th>Age</th><th class="num">Min. floor space (sq ft per bird)</th><th>Max. temperature</th></tr><tr><td>1st week</td><td class="num">0.25</td><td>92–95°F</td></tr><tr><td>2–3 weeks</td><td class="num">0.5</td><td>85–90°F</td></tr><tr><td>3–5 weeks</td><td class="num">0.75</td><td>80–85°F</td></tr><tr><td>5–8 weeks</td><td class="num">1.0</td><td>70–80°F</td></tr></table></div>
+<p class="small">Source: <a href="https://extension.psu.edu/space-should-increase-as-birds-grow">Penn State Extension, Space Should Increase as Birds Grow</a>.</p>
+<h2>University of Maine Extension table</h2>
+<div class="tbl-wrap"><table><tr><th>Age</th><th class="num">Floor (sq ft per bird)</th></tr><tr><td>0–4 weeks</td><td class="num">0.5</td></tr><tr><td>4–8 weeks</td><td class="num">1.0</td></tr><tr><td>8–12 weeks</td><td class="num">2.0</td></tr></table></div>
+<p class="small">Source: <a href="https://extension.umaine.edu/publications/2219e/">University of Maine Cooperative Extension Bulletin #2219, Table 1</a>.</p>
+<h2 id="cite">Why the two tables differ</h2>
+<p>Penn State starts smaller and steps up every week or two. Maine uses wider age bands. The calculator shows both so you can choose; this page does not average them. Penn State also says to warm the brooding area to 92°F at least 24 hours before the chicks arrive.</p>
+<p>Once birds move to the coop, see <a href="chicken-coop-size-by-flock.html">coop size by flock</a> and the full <a href="poultry-space-requirements-data.html">poultry space requirements data</a>.</p>
+<h2>Related</h2>
+<ul>
+<li><a href="how-to-feed-baby-chicks.html">How to feed baby chicks</a></li>
+<li><a href="winter-coop-heat-lamp-guide.html">Winter coop heat lamp guide</a></li>
+<li><a href="how-to-care-for-a-broody-hen.html">How to care for a broody hen</a></li>
+<li><a href="chicken-brooder-size-for-10-chicks.html">Brooder size for 10 chicks</a></li>
+</ul>
+</main>
+<footer>Built by <a href="/about.html">Jeremy Panasuk</a> · <a href="/about.html">About &amp; how this was made</a> · <a href="/methodology.html">Methodology</a> · <a href="/privacy.html">Privacy</a> · <a href="/contact.html">Contact</a> · pages may contain affiliate links</footer>
+<script src="assets/app.js" defer></script>
+<script>
+(function(){var P=[["1st week", 0, 1, 0.25, "92\u201395\u00b0F"], ["2\u20133 weeks", 1, 3, 0.5, "85\u201390\u00b0F"], ["3\u20135 weeks", 3, 5, 0.75, "80\u201385\u00b0F"], ["5\u20138 weeks", 5, 8, 1.0, "70\u201380\u00b0F"]],M=[["0\u20134 weeks", 0, 4, 0.5], ["4\u20138 weeks", 4, 8, 1.0], ["8\u201312 weeks", 8, 12, 2.0]];function f(T,w){for(var i=0;i<T.length;i++)if(w>=T[i][1]&&w<T[i][2])return T[i];return null}
+function u(){var n=+document.getElementById('cn').value,w=+document.getElementById('cw').value,o=document.getElementById('co');if(!(n>0))return;var h='';
+var p=f(P,w),m=f(M,w);[['Penn State',p],['UMaine',m]].forEach(function(x){if(x[1]){var s=x[1][3]*n;h+='<p><strong>'+x[0]+'</strong> ('+x[1][0]+'): '+x[1][3]+' sq ft × '+n+' = <strong>'+(+s.toFixed(2))+' sq ft</strong>, about a '+Math.sqrt(s).toFixed(1)+' ft square box.</p>'}else h+='<p><strong>'+x[0]+'</strong>: no row for week '+w+' in this table.</p>'});o.innerHTML=h;}
+['cn','cw'].forEach(function(i){document.getElementById(i).oninput=u});u();})();
+</script>
+</body>
+</html>
