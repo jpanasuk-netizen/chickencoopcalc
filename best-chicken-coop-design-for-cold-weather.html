@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Best Chicken Coop Design for Cold Weather</title>
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="shortcut icon" href="/assets/favicon.ico">
+<meta property="og:image" content="https://chickencoopcalc.com/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Best Chicken Coop Design for Cold Weather">
+<meta name="twitter:description" content="Oregon State: no insulation if the coop has no drafts. 3 sq ft per bird with a run, 8 to 10 sq ft when birds cannot go outside.">
+<meta name="description" content="Oregon State says a draft-free coop does not need insulation. Plan 3 sq ft per bird with a run, or 8 to 10 sq ft when birds cannot go outside. A winter floor checker.">
+<link rel="canonical" href="https://chickencoopcalc.com/best-chicken-coop-design-for-cold-weather.html">
+<meta name="robots" content="index,follow">
+<meta property="og:title" content="Best Chicken Coop Design for Cold Weather">
+<meta property="og:description" content="Oregon State: no insulation if the coop has no drafts. 3 sq ft per bird with a run, 8 to 10 sq ft when birds cannot go outside.">
+<meta property="og:url" content="https://chickencoopcalc.com/best-chicken-coop-design-for-cold-weather.html">
+<meta property="og:type" content="article">
+<link rel="stylesheet" href="assets/styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Best chicken coop design for cold weather",
+  "description": "Oregon State says a draft-free coop does not need insulation. Plan 3 sq ft per bird with a run, or 8 to 10 sq ft when birds cannot go outside.",
+  "url": "https://chickencoopcalc.com/best-chicken-coop-design-for-cold-weather.html",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://chickencoopcalc.com/best-chicken-coop-design-for-cold-weather.html"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "Chicken Coop Calculator"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Chicken Coop Calculator"
+  },
+  "datePublished": "2026-11-10",
+  "dateModified": "2026-11-10"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://chickencoopcalc.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Questions",
+      "item": "https://chickencoopcalc.com/topics.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Best chicken coop design for cold weather",
+      "item": "https://chickencoopcalc.com/best-chicken-coop-design-for-cold-weather.html"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header class="site-head">
+  <a class="brand" href="index.html">ChickenCoopCalc</a>
+  <nav aria-label="Site">
+    <a href="index.html#calc">Calculator</a>
+    <a href="winter-coop-heat-lamp-guide.html">Winter heat</a>
+    <a href="chicken-coop-lighting-for-egg-production.html">Egg-laying light</a>
+    <a href="topics.html">Topics</a>
+  </nav>
+</header>
+<main>
+<p class="small"><a href="index.html">Home</a> / <a href="topics.html">Questions</a> / Best chicken coop design for cold weather</p>
+<h1>Best chicken coop design for cold weather</h1>
+<p class="sub">The winter building: floor space with a run and without one, then the vents. Heat is a different page.</p>
+<p class="small">Built by <a href="/about.html">Jeremy Panasuk</a>. Published November 10, 2026.</p>
+
+<div class="answer-box"><strong>Quick answer:</strong> <a href="https://extension.oregonstate.edu/pub/ec-1644">Oregon State University Extension</a> says a coop does not need insulation as long as it has no drafts, and passive vents in walls, gables, eaves or the roof should clear ammonia and moisture. Plan 3 sq ft per bird when hens can use a run, and 8 to 10 sq ft per bird when they can't get outside.</div>
+
+<h2>Winter floor checker</h2>
+<p>Oregon State University Extension, EC 1644: provide at least 3 square feet per bird if there is access to a run or outdoor area, and 8 to 10 square feet per bird if there is no outdoor access. The checker multiplies those rates by the flock and compares the product with length times width. Both products are labeled derived. It does not invent a third rate.</p>
+<div class="card">
+  <div class="field">
+    <label for="cwBirds">Birds in the coop</label>
+    <input id="cwBirds" type="number" min="1" step="1" value="6">
+  </div>
+  <div class="row2">
+    <div class="field">
+      <label for="cwLen">Coop length, feet</label>
+      <input id="cwLen" type="number" min="0" step="0.1" value="4">
+    </div>
+    <div class="field">
+      <label for="cwWid">Coop width, feet</label>
+      <input id="cwWid" type="number" min="0" step="0.1" value="6">
+    </div>
+  </div>
+  <fieldset>
+    <legend>Can the hens get outside?</legend>
+    <div class="field">
+      <label><input type="radio" name="cwAccess" id="cwRun" value="run" checked> They can use a run or outdoor area</label>
+    </div>
+    <div class="field">
+      <label><input type="radio" name="cwAccess" id="cwNone" value="none"> They cannot get outside</label>
+    </div>
+  </fieldset>
+  <p><button type="button" id="cwBtn" style="background:var(--acc);color:#fff;border:none;border-radius:8px;padding:.7rem 1.4rem;font-size:1.05rem;cursor:pointer;font-weight:600">Check the floor</button></p>
+  <div id="cwOut" class="answer-box" aria-live="polite"></div>
+  <p class="small">The 4 by 6 foot example is 24 square feet. For 6 birds that is 4 sq ft per bird, derived as 24 ÷ 6. Oregon State does not specify a 4 by 6 floor. The other flock-size rates on this site are on <a href="chicken-coop-size-by-flock.html">coop size by flock</a>.</p>
+</div>
+
+<h2>The two floor rates</h2>
+<div class="tbl-wrap">
+<table>
+  <caption>Oregon State floor rates</caption>
+  <thead><tr><th>Outdoor access</th><th>Floor</th><th>Source</th></tr></thead>
+  <tbody>
+    <tr><td>Run or outdoor area</td><td>At least 3 sq ft per bird</td><td><a href="https://extension.oregonstate.edu/pub/ec-1644">Oregon State University Extension, EC 1644</a></td></tr>
+    <tr><td>No outdoor access</td><td>8 to 10 sq ft per bird</td><td><a href="https://extension.oregonstate.edu/pub/ec-1644">Oregon State University Extension, EC 1644</a></td></tr>
+  </tbody>
+</table>
+</div>
+<p>A 4 by 6 foot floor is 24 sq ft (derived: 4 × 6). Six birds at that floor have 4 sq ft each (derived: 24 ÷ 6). That meets the "at least 3" line and misses the 8 to 10 line. Six birds with no outdoor access need 48 to 60 sq ft (derived: 6 × 8 and 6 × 10). Run size, as its own number, is on <a href="how-big-should-a-chicken-run-be.html">how big a chicken run should be</a>. Oregon State's 3 sq ft figure assumes the run exists. It does not replace the run-size page.</p>
+
+<h2>Vent checklist</h2>
+<p>Tick the items the two extension pages actually name. Neither page publishes a fan size or a cubic-feet-per-minute rate. Oregon State says passive ventilation is adequate for most backyard coops, and to build in as much ventilation as possible without drafts or a way in for predators.</p>
+<ul>
+  <li><label><input type="checkbox" id="cwV1"> Oregon State: passive openings, meaning windows in the walls or vents in the gables, eaves, or roof, so ammonia, carbon dioxide, and moisture can leave.</label></li>
+  <li><label><input type="checkbox" id="cwV2"> Oregon State: the coop has air exchange and no drafts. Coops do not need to be insulated, but be sure there are no drafts.</label></li>
+  <li><label><input type="checkbox" id="cwV3"> Oregon State: if you add a fan for a warm or humid spell, it does not blow on the birds.</label></li>
+  <li><label><input type="checkbox" id="cwV4"> New Hampshire Extension: gaps that would let in wind, rain, snow, or rodents are sealed, and the roof is solid and does not leak.</label></li>
+  <li><label><input type="checkbox" id="cwV5"> New Hampshire Extension: a vent hole or a small window, covered with burlap, on the side away from the prevailing wind, and not large enough for a predator.</label></li>
+  <li><label><input type="checkbox" id="cwV6"> New Hampshire Extension: if the floor is open to the ground, 4 to 6 inches of straw or pine shavings.</label></li>
+</ul>
+<p class="small">The boxes are a list to walk with. They are not a score.</p>
+
+<h2>Insulation, stated twice and not averaged</h2>
+<p><a href="https://extension.oregonstate.edu/pub/ec-1644">Oregon State</a> says coops do not need to be insulated, but be sure there are no drafts. Ventilation removes ammonia fumes, carbon dioxide, and moisture, and brings in fresh air. Passive air moves through windows in walls or vents in gables, eaves, or roofs.</p>
+<p><a href="https://extension.unh.edu/blog/2024/02/how-should-i-take-care-backyard-chickens-winter">University of New Hampshire Extension</a> says some people insulate, which helps the inside stay warmer, but insulation is not an absolute necessity because keeping wind off the birds matters more. A cold wind takes away the birds' ability to keep themselves warm. Seal gaps. The roof should be solid and leak-proof. Siding other than wood, including corrugated metal, works if it keeps moisture and wind out. Vent holes or a small burlap-covered window, away from the prevailing wind, let moisture and ammonia from droppings escape. That opening should not be big enough for a predator.</p>
+
+<h2>What New Hampshire says about heat</h2>
+<p>Read on November 10, 2026, the UNH winter-care page does not tell you to hang a heat lamp. Under "To Heat or Not to Heat" it says: in most circumstances, advise against adding supplemental heat, because the fire risk is too high with combustible bedding and because chickens knock things over. A coop that is properly constructed and mostly draft-free, except for ventilation, is what that page says should limit the danger from the cold if you have followed the rest of the article. On the coldest days it suggests petroleum jelly on combs and wattles (the page spells them "waddles") to help prevent frostbite. Petroleum jelly is not described as a treatment for frostbite that is already there. If you suspect frostbite, UNH says to seek a veterinarian.</p>
+<p>The exception UNH names is smaller breeds. If you raise bantams, you may consider insulating the coop and/or carefully using a specially designed heater for chicken coops, and you should read the warnings before you install it. That is a heater made for coops, not a lamp hung over the roost.</p>
+<p>Oregon State, in the maintenance list, says to install electric lights and that they will also serve as a heat source during extremely cold weather. That sentence is not the same as UNH's advice against supplemental heat. This page does not pick a wattage and does not blend the two. The pages that disagree about adult heat, and the brooder schedule, are on the <a href="winter-coop-heat-lamp-guide.html">winter heat-lamp guide</a>.</p>
+<p>UNH's light note belongs with hours of light, not with a heater: when daylight drops below around 14 hours, supplemental light can bring the day back to 14 to 16 hours, using a lamp that will not generate too much heat. LED bulbs are the ones that page says do not make the heat of an incandescent or a fluorescent. The morning schedule and the bulb count are on the <a href="chicken-coop-lighting-for-egg-production.html">chicken coop lighting for egg production</a> page.</p>
+
+<h2>Roosts, nests, and the shell</h2>
+<p>Keep the roost inches apart. They are not one number.</p>
+<ul>
+  <li><a href="https://extension.oregonstate.edu/pub/ec-1644">Oregon State</a>: in general, 1- to 2-inch square wood with the top edges rounded, 2 feet off the floor, 10 inches between poles, and 5 to 10 inches of pole per bird. Silkie poles should be only 1 foot off the ground. Wood that is pressure-treated or coated in latex-based paint is the easy-to-clean option that page names. Poles that are too small or too round may cause foot problems.</li>
+  <li><a href="https://extension.unh.edu/blog/2024/02/how-should-i-take-care-backyard-chickens-winter">New Hampshire Extension</a>: about 9 to 12 inches of roost per chicken, wood rather than metal, about 1 to 2 inches wide so the toes can wrap the edge. Metal can hold the cold and lead to frostbitten feet.</li>
+</ul>
+<p>The year-round roost pages on this site use other extension figures. They are compared on <a href="how-much-roost-space-per-chicken.html">how much roost space per chicken</a>. Do not average Oregon State's 5 to 10 inches with New Hampshire's 9 to 12.</p>
+<p>Oregon State says one nest box for about every four birds, about 12 inches deep, wide, and tall, not on the ground and not lower than the roosts. A roof sloped at 45 degrees keeps birds off the top of the boxes. For the shell: close the flock in at night, raise the coop at least 1 foot off the ground, use a concrete slab or solid wood floor, enclose the run in 1- by 2-inch mesh with netting or wire over the top, and bury the fence 6 inches to 1 foot. Doors should open outward. Those are design lines from EC 1644. They are not floor-area rates.</p>
+
+<h2>Common mistake</h2>
+<p>Sealing the vents because the coop feels cold. Oregon State wants no drafts and still wants the passive openings. New Hampshire wants the wind gaps closed and still wants a vent on the lee side. The other mistake is building the 3 sq ft floor and then locking the birds in with no run. Three square feet is the rate for birds that can get outside. Birds that cannot get outside are the 8 to 10 sq ft rate.</p>
+
+<p class="small affil-disclosure">As an Amazon Associate I earn from qualifying purchases. The Amazon links below are affiliate links; they don't change the math.</p>
+<div class="affil">
+  <span class="tag">Winter shell</span>
+  <p class="small">Affiliate disclosure: as an Amazon Associate, we earn from qualifying purchases — at no cost to you. <a href="https://www.amazon.com/s?k=poultry+mesh+fencing&amp;tag=generatorsi0d-20" rel="sponsored nofollow noopener" target="_blank">poultry mesh fencing on Amazon</a> · <a href="https://www.amazon.com/s?k=pine+shavings+poultry&amp;tag=generatorsi0d-20" rel="sponsored nofollow noopener" target="_blank">pine shavings on Amazon</a></p>
+</div>
+
+<p>Compiled with AI assistance from the sources below. Spot an error? Email <a href="mailto:jpanasuk@gmail.com">jpanasuk@gmail.com</a>.</p>
+<h2>Sources</h2>
+<ul>
+<li>Oregon State University Extension, "Living on the land: Backyard chicken coop design," EC 1644, Dani Annala, Brian Tuck, Susan Kerr, Ellen Hammond, and Shilah Olson. Published April 2014, reviewed 2023. <a href="https://extension.oregonstate.edu/pub/ec-1644">https://extension.oregonstate.edu/pub/ec-1644</a>. Accessed November 10, 2026.</li>
+<li>University of New Hampshire Extension, "How Should I Take Care of Backyard Chickens in the Winter?", Sean O'Brien, February 15, 2024. <a href="https://extension.unh.edu/blog/2024/02/how-should-i-take-care-backyard-chickens-winter">https://extension.unh.edu/blog/2024/02/how-should-i-take-care-backyard-chickens-winter</a>. Accessed November 10, 2026.</li>
+</ul>
+</main>
+<footer>Built by <a href="/about.html">Jeremy Panasuk</a> · <a href="/about.html">About &amp; how this was made</a> · <a href="/methodology.html">Methodology</a> · <a href="/privacy.html">Privacy</a> · <a href="/contact.html">Contact</a> · pages may contain affiliate links</footer>
+<script src="assets/app.js" defer></script>
+<script>
+(function () {
+  function trimNum(n) {
+    var r = Math.round(n * 100) / 100;
+    if (Math.abs(r - Math.round(r)) < 1e-9) return String(Math.round(r));
+    return String(r);
+  }
+  function line(title, body) {
+    return "<div class=\"stat\"><b>" + title + "</b><span>" + body + "</span></div>";
+  }
+  function run() {
+    var box = document.getElementById("cwOut");
+    var birds = parseFloat(document.getElementById("cwBirds").value);
+    var len = parseFloat(document.getElementById("cwLen").value);
+    var wid = parseFloat(document.getElementById("cwWid").value);
+    if (!birds || birds < 1 || Math.round(birds) !== birds) {
+      box.hidden = false;
+      box.innerHTML = "<p>Enter a whole number of birds, at least 1.</p>";
+      return;
+    }
+    if (!(len > 0) || !(wid > 0)) {
+      box.hidden = false;
+      box.innerHTML = "<p>Enter a length and a width greater than zero.</p>";
+      return;
+    }
+    var floor = Math.round(len * wid * 100) / 100;
+    var per = floor / birds;
+    var need3 = 3 * birds;
+    var need8 = 8 * birds;
+    var need10 = 10 * birds;
+    var withRun = floor + 1e-9 >= need3
+      ? "Meets Oregon State's at least 3 sq ft per bird. " + trimNum(floor) + " sq ft is " + trimNum(per) + " sq ft per bird (derived: length × width, then ÷ birds). Three sq ft times " + birds + " birds is " + trimNum(need3) + " sq ft."
+      : "Short of 3 sq ft per bird. This floor is " + trimNum(floor) + " sq ft, " + trimNum(per) + " sq ft per bird. Three sq ft times " + birds + " birds is " + trimNum(need3) + " sq ft.";
+    var noOut;
+    if (floor + 1e-9 >= need10) {
+      noOut = "Meets the 10 sq ft end of Oregon State's 8 to 10 sq ft per bird, so it also meets 8. Ten sq ft times " + birds + " is " + trimNum(need10) + " sq ft.";
+    } else if (floor + 1e-9 >= need8) {
+      noOut = "Meets the 8 sq ft end of the 8 to 10 range and is short of 10. Eight sq ft times " + birds + " is " + trimNum(need8) + " sq ft. Ten sq ft times " + birds + " is " + trimNum(need10) + " sq ft.";
+    } else {
+      noOut = "Below 8 sq ft per bird, so it does not meet the 8 to 10 range. Eight sq ft times " + birds + " is " + trimNum(need8) + " sq ft. This floor is " + trimNum(floor) + " sq ft.";
+    }
+    var access = document.getElementById("cwRun").checked
+      ? "You marked that the hens can use a run, so the 3 sq ft line is the one that applies. The 8 to 10 line is what changes if they cannot get outside."
+      : "You marked that the hens cannot get outside, so the 8 to 10 sq ft line is the one that applies. The 3 sq ft line is only for birds that can use a run.";
+    box.hidden = false;
+    box.innerHTML =
+      "<p>" + trimNum(len) + " × " + trimNum(wid) + " = " + trimNum(floor) + " sq ft of floor for " + birds + " birds, which is " + trimNum(per) + " sq ft per bird. Both figures are derived.</p>" +
+      "<p>" + access + "</p>" +
+      "<div class=\"grid2\">" +
+        line("With a run: 3 sq ft per bird", withRun) +
+        line("No outdoor access: 8 to 10 sq ft per bird", noOut) +
+      "</div>";
+  }
+  ["cwBirds", "cwLen", "cwWid"].forEach(function (id) {
+    document.getElementById(id).addEventListener("input", run);
+  });
+  document.getElementById("cwRun").addEventListener("change", run);
+  document.getElementById("cwNone").addEventListener("change", run);
+  document.getElementById("cwBtn").addEventListener("click", run);
+  run();
+})();
+</script>
+</body>
+</html>
