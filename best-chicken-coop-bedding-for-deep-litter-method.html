@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Best Chicken Coop Bedding for Deep Litter Method: Depth and Volume</title>
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="shortcut icon" href="/assets/favicon.ico">
+<meta property="og:image" content="https://chickencoopcalc.com/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Best Chicken Coop Bedding for Deep Litter Method: Depth and Volume">
+<meta name="twitter:description" content="Best chicken coop bedding for the deep litter method: Minnesota Extension says 4 to 6 inches of straw or shavings with a 6 to 8 inch kickboard. Check moisture daily.">
+<meta name="description" content="Best chicken coop bedding for the deep litter method: Minnesota Extension says 4 to 6 inches of straw or shavings with a 6 to 8 inch kickboard. Check moisture daily.">
+<link rel="canonical" href="https://chickencoopcalc.com/best-chicken-coop-bedding-for-deep-litter-method.html">
+<meta name="robots" content="index,follow">
+<meta property="og:title" content="Best Chicken Coop Bedding for Deep Litter Method: Depth and Volume">
+<meta property="og:description" content="Best chicken coop bedding for the deep litter method: Minnesota Extension says 4 to 6 inches of straw or shavings with a 6 to 8 inch kickboard. Check moisture daily.">
+<meta property="og:url" content="https://chickencoopcalc.com/best-chicken-coop-bedding-for-deep-litter-method.html">
+<meta property="og:type" content="article">
+<link rel="stylesheet" href="assets/styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Best chicken coop bedding for deep litter method",
+  "description": "Best chicken coop bedding for the deep litter method: Minnesota Extension says 4 to 6 inches of straw or shavings with a 6 to 8 inch kickboard. Check moisture daily.",
+  "url": "https://chickencoopcalc.com/best-chicken-coop-bedding-for-deep-litter-method.html",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://chickencoopcalc.com/best-chicken-coop-bedding-for-deep-litter-method.html"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "ChickenCoopCalc"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "ChickenCoopCalc"
+  },
+  "datePublished": "2026-11-17",
+  "dateModified": "2026-11-17"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://chickencoopcalc.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Best chicken coop bedding for deep litter method",
+      "item": "https://chickencoopcalc.com/best-chicken-coop-bedding-for-deep-litter-method.html"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header class="site-head">
+  <a class="brand" href="index.html">ChickenCoopCalc</a>
+  <nav aria-label="Site">
+    <a href="index.html#calc">Calculator</a>
+    <a href="winter-coop-heat-lamp-guide.html">Winter heat</a>
+    <a href="chicken-coop-lighting-for-egg-production.html">Egg-laying light</a>
+    <a href="topics.html">Topics</a>
+  </nav>
+</header>
+<main>
+<p class="small"><a href="index.html">Home</a> / <a href="topics.html">Questions</a> / Best chicken coop bedding for deep litter method</p>
+<h1>Best chicken coop bedding for deep litter method</h1>
+<p class="sub">How deep, how much to buy, and what to check every day. No product picks; the extensions name straw and shavings.</p>
+<p class="small">Built by <a href="/about.html">Jeremy Panasuk</a>. Published November 17, 2026.</p>
+<div class="answer-box"><strong>Quick answer:</strong> <a href="https://extension.umn.edu/agriculture/animals-and-livestock/poultry/caring-for-chickens-in-cold-weather">University of Minnesota Extension</a> says to bed a coop deeply with 4 to 6 inches of straw or shavings, stirring as the top layer soils and adding fresh bedding on top, and to fit a 6 to 8 inch kickboard at the doorway. <a href="https://www.douglas.k-state.edu/news-events/newsletters/ag-agent-articles/margit2023dec.html">Kansas State Research and Extension</a> warns deep bedding raises humidity, so check moisture daily.</div>
+
+<h2>Litter volume calculator</h2>
+<p>Enter the coop floor and a bedding depth. The result is the loose volume to spread, in cubic feet: length × width × depth ÷ 12. That is plain arithmetic on this page. Bag and bale sizes vary, so divide by the volume printed on what you buy.</p>
+<div class="card">
+<div class="row2">
+<div class="field"><label for="dlLen">Coop length (ft)</label><input id="dlLen" type="number" min="0" step="0.5" value="6"></div>
+<div class="field"><label for="dlWid">Coop width (ft)</label><input id="dlWid" type="number" min="0" step="0.5" value="4"></div>
+</div>
+<div class="row2">
+<div class="field"><label for="dlDep">Bedding depth (in.)</label>
+<select id="dlDep"><option value="3">3 in. (Maryland's low end)</option><option value="4" selected>4 in.</option><option value="5">5 in.</option><option value="6">6 in. (Minnesota's high end)</option></select></div>
+<div class="field"><label for="dlKick">Kickboard height (in.)</label><input id="dlKick" type="number" min="0" step="1" value="6"></div>
+</div>
+<p id="dlOut" aria-live="polite"></p>
+</div>
+<script>
+(function () {
+  var L = document.getElementById("dlLen"), W = document.getElementById("dlWid"), D = document.getElementById("dlDep"), K = document.getElementById("dlKick"), out = document.getElementById("dlOut");
+  function r2(n) { return Math.round(n * 10) / 10; }
+  function render() {
+    var l = parseFloat(L.value) || 0, w = parseFloat(W.value) || 0, d = parseFloat(D.value), k = parseFloat(K.value) || 0;
+    var area = l * w, cf = area * d / 12;
+    var t = l + " × " + w + " ft = " + r2(area) + " sq ft. At " + d + " in. deep: " + r2(cf) + " cubic feet of bedding (" + r2(area) + " × " + d + " ÷ 12).";
+    if (k > 0 && k < d) t += " The kickboard is lower than the bedding, so litter will spill out the door; University of Minnesota Extension suggests a 6 to 8 inch kickboard.";
+    else if (k >= 6 && k <= 8) t += " A " + k + " in. kickboard is inside University of Minnesota Extension's 6 to 8 inch range.";
+    else if (k > 0) t += " University of Minnesota Extension's kickboard range is 6 to 8 inches.";
+    out.textContent = t;
+  }
+  [L, W, D, K].forEach(function (el) { el.addEventListener("input", render); el.addEventListener("change", render); });
+  render();
+})();
+</script>
+<p class="small">Default floor is 6 × 4 ft, a 24 sq ft coop like the one in the <a href="winter-coop-heat-lamp-guide.html">heat lamp guide</a>'s worked example; change it to yours. Floor area per bird is on <a href="chicken-coop-size-by-flock.html">chicken coop size by flock</a>.</p>
+
+<h2>How deep: three extensions, two ranges</h2>
+<div class="tbl-wrap"><table>
+<tr><th>Source</th><th>Depth</th><th>Material</th><th>What it says the depth does</th></tr>
+<tr><td><a href="https://extension.umn.edu/agriculture/animals-and-livestock/poultry/caring-for-chickens-in-cold-weather">University of Minnesota Extension</a></td><td>4 to 6 in.</td><td>Straw or shavings</td><td>Deep bedding gives some natural heat as manure decomposes; needs a deep cleaning in spring</td></tr>
+<tr><td><a href="https://extension.umd.edu/resource/winter-weather-and-small-flocks-what-you-need-know-fs-1133">University of Maryland Extension, FS-1133</a></td><td>3 to 4 in.</td><td>Pine shavings or straw</td><td>Good insulation; deep litter also generates heat as microbes break it down</td></tr>
+<tr><td><a href="https://www.douglas.k-state.edu/news-events/newsletters/ag-agent-articles/margit2023dec.html">K-State Research and Extension, Douglas County</a></td><td>No depth given</td><td>—</td><td>Deep bedding increases humidity; check moisture daily</td></tr>
+</table></div>
+<p>The two depth ranges overlap at 4 inches. They are listed here as each extension states them, not averaged. The calculator offers 3 to 6 inches so you can run either one.</p>
+
+<h2>Daily moisture check</h2>
+<ul>
+<li>Check the moisture level in the coop every day (<a href="https://www.douglas.k-state.edu/news-events/newsletters/ag-agent-articles/margit2023dec.html">K-State</a>).</li>
+<li>As the top layer soils, stir the bedding so manure moves to the bottom, then add fresh bedding on top (<a href="https://extension.umn.edu/agriculture/animals-and-livestock/poultry/caring-for-chickens-in-cold-weather">Minnesota</a>).</li>
+<li>If the litter is damp, clean more often or adjust, mix or fluff it to keep it warm and dry (K-State).</li>
+<li>Remove wet, frozen or humid litter to protect feet from frostbite (K-State).</li>
+<li>Plan a deep clean-out in spring (Minnesota).</li>
+</ul>
+<p>Moisture comes back to ventilation. Vent and floor planning for a winter coop is on <a href="best-chicken-coop-design-for-cold-weather.html">best chicken coop design for cold weather</a>, and why the extensions talk about moisture before heat is on the <a href="winter-coop-heat-lamp-guide.html">winter coop heat lamp guide</a>. Run space for the same flock is on <a href="how-big-should-a-chicken-run-be.html">how big should a chicken run be</a>, and winter laying light is on <a href="chicken-coop-lighting-for-egg-production.html">chicken coop lighting for egg production</a>.</p>
+
+<h2>Sources</h2>
+<p>Compiled with AI assistance from the sources below. Spot an error? Email <a href="mailto:jpanasuk@gmail.com">jpanasuk@gmail.com</a>.</p>
+<ul>
+<li>University of Minnesota Extension, Caring for chickens in cold weather. <a href="https://extension.umn.edu/agriculture/animals-and-livestock/poultry/caring-for-chickens-in-cold-weather">https://extension.umn.edu/agriculture/animals-and-livestock/poultry/caring-for-chickens-in-cold-weather</a>. Read November 17, 2026.</li>
+<li>K-State Research and Extension, Douglas County, ag agent article, December 2023. <a href="https://www.douglas.k-state.edu/news-events/newsletters/ag-agent-articles/margit2023dec.html">https://www.douglas.k-state.edu/news-events/newsletters/ag-agent-articles/margit2023dec.html</a>. Read November 17, 2026.</li>
+<li>University of Maryland Extension, Winter Weather and Small Flocks: What You Need to Know (FS-1133). <a href="https://extension.umd.edu/resource/winter-weather-and-small-flocks-what-you-need-know-fs-1133">https://extension.umd.edu/resource/winter-weather-and-small-flocks-what-you-need-know-fs-1133</a>. Read November 17, 2026.</li>
+</ul>
+</main>
+<footer>Built by <a href="/about.html">Jeremy Panasuk</a> · <a href="/about.html">About &amp; how this was made</a> · <a href="/methodology.html">Methodology</a> · <a href="/privacy.html">Privacy</a> · <a href="/contact.html">Contact</a> · pages may contain affiliate links</footer>
+<script src="assets/app.js" defer></script>
+</body>
+</html>
