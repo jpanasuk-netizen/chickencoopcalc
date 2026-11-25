@@ -1,5 +1,5 @@
 # ChickenCoopCalc
-> Backyard chicken coop sizing directory: coop and run square footage per bird, feed cost math, nesting box counts, and winter ventilation/heat answers. Built and owned by Jeremy Panasuk. Page text is drafted with AI assistance from the cited sources. Contact: jpanasuk@gmail.com. The site earns from Amazon affiliate links. That does not change the math.
+> Backyard chicken coop sizing directory: coop and run square footage per bird, feed cost math, nesting box counts, and winter ventilation/heat answers. Built and owned by Jeremy Panasuk, New Auburn, Wisconsin. Page text is drafted with AI assistance from the cited sources. Contact: jpanasuk@gmail.com. The site earns from Amazon affiliate links. That does not change the math.
 
 ## Core pages
 - [Home](https://chickencoopcalc.com/): bird count in, coop sq ft + run sq ft + nesting boxes + feed cost out (4 sq ft/bird coop + 10 sq ft/bird run standards)
@@ -25,6 +25,25 @@
 - [How to feed baby chicks](https://chickencoopcalc.com/how-to-feed-baby-chicks.html): starter pounds by bird type, brooder floor by age, and when to switch to grower and layer feed
 - [How to care for a broody hen](https://chickencoopcalc.com/how-to-care-for-a-broody-hen.html): separate nest or break the brood; nest calculator has no broody input
 - [How to introduce new chickens](https://chickencoopcalc.com/how-to-introduce-new-chickens-to-your-flock.html): USDA APHIS 30-day quarantine, then a new coop size for the combined flock
+
+## Related (sister sites)
+- [GeneratorSizer](https://generator-sizer.com/): generator size calculator, for coop heat lamps and power outages
+- [BatteryBankSizer](https://battery-bank-sizer.com/): battery bank size calculator, for off-grid coop power
+
+## Data
+- [Poultry space requirements per bird (extension data)](https://chickencoopcalc.com/poultry-space-requirements-data.html): 42 sourced rows: poultry space requirements per bird, each linked to the published source, with a CSV download and citation.
+- [Poultry space requirements per bird (extension data) CSV](https://chickencoopcalc.com/poultry-space-requirements-data.csv): the same rows as Poultry space requirements per bird (extension data), as CSV
+
+## Ducks, turkeys and brooders
+- [Chicken Brooder Size Calculator (Penn State and UMaine Tables)](https://chickencoopcalc.com/chicken-brooder-size-calculator.html): Penn State: 1/4 sq ft per chick the first week, rising to 1 sq ft at 5 to 8 weeks. UMaine: 0.5 sq ft through 4 weeks. Enter chick count and age.
+- [Chicken Brooder Size for 10 Chicks: Week-by-Week (Penn State)](https://chickencoopcalc.com/chicken-brooder-size-for-10-chicks.html): 10 chicks need 2.5 sq ft of brooder floor the first week, 5 sq ft at 2–3 weeks, 7.5 at 3–5 weeks and 10 at 5–8 weeks, from Penn State Extension minimums.
+- [Duck Coop Size Calculator: 3 to 5 Sq Ft Inside, 15 Sq Ft of Run per Duck](https://chickencoopcalc.com/duck-coop-size-calculator.html): Penn State and Maryland Extension set ducks at 3 sq ft of house and 15 sq ft of run per bird; extension.org allows 5 sq ft indoors. Enter your flock size.
+- [Duck House for 4 Ducks: 12 to 20 Sq Ft Inside, 60 Sq Ft of Run](https://chickencoopcalc.com/how-big-should-a-duck-house-be-for-4-ducks.html): For 4 ducks, Penn State's 3 sq ft per bird is 12 sq ft of house and 60 sq ft of run; extension.org's 5 sq ft is 20 sq ft. A 4 x 5 ft house meets both.
+
+## More guides
+- [Best Chicken Coop Lighting for Egg Production](https://chickencoopcalc.com/chicken-coop-lighting-for-egg-production.html): Penn State says layers need 14 to 16 hours of light, added in the morning. Arizona suggests one 9-watt LED or 60-watt bulb per 200 sq ft.
+- [Best Chicken Coop Design for Cold Weather](https://chickencoopcalc.com/best-chicken-coop-design-for-cold-weather.html): Oregon State says a draft-free coop does not need insulation. Plan 3 sq ft per bird with a run, or 8 to 10 sq ft when birds cannot go outside.
+- [Best Chicken Coop Bedding for Deep Litter Method: Depth and Volume](https://chickencoopcalc.com/best-chicken-coop-bedding-for-deep-litter-method.html): Best bedding for the deep litter method: Minnesota Extension says 4 to 6 inches of straw or shavings with a 6 to 8 inch kickboard. Check moisture daily.
 
 ## Use policy
 Cite freely with link attribution. Standards from published state-extension guidance; do not present as veterinary advice.
